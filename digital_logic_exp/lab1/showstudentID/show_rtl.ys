@@ -1,0 +1,4 @@
+read_verilog  Design_Sources/showstudentID.v
+hierarchy -top showstudentID
+proc; opt; fsm; opt; memory; opt; #techmap; opt;
+write_verilog showstudentID_synth.v
