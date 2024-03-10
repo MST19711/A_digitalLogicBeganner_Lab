@@ -245,7 +245,8 @@ module clock(
     output [6:0]M,
     output [6:0]S,
     output [6:0]tms,
-    output [7:0]blink_chose
+    output [7:0]blink_chose,
+    output [2:0]TimeKeeper
 );
     reg [31:0]counter;
     reg [6:0]rS = 0;
@@ -253,6 +254,8 @@ module clock(
     reg [6:0]rH = 0;
     reg [6:0]rTMS = 0;
     reg [7:0]blink_r;
+    reg [2:0]TimeKeeper_R;
+    assign TimeKeeper = TimeKeeper_R;
     assign tms = rTMS;
     assign S = rS;
     assign M = rM;
@@ -261,6 +264,7 @@ module clock(
     reg is_setting = 0, has_setted = 0;
     always @(posedge clk) begin
         if(((setting_mode == 2'b00 || has_setted == 1) && is_setting == 0) || enable == 0)begin
+            TimeKeeper_R = (rM == 0 && (rS == 0 || rS == 2 || rS == 4 || rS == 6 || rS == 8)) ? 4'b1111 : 4'b0000;
             if(setting_mode == 2'b00)begin
                 has_setted <= 0;
             end
@@ -316,6 +320,105 @@ module BCD2INT(
     assign data_out = 10 * ((data_h > 9) ? 9 : data_h) + ((data_l > 9) ? 9 : data_l);
 endmodule
 
+module alarm(
+    input clk,
+    input [6:0]now_H,
+    input [6:0]now_M,
+    input [6:0]now_S,
+    input [6:0]setting_num,
+    input enable,
+    input [1:0]AlarmNo,
+    input set,
+    input [1:0]setting_mode,
+    output [6:0]setted_H,
+    output [6:0]setted_M,
+    output [6:0]setted_S,
+    output [7:0]blink_chose,
+    output [2:0]AlarmDisplay
+);
+    reg [6:0]alram_H[0:3];
+    reg [6:0]alram_M[0:3];
+    reg [6:0]alram_S[0:3];
+    reg [2:0]alram_LED;
+    reg [31:0]alram_start = 0;
+    reg is_alraming, red_LED;
+    reg [7:0]blink_r;
+    assign blink_chose = blink_r;
+    assign AlarmDisplay = alram_LED;
+    assign setted_H = alram_H[AlarmNo];
+    assign setted_M = alram_M[AlarmNo];
+    assign setted_S = alram_S[AlarmNo];
+    wire at_time;
+    assign AlarmDisplay[0] = red_LED;
+    assign at_time =
+                 ((now_H == alram_H[0] && now_M == alram_M[0] && now_S == alram_S[0]) || 
+                 (now_H == alram_H[1] && now_M == alram_M[1] && now_S == alram_S[1]) || 
+                 (now_H == alram_H[2] && now_M == alram_M[2] && now_S == alram_S[2]) || 
+                 (now_H == alram_H[3] && now_M == alram_M[3] && now_S == alram_S[3])  == 1 )? 1 : 0;
+    reg has_setted, is_setting;
+    always@(posedge clk)begin
+        
+        if(is_alraming == 0)begin
+            is_alraming <= at_time;
+            alram_start <= (at_time == 1) ? 0 : 100000000;
+        end
+        if(is_alraming == 1)begin
+            alram_start <= alram_start + 1;
+        end
+        red_LED <= ((alram_start / 100000000) % 2 == 0) ? 1 : 0;
+        if(alram_start >= 1000000000)begin
+            is_alraming <= 0;
+            alram_start <= 100000000;
+            red_LED <= 0;
+        end
+        
+        if(enable == 1)begin
+            if(setting_mode == 2'b00 && has_setted == 1)begin
+                has_setted <= 0;
+            end
+            if(setting_mode != 2'b00 && has_setted == 0)begin
+                is_setting <= 1;
+            end
+            if(is_setting == 1)begin
+                if(set == 1)begin
+                    blink_r <= 8'b00000000;
+                    has_setted = 1;
+                    is_setting = 0;
+                end
+                if(setting_mode == 2'b01 && has_setted == 0)begin
+                    blink_r <= 8'b00001100;
+                    alram_S[AlarmNo] <= setting_num % 60;//(setting_num > 7'd59) ? 59 : setting_num;
+                end
+                if(setting_mode == 2'b10 & has_setted == 0)begin
+                    blink_r <= 8'b00110000;
+                    alram_M[AlarmNo] <= setting_num % 60;//(setting_num > 7'd59) ? 59 : setting_num;
+                end
+                if(setting_mode == 2'b11 && has_setted == 0)begin
+                    blink_r <= 8'b11000000;
+                    alram_H[AlarmNo] <= setting_num % 24;//(setting_num > 7'd23) ? 23 : setting_num;
+                end
+                if(setting_mode == 2'b00 && has_setted == 0)begin
+                    blink_r <= 8'b11111111;
+                end
+            end
+        end
+    end
+endmodule
+
+module stopwatch(
+    input srart_stop,
+    input reset,
+    input enable,
+    input clk,
+    output [6:0]setted_H,
+    output [6:0]setted_M,
+    output [6:0]setted_S,
+    output [7:0]blink_chose
+);
+    assign blink_chose = 8'b00000000;
+    
+endmodule
+
 module DigitalTimer (
     input clk,//连接到时钟端口 CLK100MHZ，引脚 E3
     input RST,//复位按钮，单击有效
@@ -350,6 +453,7 @@ module DigitalTimer (
         .data_l(data_l),
         .data_out(data_BUS)
     );
+
     clock clock0( 
         .clk(clk),
         .setting_num(data_BUS),
@@ -360,7 +464,24 @@ module DigitalTimer (
         .M(display_BUS_time_M[0]),
         .S(display_BUS_time_S[0]),
         .tms(display_BUS_time_tMS[0]),
-        .blink_chose(blink_BUS[0])
+        .blink_chose(blink_BUS[0]),
+        .TimeKeeper(TimeKeeper)
+    );
+    alarm alarm0(
+        .clk(clk),
+        .now_H(display_BUS_time_H[0]),
+        .now_M(display_BUS_time_M[0]),
+        .now_S(display_BUS_time_S[0]),
+        .setting_num(data_BUS),
+        .enable(enable[3]),
+        .AlarmNo(AlarmNo),
+        .set(ReadPara),
+        .setting_mode(ParaSelect),
+        .setted_H(display_BUS_time_H[3]),
+        .setted_M(display_BUS_time_M[3]),
+        .setted_S(display_BUS_time_S[3]),
+        .blink_chose(blink_BUS[3]),
+        .AlarmDisplay(AlarmDisplay)
     );
     wire [3:0]trans2blinker_0;
     wire [3:0]trans2blinker_1; 
