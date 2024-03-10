@@ -37,7 +37,20 @@ module regfile_top(
    wire [4:0] rb32;
    wire [4:0] rw32;
 // add your code
-
+   genvar i;
+   generate
+      for(i = 0; i < 32; i = i + 1)begin
+         assign busw32[i] = busw[i % 4];
+      end
+   endgenerate
+   assign ra32[2:0] = ra;
+   assign rb32[2:0] = rb;
+   assign rw32[2:0] = rw;
+   assign ra32[4:3] = rd_hi;
+   assign rb32[4:3] = rd_hi;
+   assign rw32[4:3] = rd_hi;
+   assign busa8 = busa32[7:0];
+   assign busb8 = busb32[7:0];
    regfile32 regfile32_check(.busa(busa32),.busb(busb32),.busw(busw32),.ra(ra32),.rb(rb32),.rw(rw32),.clk(clk),.we(we));
 // add your code
  
