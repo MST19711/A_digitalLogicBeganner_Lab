@@ -5,7 +5,6 @@ vvp_files = $(wildcard *.vvp)
 vcd_files = $(wildcard *.vcd)
 sim_file = $(wildcard *_sim)
 
-
 simulate:
 	iverilog $(FILES) -o $(project_name)_sim.vvp
 	vvp -n $(project_name)_sim.vvp -lxt2

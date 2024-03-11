@@ -410,13 +410,241 @@ module stopwatch(
     input reset,
     input enable,
     input clk,
-    output [6:0]setted_H,
-    output [6:0]setted_M,
-    output [6:0]setted_S,
+    output [6:0]H,
+    output [6:0]M,
+    output [6:0]S,
+    output [6:0]tms,
     output [7:0]blink_chose
 );
     assign blink_chose = 8'b00000000;
-    
+    reg [63:0]counter = 0;
+    reg is_stop = 1;
+    reg is_pushdown = 0;
+    reg is_rst_pushdown = 0;
+    reg [6:0]rS = 0;
+    reg [6:0]rM = 0;
+    reg [6:0]rH = 0;
+    reg [6:0]rTMS = 0;
+    assign H = rH;
+    assign M = rM;
+    assign S = rS;
+    assign tms = rTMS;
+    always@(posedge clk)begin
+        if(srart_stop == 1 && is_pushdown == 0)begin
+            is_stop = ~is_stop;
+            is_pushdown <= 1;
+        end
+        if(srart_stop == 0)begin
+            is_pushdown <= 0;
+        end
+        if(reset == 1 && is_rst_pushdown == 0)begin
+            counter <= 0;
+            rTMS <= 0;
+            rS <= 0;
+            rM <= 0;
+            rH <= 0;
+            is_rst_pushdown <= 1;
+        end
+        if(reset == 0)begin
+            is_rst_pushdown <= 0;
+        end
+        if(is_stop == 0 && !(reset == 1 && is_rst_pushdown == 0))begin
+            counter <= counter + 1;//1s = 100000000
+            if(counter == 999999)begin
+                counter <= 0;
+                if(rTMS == 99)begin
+                    if(rS == 59)begin
+                        if(rM == 59)begin
+                            rH = (rH + 1) % 24;
+                        end
+                        rM = (rM + 1) % 60;
+                    end
+                    rS = (rS + 1) % 60;
+                end
+                rTMS <= (rTMS + 1) % 100;
+            end else begin
+                counter <= counter + 1;
+            end
+        end
+    end
+endmodule
+
+//a - b
+module time_m(
+    input [6:0]aH,
+    input [6:0]aM,
+    input [6:0]aS,
+    input [6:0]bH,
+    input [6:0]bM,
+    input [6:0]bS,
+    output [6:0]cH,
+    output [6:0]cM,
+    output [6:0]cS
+);
+    wire S2M, M2H;
+    assign S2M = (aS >= bS) ? 0 : 1;
+    assign M2H = (aM >= (bM + S2M)) ? 0 : 1;
+    assign cS = (aS >= bS) ? (aS - bS) : (aS + 60 - bS);
+    assign cM = (M2H) ? (aM + 60 - (bM + S2M)) : (aM - (bM + S2M));
+    assign cH = aH - (bH + M2H);
+endmodule
+
+module timers(
+    input clk,
+    input [1:0]setting_mode,
+    input [6:0]setting_num,
+    input start_stop,
+    input enable,
+    input reset,
+    input set,
+    output [7:0]blink_chose,
+    output [6:0]H,
+    output [6:0]M,
+    output [6:0]S,
+    output [6:0]tms,
+    output red_LED
+);
+    reg [6:0] max_H = 0;
+    reg [6:0] max_M = 1;
+    reg [6:0] max_S = 0;
+    reg [6:0] rH = 0;
+    reg [6:0] rM = 0;
+    reg [6:0] rS = 0;
+    reg [6:0] rTMS;
+    reg is_setting = 0, has_setted = 0, is_running = 1, is_stop = 1;
+    reg has_pushdown_stop = 0;
+    reg [63:0] counter = 0;
+    reg [63:0] tms_counter = 0;
+    reg alram_LED = 0;
+    assign red_LED = alram_LED;
+    reg [7:0]blink_r;
+    assign blink_chose = blink_r;
+    time_m res(
+        .aH(max_H),
+        .aM(max_M),
+        .aS(max_S),
+        .bH(rH),
+        .bM(rM),
+        .bS(rS),
+        .cH(H),
+        .cM(M),
+        .cS(S)
+    );
+    assign tms = (99 - rTMS);
+    reg is_stop_pushdown = 0, is_rst_pushdown = 1;
+    always@(posedge clk)begin
+        if(is_running == 0)begin
+            rTMS <= 99;
+            rH <= 0;
+            rM <= 0;
+            rS <= 0;
+            if(enable == 1)begin
+                if(set == 1)begin
+                    blink_r <= 8'b00000000;
+                    has_setted <= 1;
+                    is_running <= 1;
+                    is_stop <= 1;
+                end
+                if(setting_mode == 2'b01 && has_setted == 0)begin
+                    blink_r <= 8'b00001100;
+                    max_S <= setting_num % 60;//(setting_num > 7'd59) ? 59 : setting_num;
+                end
+                if(setting_mode == 2'b10 & has_setted == 0)begin
+                    blink_r <= 8'b00110000;
+                    max_M <= setting_num % 60;//(setting_num > 7'd59) ? 59 : setting_num;
+                end
+                if(setting_mode == 2'b11 && has_setted == 0)begin
+                    blink_r <= 8'b11000000;
+                    max_H <= setting_num % 24;//(setting_num > 7'd23) ? 23 : setting_num;
+                end
+                if(setting_mode == 2'b00 && has_setted == 0)begin
+                    blink_r <= 8'b11111111;
+                end
+            end
+        end
+        if(is_running == 1)begin
+            blink_r <= 8'b00000000;
+            if(enable == 1)begin
+                if(setting_mode != 2'b00 && has_setted == 0)begin
+                    is_running <= 0;
+                end
+                if(setting_mode != 2'b00 && has_setted == 1)begin
+                    is_running <= 1;
+                end
+                if(setting_mode == 0)begin
+                    has_setted <= 0;
+                end
+            end
+            if(max_H == rH && max_M == rM && max_S == rS)begin
+                rTMS <= 99;
+                if(counter == 199999999)begin
+                    counter <= 0;
+                end else begin
+                    counter <= counter + 1;
+                end
+                if(is_stop == 0)begin
+                    alram_LED <= (counter / 100000000) % 2;
+                end
+                else begin
+                    alram_LED <= 0;
+                end
+                if(enable == 1)begin
+                    if(reset == 1 && is_rst_pushdown == 0)begin
+                        counter <= 0;
+                        rTMS <= 99;
+                        rS <= 0;
+                        rM <= 0;
+                        rH <= 0;
+                        is_rst_pushdown <= 1;
+                        is_stop <= 1;
+                    end
+                    if(reset == 0)begin
+                        is_rst_pushdown <= 0;
+                    end
+                end
+            end else begin
+                alram_LED <= 0;
+                if(enable == 1)begin
+                    if(start_stop == 1 && is_stop_pushdown == 0)begin
+                        is_stop = ~is_stop;
+                        is_stop_pushdown <= 1;
+                    end
+                    if(start_stop == 0)begin
+                        is_stop_pushdown <= 0;
+                    end
+                    if(reset == 1 && is_rst_pushdown == 0)begin
+                        counter <= 0;
+                        rTMS <= 99;
+                        rS <= 0;
+                        rM <= 0;
+                        rH <= 0;
+                        is_rst_pushdown <= 1;
+                    end
+                    if(reset == 0)begin
+                        is_rst_pushdown <= 0;
+                    end
+                end
+                if(is_stop == 0)begin
+                    counter <= counter + 1;//1s = 100000000
+                    if(counter == 999999)begin
+                        counter <= 0;
+                        if(rTMS == 99)begin
+                            if(rS == 59)begin
+                                if(rM == 59)begin
+                                    rH = (rH + 1) % 24;
+                                end
+                                rM = (rM + 1) % 60;
+                            end
+                            rS = (rS + 1) % 60;
+                        end
+                        rTMS <= (rTMS + 1) % 100;
+                    end else begin
+                        counter <= counter + 1;
+                    end
+                end
+            end
+        end
+    end
 endmodule
 
 module DigitalTimer (
@@ -483,6 +711,33 @@ module DigitalTimer (
         .blink_chose(blink_BUS[3]),
         .AlarmDisplay(AlarmDisplay)
     );
+    stopwatch stopwatch0(
+        .srart_stop(StartOrPause),
+        .reset(RST),
+        .enable(enable[2]),
+        .clk(clk),
+        .H(display_BUS_time_H[2]),
+        .M(display_BUS_time_M[2]),
+        .S(display_BUS_time_S[2]),
+        .tms(display_BUS_time_tMS[2]),
+        .blink_chose(blink_BUS[2])
+    );
+    timers timer0(
+        .clk(clk),
+        .setting_mode(ParaSelect),
+        .setting_num(data_BUS),
+        .start_stop(StartOrPause),
+        .enable(enable[1]),
+        .reset(RST),
+        .set(ReadPara),
+        .blink_chose(blink_BUS[1]),
+        .H(display_BUS_time_H[1]),
+        .M(display_BUS_time_M[1]),
+        .S(display_BUS_time_S[1]),
+        .tms(display_BUS_time_tMS[1]),
+        .red_LED(AlarmDisplay[1])
+    );
+
     wire [3:0]trans2blinker_0;
     wire [3:0]trans2blinker_1; 
     wire [3:0]trans2blinker_2; 
