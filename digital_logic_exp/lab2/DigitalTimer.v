@@ -430,20 +430,22 @@ module stopwatch(
     assign S = rS;
     assign tms = rTMS;
     always@(posedge clk)begin
-        if(srart_stop == 1 && is_pushdown == 0)begin
-            is_stop = ~is_stop;
-            is_pushdown <= 1;
+        if(enable == 1)begin
+            if(srart_stop == 1 && is_pushdown == 0)begin
+                is_stop = ~is_stop;
+                is_pushdown <= 1;
+            end
+            if(reset == 1 && is_rst_pushdown == 0)begin
+                counter <= 0;
+                rTMS <= 0;
+                rS <= 0;
+                rM <= 0;
+                rH <= 0;
+                is_rst_pushdown <= 1;
+            end
         end
         if(srart_stop == 0)begin
             is_pushdown <= 0;
-        end
-        if(reset == 1 && is_rst_pushdown == 0)begin
-            counter <= 0;
-            rTMS <= 0;
-            rS <= 0;
-            rM <= 0;
-            rH <= 0;
-            is_rst_pushdown <= 1;
         end
         if(reset == 0)begin
             is_rst_pushdown <= 0;
@@ -575,7 +577,7 @@ module timers(
                     has_setted <= 0;
                 end
             end
-            if(max_H == rH && max_M == rM && max_S == rS)begin
+            if(max_H == rH && max_M == rM && max_S == rS && rTMS == 99)begin
                 rTMS <= 99;
                 if(counter == 199999999)begin
                     counter <= 0;
