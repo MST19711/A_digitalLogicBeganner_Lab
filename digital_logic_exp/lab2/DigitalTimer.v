@@ -313,8 +313,8 @@ module clock(
 endmodule
 
 module BCD2INT(
-    input [3:0] data_h,//ÉèÖÃ²ÎÊý¸ßÎ»£¬Ê¹ÓÃ BCD Âë±íÊ¾
-    input [3:0] data_l,//ÉèÖÃ²ÎÊýµÍÎ»£¬Ê¹ÓÃ BCD Âë±íÊ¾
+    input [3:0] data_h,//ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ê¹ï¿½ï¿½ BCD ï¿½ï¿½ï¿½Ê¾
+    input [3:0] data_l,//ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ê¹ï¿½ï¿½ BCD ï¿½ï¿½ï¿½Ê¾
     output [6:0] data_out
 );
     assign data_out = 10 * ((data_h > 9) ? 9 : data_h) + ((data_l > 9) ? 9 : data_l);
@@ -650,21 +650,21 @@ module timers(
 endmodule
 
 module DigitalTimer (
-    input clk,//Á¬½Óµ½Ê±ÖÓ¶Ë¿Ú CLK100MHZ£¬Òý½Å E3
-    input RST,//¸´Î»°´Å¥£¬µ¥»÷ÓÐÐ§
-    input StartOrPause,//¼ÆÊ±Æ÷¿ªÊ¼»òÔÝÍ££¬µ¥»÷ 1 ´Î¿ªÊ¼£¬ÔÙ°´ 1 ´ÎÔÝÍ£
-    input ReadPara,//¶ÁÈ¡²ÎÊý£¬µ±²ÎÊýÉèÖÃ½áÊøºó£¬µ¥»÷ 1 ´Î£¬¶ÁÈ¡Êý¾Ý
-    input TimeFormat,//=0 ±íÊ¾ 24 Ð¡Ê±ÖÆ£¬=1 ±íÊ¾ 12 Ð¡Ê±ÖÆ
-    input [1:0] mode,//¹¦ÄÜÑ¡Ôñ£¬00 Êý×ÖÊ±ÖÓ£¬01 µ¹¼ÆÊ±£¬10 ¼ÆÊ±Æ÷£¬11 ÉèÖÃÄÖÖÓ
-    input [1:0] ParaSelect,// ²ÎÊýÉèÖÃ£¬00 ÎÞ£»01 ÉèÖÃÃëÊý£»10 ÉèÖÃ·ÖÖÓ£»11 ÉèÖÃÐ¡Ê±
-    input [1:0] AlarmNo,// ÄÖÖÓÐòºÅ£¬0~3
-    input [3:0] data_h,//ÉèÖÃ²ÎÊý¸ßÎ»£¬Ê¹ÓÃ BCD Âë±íÊ¾
-    input [3:0] data_l,//ÉèÖÃ²ÎÊýµÍÎ»£¬Ê¹ÓÃ BCD Âë±íÊ¾
-    output Afternoon,//12 Ð¡Ê±ÖÆÊ±£¬ÏÂÎçÊ±¼äÊä³öÎª 1
-    output [2:0] TimeKeeper,//ÕûµãÊä³ö 3 É«Ö¸Ê¾µÆ
-    output [2:0] AlarmDisplay,//ÄÖÖÓÊä³ö 3 É«Ö¸Ê¾µÆ
-    output [7:0] segs,//Æß¶ÎÊýÂë¹ÜÊäÈëÖµ£¬ÏÔÊ¾Êý×Ö
-    output [7:0] an//Æß¶ÎÊýÂë¹Ü¿ØÖÆÎ»£¬¿ØÖÆÊ±¡¢·Ö¡¢Ãë
+    input clk,//ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½Ó¶Ë¿ï¿½ CLK100MHZï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ E3
+    input RST,//ï¿½ï¿½Î»ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
+    input StartOrPause,//ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1 ï¿½Î¿ï¿½Ê¼ï¿½ï¿½ï¿½Ù°ï¿½ 1 ï¿½ï¿½ï¿½ï¿½Í£
+    input ReadPara,//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ó£¬µï¿½ï¿½ï¿½ 1 ï¿½Î£ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+    input TimeFormat,//=0 ï¿½ï¿½Ê¾ 24 Ð¡Ê±ï¿½Æ£ï¿½=1 ï¿½ï¿½Ê¾ 12 Ð¡Ê±ï¿½ï¿½
+    input [1:0] mode,//ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½00 ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ó£ï¿½01 ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½10 ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½11 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    input [1:0] ParaSelect,// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½00 ï¿½Þ£ï¿½01 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10 ï¿½ï¿½ï¿½Ã·ï¿½ï¿½Ó£ï¿½11 ï¿½ï¿½ï¿½ï¿½Ð¡Ê±
+    input [1:0] AlarmNo,// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½0~3
+    input [3:0] data_h,//ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ê¹ï¿½ï¿½ BCD ï¿½ï¿½ï¿½Ê¾
+    input [3:0] data_l,//ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ê¹ï¿½ï¿½ BCD ï¿½ï¿½ï¿½Ê¾
+    output Afternoon,//12 Ð¡Ê±ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Îª 1
+    output [2:0] TimeKeeper,//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3 É«Ö¸Ê¾ï¿½ï¿½
+    output [2:0] AlarmDisplay,//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3 É«Ö¸Ê¾ï¿½ï¿½
+    output [7:0] segs,//ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
+    output [7:0] an//ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½
 );
 // Add your code
     wire [6:0] display_BUS_time_H [0:3];

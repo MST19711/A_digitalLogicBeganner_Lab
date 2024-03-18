@@ -21,16 +21,16 @@
 
 
 module encryption6b(
-    output [7:0] dataout,    //Êä³ö¼ÓÃÜ»ò½âÃÜºóµÄ8±ÈÌØASCIIÊı¾İ¡£
-    output reg ready,       //Êä³öÓĞĞ§±êÊ¶£¬¸ßµçÆ½ËµÃ÷Êä³öÓĞĞ§£¬µÚ6ÖÜÆÚ¸ßµçÆ½
-    output [5:0] key,       //Êä³ö6Î»¼ÓÃÜÂë
-    input clk,             // Ê±ÖÓĞÅºÅ£¬ÉÏÉıÑØÓĞĞ§
-    input load,            //ÔØÈëseedÖ¸Ê¾£¬¸ßµçÆ½ÓĞĞ§
-    input [7:0] datain       //ÊäÈëÊı¾İµÄ8±ÈÌØASCIIÂë¡£
+    output [7:0] dataout,    //è¾“å‡ºåŠ å¯†æˆ–è§£å¯†åçš„8æ¯”ç‰¹ASCIIæ•°æ®ã€‚
+    output reg ready,       //è¾“å‡ºæœ‰æ•ˆæ ‡è¯†ï¼Œé«˜ç”µå¹³è¯´æ˜è¾“å‡ºæœ‰æ•ˆï¼Œç¬¬6å‘¨æœŸé«˜ç”µå¹³
+    output [5:0] key,       //è¾“å‡º6ä½åŠ å¯†ç 
+    input clk,             // æ—¶é’Ÿä¿¡å·ï¼Œä¸Šå‡æ²¿æœ‰æ•ˆ
+    input load,            //è½½å…¥seedæŒ‡ç¤ºï¼Œé«˜ç”µå¹³æœ‰æ•ˆ
+    input [7:0] datain       //è¾“å…¥æ•°æ®çš„8æ¯”ç‰¹ASCIIç ã€‚
 );
-    wire  [63:0] seed=64'ha845fd7183ad75c4;       //³õÊ¼64±ÈÌØseed=64'ha845fd7183ad75c4
+    wire  [63:0] seed=64'ha845fd7183ad75c4;       //åˆå§‹64æ¯”ç‰¹seed=64'ha845fd7183ad75c4
 //add your code here
-    reg [7:0]datain_R;
+    reg [7:0]datain_R = 0;
     wire [63:0]lfsr_out;
     reg [2:0] counter = 3'b000;
     lfsr L(
@@ -65,18 +65,20 @@ module encryption6b(
     end
 endmodule
 
-module lfsr(              //64Î»ÏßĞÔÒÆÎ»¼Ä´æÆ÷
+module lfsr(              //64ä½çº¿æ€§ç§»ä½å¯„å­˜å™¨
 	output reg [63:0] dout,
     input  [63:0]  seed,
 	input  clk,
 	input  load
 	);
-    reg new_bit;
+    reg new_bit = 0;
+    reg has_loaded = 0;
     always @(posedge clk) begin
         if(load == 1)begin
             dout <= seed;
+            has_loaded <= 1;
         end
-        else begin
+        else if(has_loaded == 1)begin
             new_bit <= dout[0] ^ dout[1] ^ dout[2] ^ dout[3];
             /*
             ```python3
@@ -148,6 +150,8 @@ module lfsr(              //64Î»ÏßĞÔÒÆÎ»¼Ä´æÆ÷
             dout[61] <= dout[62];
             dout[62] <= dout[63];
             dout[63] <= new_bit;
+        end else begin
+            dout <= 0;
         end
     end
 //add your code here
