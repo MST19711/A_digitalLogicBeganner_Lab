@@ -16,6 +16,7 @@
 `define seg_D (I[0]&I[1]&~I[2]&I[3])
 `define seg_E (I[0]&I[1]&I[2]&~I[3])
 `define seg_F (I[0]&I[1]&I[2]&I[3])
+
 module decoder_seg(
                 input [3:0] I,
                 output [6:0] seg
@@ -113,7 +114,7 @@ module seg_display(
     reg [31:0] counter = 31'd0;
     reg [2:0] c_REG;
     decoder_3to8 dec38_0(
-        .INPUT(c_REG),
+        .INPUT(3'b111 - c_REG),
         .OUT(AN)
     );
     wire [3:0] input2decoder;
@@ -130,7 +131,7 @@ module seg_display(
         .C(c_REG)
     );
     decoder_seg seg_0(
-        .I(c_REG),
+        .I(input2decoder),
         .seg(segs)
     );
     always@(posedge clk) begin : main

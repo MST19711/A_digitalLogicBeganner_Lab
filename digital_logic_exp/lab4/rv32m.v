@@ -36,49 +36,49 @@ module rv32m(
     wire in_error_w[0:7];
     wire [31:0]rd_w[0:7];
     reg [31:0] out_rd;
-    assign re = out_rd;
+    assign rd = out_rd;
     reg out_valid_r, in_error_r;
     assign out_valid = out_valid_r;
     assign in_error = in_error_r;
     always @(*) begin
         case (funct3)
             3'b000: begin 
-                out_rd = rd_w[0]; 
-                out_valid_r = out_valid_w[0];
-                in_error_r = in_error_w[0];
+                out_rd <= rd_w[0]; 
+                out_valid_r <= out_valid_w[0];
+                in_error_r <= in_error_w[0];
             end
             3'b001: begin 
-                out_rd = rd_w[1]; 
-                out_valid_r = out_valid_w[1]; 
-                in_error_r = in_error_w[1];
+                out_rd <= rd_w[1]; 
+                out_valid_r <= out_valid_w[1]; 
+                in_error_r <= in_error_w[1];
             end
             3'b010: begin 
-                out_rd = rd_w[2]; 
-                out_valid_r = out_valid_w[2]; 
-                in_error_r = in_error_w[2];
+                out_rd <= rd_w[2]; 
+                out_valid_r <= out_valid_w[2]; 
+                in_error_r <= in_error_w[2];
             end
             3'b011: begin
-                out_rd = rd_w[3]; 
-                out_valid_r = out_valid_w[3]; 
-                in_error_r = in_error_w[3];
+                out_rd <= rd_w[3]; 
+                out_valid_r <= out_valid_w[3]; 
+                in_error_r <= in_error_w[3];
             end
             3'b100: begin 
-                out_rd = rd_w[4]; 
-                out_valid_r = out_valid_w[4];
-                in_error_r = in_error_w[4];
+                out_rd <= rd_w[4]; 
+                out_valid_r <= out_valid_w[4];
+                in_error_r <= in_error_w[4];
             end
             3'b101: begin 
-                out_rd = rd_w[5]; 
-                out_valid_r = out_valid_w[5]; 
-                in_error_r = in_error_w[5];
+                out_rd <= rd_w[5]; 
+                out_valid_r <= out_valid_w[5]; 
+                in_error_r <= in_error_w[5];
             end
             3'b110: begin 
-                out_rd = rd_w[6]; 
-                out_valid_r = out_valid_w[6]; 
-                in_error_r = in_error_w[6];
+                out_rd <= rd_w[6]; 
+                out_valid_r <= out_valid_w[6]; 
+                in_error_r <= in_error_w[6];
             end
             3'b111: begin 
-                out_rd = rd_w[7];
+                out_rd <= rd_w[7];
                 out_valid_r = out_valid_w[7];
                 in_error_r = in_error_w[7];
             end
@@ -98,14 +98,13 @@ module rv32m(
     wire [63:0]mulu_res_unsigned, mulu_res_signed;
     mul_32b mul32b_1(
         .p(mulu_res_unsigned),         //乘积
-        .out_valid(out_valid_w[1]),        //高电平有效时，表示乘法器结束工作
+        .out_valid(out_valid_w[2]),        //高电平有效时，表示乘法器结束工作
         .clk(clk),              //时钟 
         .rst_n(rst),             //复位信号，低有效
         .x((rs1[31] == 0 ? rs1 : (~rs1 + 1))),           //被乘数
         .y(rs2),           //乘数
         .in_valid(in_valid)           //高电平有效，表示乘法器开始工作
     ); 
-    assign out_valid_w[2] = out_valid_w[1];
     assign in_error_w[1] = 0;
     assign in_error_w[2] = 0;
     assign mulu_res_signed = (rs1[31] == 0 ? mulu_res_unsigned : (~mulu_res_unsigned + 1));

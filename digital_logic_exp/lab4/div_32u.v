@@ -24,7 +24,7 @@ module div_32u(
     output  [31:0] Q,          //��
     output  [31:0] R,          //����
     output out_valid,        //�����������ʱ�����Ϊ1
-    output in_error,         //�����������Ϊ0ʱ�����Ϊ1
+    output in_error,         //������������?0ʱ������?1
     input clk,               //ʱ�� 
     input rst,             //��λ�ź�
     input [31:0] X,           //������
@@ -32,7 +32,7 @@ module div_32u(
     input in_valid          //����Ϊ1ʱ����ʾ���ݾ�������ʼ��������
 );
 
-    assign in_error = ((X == 0) || (Y == 0)); //预处理，除数和被除数异常检测报错
+    assign in_error = ((X == 0) || (Y == 0)); //预处理，除数和被除数异常�?测报�?
     reg temp_outval;// = 1'b0;
     assign out_valid = temp_outval || in_error;
     reg [5:0] cnt = 0;
@@ -41,7 +41,7 @@ module div_32u(
     assign R = r;
     wire [31:0] rmY;
     assign rmY = r - Y;
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if(rst) begin
             cnt <= 0;
             temp_outval <= 0;

@@ -21,6 +21,7 @@
 
 
 module rv32m_top(
+    output rst_display,
     output  [15:0] rd_l,        //运算结果的低16位
     output out_valid,         //运算结束时，输出为1
     output in_error,          //运算出错时，输出为1
@@ -34,4 +35,31 @@ module rv32m_top(
     input in_valid          //输入为1时，表示数据就绪，开始运算
     );
     //add your code here
+    assign rst_display = rst;
+    wire [31 : 0] result;
+    assign rd_l = result[15:0];
+    seg_display seg0(
+        .I0(result[31:28]),
+        .I1(result[27:24]),
+        .I2(result[23:20]),
+        .I3(result[19:16]),
+        .I4(result[15:12]),
+        .I5(result[11:8]),
+        .I6(result[7:4]),
+        .I7(result[3:0]),
+        .clk(clk),
+        .segs(segs),           
+        .AN(AN)
+    );
+    rv32m rv32m_0(
+        .rd(result),        //运算结果
+        .out_valid(out_valid),         //运算结束时，输出为1
+        .in_error(in_error),          //运算出错时，输出为1
+        .clk(clk),               //时钟 
+        .rst(rst),               //复位信号，低有效
+        .rs1({x, x ,x ,x, x, x ,x ,x}),          //操作数rs1
+        .rs2({y, y, y, y, y, y, y, y}),          //操作数rs2
+        .funct3(funct3),        //3位功能选择码
+        .in_valid(in_valid)           //输入为1时，表示数据就绪，开始除法运算
+    );
 endmodule
