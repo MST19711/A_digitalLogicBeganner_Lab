@@ -1,4 +1,4 @@
-.PHONY : all module clean
+.PHONY : all module clean ALU32
 
 FILES = $(wildcard $(module_name)*.v)
 ALL_vFILES = $(wildcard *.v)
@@ -16,3 +16,7 @@ all:
 
 clean:
 	rm $(vvp_files) $(vcd_files) $(sim_file)
+
+ALU32:
+	iverilog ./Adder32.v ./barrelsft32.v ./ALU32.v ./ALU32_tb.v -o ALU32_tb_sim.vvp
+	vvp -n ALU32_tb_sim.vvp -lxt2

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>211502008_李诚希_算术逻辑部件实验.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%AE%9E%E9%AA%8C-%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%AE%9E%E9%AA%8C-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E9%83%A8%E4%BB%B6%E5%AE%9E%E9%AA%8C-%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A">数字逻辑与计算机组成实验 第三次实验 算术逻辑部件实验 实验报告</h1>
+<blockquote>
+<p>211502008 李诚希
+chengxili@smail.nju.edu.cn</p>
+</blockquote>
+<h2 id="1-%E5%B8%A6%E6%A0%87%E5%BF%97%E4%BD%8D%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97%E9%83%A8%E4%BB%B6">1. 带标志位的加减运算部件</h2>
+<h3 id="%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1">整体设计</h3>
+<p>如下图，使用加法器和和一二路选择器和非门阵列实现带标志位的可以加法和减法的运算部件。其中的加法器使用四位先行进位串联成32位实现。</p>
+<p><img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/截屏2024-03-24 12.11.41.png" alt="image-20240323213631569"></p>
+<h3 id="%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1">模块设计</h3>
+<p>模块设计如下:</p>
+<ul>
+<li>
+<p><strong>Adder32</strong>:主模块，它接收两个32位的输入<code>x</code>和<code>y</code>，以及一个控制信号<code>sub</code>。如果<code>sub</code>为0，执行加法；如果为1，执行减法,即取反输入并将cin设置为1。它使用两个CLA_16模块来计算结果，并生成溢出（OF）、符号（SF）、零（ZF）和进位（CF）标志。</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> Adder32(
+      <span class="hljs-keyword">output</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] f,
+      <span class="hljs-keyword">output</span> OF, SF, ZF, CF,
+      <span class="hljs-keyword">output</span> cout,
+      <span class="hljs-keyword">input</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] x, y,
+      <span class="hljs-keyword">input</span> sub
+	);
+      <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] y_in = (sub == <span class="hljs-number">0</span>) ? y : ~y;
+      <span class="hljs-keyword">wire</span> cin, c_a2bm;
+      <span class="hljs-keyword">assign</span> cin = sub;
+      CLA_16 CLA_16_0(
+            <span class="hljs-variable">.f</span>(f[<span class="hljs-number">15</span>:<span class="hljs-number">0</span>]),
+            <span class="hljs-variable">.cout</span>(c_a2b),
+            <span class="hljs-variable">.x</span>(x[<span class="hljs-number">15</span>:<span class="hljs-number">0</span>]),
+            <span class="hljs-variable">.y</span>(y_in[<span class="hljs-number">15</span>:<span class="hljs-number">0</span>]),
+            <span class="hljs-variable">.cin</span>(cin)
+      );
+      CLA_16 CLA_16_1(
+            <span class="hljs-variable">.f</span>(f[<span class="hljs-number">31</span>:<span class="hljs-number">16</span>]),
+            <span class="hljs-variable">.cout</span>(cout),
+            <span class="hljs-variable">.x</span>(x[<span class="hljs-number">31</span>:<span class="hljs-number">16</span>]),
+            <span class="hljs-variable">.y</span>(y_in[<span class="hljs-number">31</span>:<span class="hljs-number">16</span>]),
+            <span class="hljs-variable">.cin</span>(c_a2b)
+      );
+      <span class="hljs-keyword">assign</span> OF = (~x[<span class="hljs-number">31</span>] &amp; ~y_in[<span class="hljs-number">31</span>] &amp; f[<span class="hljs-number">31</span>]) | (x[<span class="hljs-number">31</span>] &amp; y_in[<span class="hljs-number">31</span>] &amp; ~f[<span class="hljs-number">31</span>]);
+      <span class="hljs-keyword">assign</span> SF = f[<span class="hljs-number">31</span>];
+      <span class="hljs-keyword">assign</span> CF = cin ^ cout;
+      <span class="hljs-keyword">assign</span> ZF = (f == <span class="hljs-number">31'b0000000000000000</span>) ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>CLA_16</strong>: 这是一个16位进位查找加法器（Carry-Lookahead Adder）模块，它用于加速加法操作中进位的计算。它接收两个16位的输入和一个进位输入（cin），并输出16位的结果和一个进位输出（cout）。</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> CLA_16(
+       <span class="hljs-keyword">output</span> <span class="hljs-keyword">wire</span> [<span class="hljs-number">15</span>:<span class="hljs-number">0</span>] f,
+       <span class="hljs-keyword">output</span> <span class="hljs-keyword">wire</span>  cout, 
+       <span class="hljs-keyword">input</span> [<span class="hljs-number">15</span>:<span class="hljs-number">0</span>] x, y,
+       <span class="hljs-keyword">input</span> cin
+  );
+ <span class="hljs-comment">//add your code here</span>
+      <span class="hljs-keyword">wire</span> [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] Pi,Gi;
+      <span class="hljs-keyword">wire</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] c;
+      <span class="hljs-keyword">assign</span> c[<span class="hljs-number">0</span>] = cin;
+      CLA_group cla0(f[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>],Pi[<span class="hljs-number">0</span>],Gi[<span class="hljs-number">0</span>],x[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>],y[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>],c[<span class="hljs-number">0</span>]);
+      CLA_group cla1(f[<span class="hljs-number">7</span>:<span class="hljs-number">4</span>],Pi[<span class="hljs-number">1</span>],Gi[<span class="hljs-number">1</span>],x[<span class="hljs-number">7</span>:<span class="hljs-number">4</span>],y[<span class="hljs-number">7</span>:<span class="hljs-number">4</span>],c[<span class="hljs-number">1</span>]);
+      CLA_group cla2(f[<span class="hljs-number">11</span>:<span class="hljs-number">8</span>],Pi[<span class="hljs-number">2</span>],Gi[<span class="hljs-number">2</span>],x[<span class="hljs-number">11</span>:<span class="hljs-number">8</span>],y[<span class="hljs-number">11</span>:<span class="hljs-number">8</span>],c[<span class="hljs-number">2</span>]);
+      CLA_group cla3(f[<span class="hljs-number">15</span>:<span class="hljs-number">12</span>],Pi[<span class="hljs-number">3</span>],Gi[<span class="hljs-number">3</span>],x[<span class="hljs-number">15</span>:<span class="hljs-number">12</span>],y[<span class="hljs-number">15</span>:<span class="hljs-number">12</span>],c[<span class="hljs-number">3</span>]);
+      CLU clu(c[<span class="hljs-number">4</span>:<span class="hljs-number">1</span>],Pi,Gi, c[<span class="hljs-number">0</span>]);
+      <span class="hljs-keyword">assign</span> cout = c[<span class="hljs-number">4</span>];
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>CLA_group</strong>: 这是一个4位进位查找组（Carry-Lookahead Group）模块，它是CLA_16模块的一部分。它接收4位的输入和一个进位输入，计算4位的结果，并生成组进位（pg）和组生成（gg）信号，这些信号用于进位的快速计算。</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> CLA_group (
+     <span class="hljs-keyword">output</span> [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] f,
+     <span class="hljs-keyword">output</span> pg,gg,
+     <span class="hljs-keyword">input</span> [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] x, y,
+      <span class="hljs-keyword">input</span> cin
+);
+      <span class="hljs-keyword">wire</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] c;
+      <span class="hljs-keyword">wire</span> [<span class="hljs-number">4</span>:<span class="hljs-number">1</span>] p, g;
+      <span class="hljs-keyword">assign</span> c[<span class="hljs-number">0</span>] = cin;
+      FA_PG fa0(f[<span class="hljs-number">0</span>], p[<span class="hljs-number">1</span>], g[<span class="hljs-number">1</span>],x[<span class="hljs-number">0</span>], y[<span class="hljs-number">0</span>], c[<span class="hljs-number">0</span>]);
+      FA_PG fa1(f[<span class="hljs-number">1</span>], p[<span class="hljs-number">2</span>], g[<span class="hljs-number">2</span>],x[<span class="hljs-number">1</span>], y[<span class="hljs-number">1</span>], c[<span class="hljs-number">1</span>]);
+      FA_PG fa2(f[<span class="hljs-number">2</span>], p[<span class="hljs-number">3</span>], g[<span class="hljs-number">3</span>],x[<span class="hljs-number">2</span>], y[<span class="hljs-number">2</span>], c[<span class="hljs-number">2</span>]);
+      FA_PG fa3(f[<span class="hljs-number">3</span>], p[<span class="hljs-number">4</span>], g[<span class="hljs-number">4</span>],x[<span class="hljs-number">3</span>], y[<span class="hljs-number">3</span>], c[<span class="hljs-number">3</span>]);
+      CLU clu(c[<span class="hljs-number">4</span>:<span class="hljs-number">1</span>],p, g, c[<span class="hljs-number">0</span>]);
+      <span class="hljs-keyword">assign</span> pg=p[<span class="hljs-number">1</span>] &amp; p[<span class="hljs-number">2</span>] &amp; p[<span class="hljs-number">3</span>] &amp; p[<span class="hljs-number">4</span>];
+      <span class="hljs-keyword">assign</span> gg= g[<span class="hljs-number">4</span>] | (p[<span class="hljs-number">4</span>] &amp; g[<span class="hljs-number">3</span>]) | (p[<span class="hljs-number">4</span>] &amp; p[<span class="hljs-number">3</span>] &amp; g[<span class="hljs-number">2</span>]) | (p[<span class="hljs-number">4</span>] &amp; p[<span class="hljs-number">3</span>] &amp; p[<span class="hljs-number">2</span>] &amp; g[<span class="hljs-number">1</span>]);
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>CLU</strong>: 这是一个进位逻辑单元（Carry Logic Unit）模块，它根据进位生成（g）和进位传播（p）信号计算进位输出。</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> CLU (
+      <span class="hljs-keyword">output</span> [<span class="hljs-number">4</span>:<span class="hljs-number">1</span>] c,
+      <span class="hljs-keyword">input</span> [<span class="hljs-number">4</span>:<span class="hljs-number">1</span>] p, g,
+      <span class="hljs-keyword">input</span> c0
+);
+      <span class="hljs-keyword">assign</span> c[<span class="hljs-number">1</span>] = g[<span class="hljs-number">1</span>] | (p[<span class="hljs-number">1</span>] &amp; c0);
+      <span class="hljs-keyword">assign</span> c[<span class="hljs-number">2</span>] = g[<span class="hljs-number">2</span>] | (p[<span class="hljs-number">2</span>] &amp; g[<span class="hljs-number">1</span>]) | (p[<span class="hljs-number">2</span>] &amp; p[<span class="hljs-number">1</span>] &amp; c0);
+      <span class="hljs-keyword">assign</span> c[<span class="hljs-number">3</span>] = g[<span class="hljs-number">3</span>] | (p[<span class="hljs-number">3</span>] &amp; g[<span class="hljs-number">2</span>]) | (&amp;{p[<span class="hljs-number">3</span>:<span class="hljs-number">2</span>], g[<span class="hljs-number">1</span>]}) | (&amp;{p[<span class="hljs-number">3</span>:<span class="hljs-number">1</span>], c0});
+      <span class="hljs-keyword">assign</span> c[<span class="hljs-number">4</span>] = g[<span class="hljs-number">4</span>] | (p[<span class="hljs-number">4</span>] &amp; g[<span class="hljs-number">3</span>]) | (&amp;{p[<span class="hljs-number">4</span>:<span class="hljs-number">3</span>], g[<span class="hljs-number">2</span>]}) | (&amp;{p[<span class="hljs-number">4</span>:<span class="hljs-number">2</span>], g[<span class="hljs-number">1</span>]}) | (&amp;{p[<span class="hljs-number">4</span>:<span class="hljs-number">1</span>], c0});
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>
+<p><strong>FA_PG</strong>: 这是一个全加器（Full Adder）模块，它接收两个1位输入和一个进位输入，计算1位的结果，并生成进位传播（p）和进位生成（g）信号。</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> FA_PG (
+      <span class="hljs-keyword">output</span> f, p, g,
+      <span class="hljs-keyword">input</span> x, y, cin
+);
+      <span class="hljs-keyword">assign</span> f = x ^ y ^ cin;
+      <span class="hljs-keyword">assign</span> p = x | y;
+      <span class="hljs-keyword">assign</span> g = x &amp; y;
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+</ul>
+<h3 id="%E4%BB%BF%E7%9C%9F">仿真</h3>
+<p>仿真脚本直接给<code>Adder32</code>输入随机信号尝试不同的输入的输出与程序的计算结果是否相同：</p>
+<pre class="hljs"><code><div><span class="hljs-meta">`<span class="hljs-meta-keyword">timescale</span> 1ns / 1ps</span>
+<span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span>
+<span class="hljs-comment">// Company: </span>
+<span class="hljs-comment">// Engineer: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Create Date: 2023/09/17 22:02:27</span>
+<span class="hljs-comment">// Design Name: </span>
+<span class="hljs-comment">// Module Name: Adder32_tb</span>
+<span class="hljs-comment">// Project Name: </span>
+<span class="hljs-comment">// Target Devices: </span>
+<span class="hljs-comment">// Tool Versions: </span>
+<span class="hljs-comment">// Description: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Dependencies: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Revision:</span>
+<span class="hljs-comment">// Revision 0.01 - File Created</span>
+<span class="hljs-comment">// Additional Comments:</span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span>
+
+
+<span class="hljs-keyword">module</span> Adder32_tb(    );
+  <span class="hljs-keyword">parameter</span> N = <span class="hljs-number">32</span>;      <span class="hljs-comment">// Operand widths</span>
+  <span class="hljs-keyword">reg</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] A, B;
+  <span class="hljs-keyword">reg</span> CIN;
+  <span class="hljs-keyword">wire</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] S;
+  <span class="hljs-keyword">wire</span> COUT;
+  <span class="hljs-keyword">wire</span> OF,SF,ZF,CF;
+  <span class="hljs-keyword">integer</span> i, errors;
+  <span class="hljs-keyword">reg</span> xpectCF,xpectOF;
+  <span class="hljs-keyword">reg</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] xpectS;
+  
+   Adder32 adder_inst(<span class="hljs-variable">.f</span>(S),<span class="hljs-variable">.OF</span>(OF),<span class="hljs-variable">.SF</span>(SF),<span class="hljs-variable">.ZF</span>(ZF),<span class="hljs-variable">.CF</span>(CF),<span class="hljs-variable">.cout</span>(COUT),<span class="hljs-variable">.x</span>(A),<span class="hljs-variable">.y</span>(B),<span class="hljs-variable">.sub</span>(CIN));
+  <span class="hljs-keyword">task</span> checkadd;
+    <span class="hljs-keyword">begin</span>
+      <span class="hljs-comment">//$display("%d,%d,%d,%d,%d,%d,%d,%d", CIN, A, B, S, OF, SF, ZF, CF);</span>
+       {xpectCF,xpectS} = (CIN ? (A-B):(A+B));         
+      <span class="hljs-keyword">if</span> ( (xpectCF!==CF) || (xpectS!==S) ) <span class="hljs-keyword">begin</span>
+        errors = errors + <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: CIN,A,B = %1b,%8h,%8h, CF,S = %1b,%8h, should be %1b,%8h, OF,SF,ZF,COUT=%1b, %1b, %1b, %1b."</span> ,
+                 CIN, A, B, CF, S, xpectCF, xpectS ,OF,SF,ZF,COUT);
+      <span class="hljs-keyword">end</span>
+      <span class="hljs-keyword">if</span> ((B==A) &amp;&amp; (CIN==<span class="hljs-number">1</span>)&amp;&amp;(ZF==<span class="hljs-number">0</span> )) <span class="hljs-keyword">begin</span>
+        errors = errors + <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: CIN,A,B = %1b,%8h,%8h, CF,S = %1b,%8h, should be %1b,%8h, OF,SF,ZF,COUT=%1b, %1b, %1b, %1b."</span> ,
+                 CIN, A, B, CF, S, xpectCF, xpectS ,OF,SF,ZF,COUT);
+      <span class="hljs-keyword">end</span>
+      <span class="hljs-keyword">if</span>(CIN) xpectOF=(~B[N-<span class="hljs-number">1</span>]&amp;A[N-<span class="hljs-number">1</span>]&amp;~S[N-<span class="hljs-number">1</span>]) |(~A[N-<span class="hljs-number">1</span>]&amp;B[N-<span class="hljs-number">1</span>]&amp;S[N-<span class="hljs-number">1</span>]); 
+       <span class="hljs-keyword">else</span>   xpectOF=(B[N-<span class="hljs-number">1</span>]&amp;A[N-<span class="hljs-number">1</span>]&amp;~S[N-<span class="hljs-number">1</span>]) |(~A[N-<span class="hljs-number">1</span>]&amp;~B[N-<span class="hljs-number">1</span>]&amp;S[N-<span class="hljs-number">1</span>]);
+      <span class="hljs-keyword">if</span> (xpectOF!=OF) <span class="hljs-keyword">begin</span>
+        errors = errors + <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: CIN,A,B = %1b,%8h,%8h, CF,S = %1b,%8h, should be %1b,%8h, OF,SF,ZF,COUT=%1b, %1b, %1b, %1b."</span> ,
+                 CIN, A, B, CF, S, xpectCF, xpectS ,OF,SF,ZF,COUT);
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">endtask</span>
+  <span class="hljs-keyword">integer</span> SEED;
+  <span class="hljs-keyword">initial</span> <span class="hljs-keyword">begin</span>
+    SEED = <span class="hljs-built_in">$time</span>;
+    <span class="hljs-built_in">$dumpfile</span>(<span class="hljs-string">"Adder32_tb.vcd"</span>);
+    <span class="hljs-built_in">$dumpvars</span>(<span class="hljs-number">0</span>, Adder32_tb);
+    errors = <span class="hljs-number">0</span>;
+    A = <span class="hljs-built_in">$random</span>(SEED);                           
+   <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">10000</span>; i=i+<span class="hljs-number">1</span>) <span class="hljs-keyword">begin</span>          
+          B = ~A; CIN = <span class="hljs-number">0</span>;  #<span class="hljs-number">10</span> ; checkadd;  
+          B = ~A; CIN = <span class="hljs-number">1</span>;  #<span class="hljs-number">10</span> ; checkadd;     
+          B = A;  CIN = <span class="hljs-number">1</span>;  #<span class="hljs-number">10</span> ; checkadd;    
+          A = <span class="hljs-built_in">$random</span>; B= <span class="hljs-built_in">$random</span>;                          
+          CIN = <span class="hljs-number">0</span>; #<span class="hljs-number">10</span> ; checkadd;     
+          CIN = <span class="hljs-number">1</span>; #<span class="hljs-number">10</span> ; checkadd;        
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-built_in">$display</span>(<span class="hljs-string">"Adder32 test done. Errors: %0d ."</span>, errors);
+    <span class="hljs-built_in">$stop</span>(<span class="hljs-number">1</span>);
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">endmodule</span>
+
+</div></code></pre>
+<p>为了方便使用iverilog编译和仿真我编写了如下Makefile:</p>
+<pre class="hljs"><code><div>.PHONY : all module clean
+
+FILES = <span class="hljs-variable">$(<span class="hljs-built_in">wildcard</span> <span class="hljs-variable">$(module_name)</span>*.v)</span>
+ALL_vFILES = <span class="hljs-variable">$(<span class="hljs-built_in">wildcard</span> *.v)</span>
+vvp_files = <span class="hljs-variable">$(<span class="hljs-built_in">wildcard</span> *.vvp)</span>
+vcd_files = <span class="hljs-variable">$(<span class="hljs-built_in">wildcard</span> *.vcd)</span>
+sim_file = <span class="hljs-variable">$(<span class="hljs-built_in">wildcard</span> *_sim)</span>
+
+<span class="hljs-section">module:</span>
+	iverilog <span class="hljs-variable">$(FILES)</span> -o <span class="hljs-variable">$(module_name)</span>_sim.vvp
+	vvp -n <span class="hljs-variable">$(module_name)</span>_sim.vvp -lxt2
+
+<span class="hljs-section">all:</span>
+	iverilog <span class="hljs-variable">$(ALL_vFILES)</span> -o <span class="hljs-variable">$(project_name)</span>_sim.vvp
+	vvp -n <span class="hljs-variable">$(project_name)</span>_sim.vvp -lxt2
+
+<span class="hljs-section">clean:</span>
+	rm <span class="hljs-variable">$(vvp_files)</span> <span class="hljs-variable">$(vcd_files)</span> <span class="hljs-variable">$(sim_file)</span>
+</div></code></pre>
+<p>接着使用如下指令进行编译和仿真得到波形文件：</p>
+<pre class="hljs"><code><div>make module module_name=Adder32
+</div></code></pre>
+<p>命令行输出如下：</p>
+<pre class="hljs"><code><div>iverilog Adder32_tb.v Adder32.v -o Adder32_sim.vvp
+vvp -n Adder32_sim.vvp -lxt2
+LXT2 info: dumpfile Adder32_tb.vcd opened for output.
+Adder32 test done. Errors: 0 .
+</div></code></pre>
+<p>可见测试未发现错误。
+使用GTKWave打开仿真生成的波形文件：</p>
+<pre class="hljs"><code><div>gtkwave ./Adder32_tb.vcd 
+</div></code></pre>
+<p><img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/截屏2024-03-24 14.26.00.png" alt="image-20240312143018667"></p>
+<p>仿真结果表明该电路可以正常工作。</p>
+<h2 id="2-%E6%A1%B6%E5%BD%A2%E7%A7%BB%E4%BD%8D%E5%99%A8">2. 桶形移位器</h2>
+<h3 id="%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1">整体设计</h3>
+<p>使用多路选择器级联实现一个周期内完成移位。
+移位器使用二路选择器组合实现。</p>
+<h3 id="%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1">模块设计</h3>
+<p>设计中有若干个模块：</p>
+<ul>
+<li>chose_2to1 模块：这是一个2选1的多路选择器模块，它接收两个输入信号 a 和 b，以及一个选择信号 c。根据选择信号 c 的值，输出 a 或 b。如果 c 为0，则输出 a；如果 c 为1，则输出 b。<pre class="hljs"><code><div><span class="hljs-keyword">module</span> chose_2to1(
+    <span class="hljs-keyword">input</span> a,<span class="hljs-comment">// 0</span>
+    <span class="hljs-keyword">input</span> b,<span class="hljs-comment">// 1</span>
+    <span class="hljs-keyword">input</span> c,
+    <span class="hljs-keyword">output</span> o
+);
+    <span class="hljs-keyword">assign</span> o = (~c &amp; a) | (c &amp; b);
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>shift_left 模块：这个模块实现了向左移位的功能。它接收一个32位的输入 din 和一个5位的移位量 shamt。根据 shamt 的值，输入 din 向左移动相应的位数。模块内部通过一系列的 chose_2to1 模块来实现逐级移位，最终将移位后的结果输出到 dout。<pre class="hljs"><code><div><span class="hljs-keyword">module</span> shift_left(
+    <span class="hljs-keyword">output</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] dout,
+    <span class="hljs-keyword">input</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] din,
+    <span class="hljs-keyword">input</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] shamt
+);
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] l2;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] l4;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] l8;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] l16;
+    <span class="hljs-comment">/*
+    python3
+        j = 1
+        for i in range(0, 32):
+            shift_l = ''
+            if i - j &lt; 0:
+                shift_l = '1\'b0'
+            else:
+                shift_l = "din[" + str(i-j) + "]"
+            print("chose_2to1 l2_" + str(i) + "(")
+            print("    .a(din[" + str(i) + "]),")
+            print("    .b(" + shift_l + "),")
+            print("    .c(shamt[0]),")
+            print("    .o(l2["  + str(i) + "])")
+            print(");")
+
+        j = 2
+        for i in range(0, 32):
+            shift_l = ''
+            if i - j &lt; 0:
+                shift_l = '1\'b0'
+            else:
+                shift_l = "l2[" + str(i-j) + "]"
+            print("chose_2to1 l4_" + str(i) + "(")
+            print("    .a(l2[" + str(i) + "]),")
+            print("    .b(" + shift_l + "),")
+            print("    .c(shamt[1]),")
+            print("    .o(l4["  + str(i) + "])")
+            print(");")
+
+        j = 4
+        for i in range(0, 32):
+            shift_l = ''
+            if i - j &lt; 0:
+                shift_l = '1\'b0'
+            else:
+                shift_l = "l4[" + str(i-j) + "]"
+            print("chose_2to1 l8_" + str(i) + "(")
+            print("    .a(l4[" + str(i) + "]),")
+            print("    .b(" + shift_l + "),")
+            print("    .c(shamt[2]),")
+            print("    .o(l8["  + str(i) + "])")
+            print(");")
+
+        j = 8
+        for i in range(0, 32):
+            shift_l = ''
+            if i - j &lt; 0:
+                shift_l = '1\'b0'
+            else:
+                shift_l = "l8[" + str(i-j) + "]"
+            print("chose_2to1 l16_" + str(i) + "(")
+            print("    .a(l8[" + str(i) + "]),")
+            print("    .b(" + shift_l + "),")
+            print("    .c(shamt[3]),")
+            print("    .o(l16["  + str(i) + "])")
+            print(");")
+
+        j = 16
+        for i in range(0, 32):
+            shift_l = ''
+            if i - j &lt; 0:
+                shift_l = '1\'b0'
+            else:
+                shift_l = "l16[" + str(i-j) + "]"
+            print("chose_2to1 l32_" + str(i) + "(")
+            print("    .a(l16[" + str(i) + "]),")
+            print("    .b(" + shift_l + "),")
+            print("    .c(shamt[4]),")
+            print("    .o(dout["  + str(i) + "])")
+            print(");")
+    */</span>  
+    <span class="hljs-comment">//生成的代码行数过多，不在此附上</span>
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>shift_right 模块：与 shift_left 模块相对应，这个模块实现了向右移位的功能。它同样接收一个32位的输入 din 和一个5位的移位量 shamt，以及一个额外的输入 AL（算术左移标志）。根据 shamt 的值，输入 din 向右移动相应的位数。在移位过程中，最高位的填充取决于 AL 信号的值。模块内部也使用了一系列 chose_2to1 模块来实现逐级移位，并将结果输出到 dout。<pre class="hljs"><code><div><span class="hljs-keyword">module</span> shift_right(
+    <span class="hljs-keyword">output</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] dout,
+    <span class="hljs-keyword">input</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] din,
+    <span class="hljs-keyword">input</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] shamt,
+    <span class="hljs-keyword">input</span> AL
+    );
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] r2;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] r4;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] r8;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] r16;
+    <span class="hljs-comment">/*
+    python3
+    j = 1
+    for i in range(0, 32):
+        shift_l = ''
+        if i + j &gt;31:
+            shift_l = str("AL &amp; din[31]")
+        else:
+            shift_l = "din[" + str(i+j) + "]"
+        print("chose_2to1 l2_" + str(i) + "(")
+        print("    .a(din[" + str(i) + "]),")
+        print("    .b(" + shift_l + "),")
+        print("    .c(shamt[0]),")
+        print("    .o(l2["  + str(i) + "])")
+        print(");")
+
+    j = 2
+    for i in range(0, 32):
+        shift_l = ''
+        if i + j &gt;31:
+            shift_l = str("AL &amp; din[31]")
+        else:
+            shift_l = "l2[" + str(i+j) + "]"
+        print("chose_2to1 l4_" + str(i) + "(")
+        print("    .a(l2[" + str(i) + "]),")
+        print("    .b(" + shift_l + "),")
+        print("    .c(shamt[1]),")
+        print("    .o(l4["  + str(i) + "])")
+        print(");")
+
+    j = 4
+    for i in range(0, 32):
+        shift_l = ''
+        if i + j &gt;31:
+            shift_l = str("AL &amp; din[31]")
+        else:
+            shift_l = "l4[" + str(i+j) + "]"
+        print("chose_2to1 l8_" + str(i) + "(")
+        print("    .a(l4[" + str(i) + "]),")
+        print("    .b(" + shift_l + "),")
+        print("    .c(shamt[2]),")
+        print("    .o(l8["  + str(i) + "])")
+        print(");")
+
+    j = 8
+    for i in range(0, 32):
+        shift_l = ''
+        if i + j &gt;31:
+            shift_l = str("AL &amp; din[31]")
+        else:
+            shift_l = "l8[" + str(i+j) + "]"
+        print("chose_2to1 l16_" + str(i) + "(")
+        print("    .a(l8[" + str(i) + "]),")
+        print("    .b(" + shift_l + "),")
+        print("    .c(shamt[3]),")
+        print("    .o(l16["  + str(i) + "])")
+        print(");")
+
+    j = 16
+    for i in range(0, 32):
+        shift_l = ''
+        if i + j &gt;31:
+            shift_l = str("AL &amp; din[31]")
+        else:
+            shift_l = "l16[" + str(i+j) + "]"
+        print("chose_2to1 l32_" + str(i) + "(")
+        print("    .a(l16[" + str(i) + "]),")
+        print("    .b(" + shift_l + "),")
+        print("    .c(shamt[4]),")
+        print("    .o(dout["  + str(i) + "])")
+        print(");")
+    */</span>
+    <span class="hljs-comment">//...</span>
+    <span class="hljs-comment">//生成的代码过长，不在此附上</span>
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+<li>barrelsft32 模块：这是整个桶形移位器的主模块，它整合了左右移位的功能。模块接收一个32位的输入 din，一个5位的移位量 shamt，以及两个控制信号 LR（左移/右移选择）和 AL（算术左移标志）。根据 LR 的值，模块将选择使用 shift_left 或 shift_right 模块的输出。最终，通过一系列的 chose_2to1 模块，模块将左移和右移的结果根据 LR 信号的选择合并，并输出到 dout。<pre class="hljs"><code><div><span class="hljs-keyword">module</span> barrelsft32(
+    <span class="hljs-keyword">output</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] dout,
+    <span class="hljs-keyword">input</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] din,
+    <span class="hljs-keyword">input</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] shamt,   
+    <span class="hljs-keyword">input</span> LR,           
+    <span class="hljs-keyword">input</span> AL       
+);
+<span class="hljs-comment">//add your code here</span>
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] S_L;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] S_R;
+    shift_left SL(
+        <span class="hljs-variable">.dout</span>(S_L),
+        <span class="hljs-variable">.din</span>(din),
+        <span class="hljs-variable">.shamt</span>(shamt)
+    );
+    shift_right SR(
+        <span class="hljs-variable">.dout</span>(S_R),
+        <span class="hljs-variable">.din</span>(din),
+        <span class="hljs-variable">.shamt</span>(shamt),
+        <span class="hljs-variable">.AL</span>(AL)
+    );
+    <span class="hljs-comment">/*
+    python3
+    for i in range(0, 32):
+        print("chose_2to1 LR_{}(".format(str(i)))
+        print("    .a(S_R[{}]),".format(str(i)))
+        print("    .b(S_L[{}]),".format(str(i)))
+        print("    .c(LR),")
+        print("    .o(dout[{}])".format(str(i)))
+        print(");")
+    */</span>
+    <span class="hljs-comment">//生成出的代码长度过长，不在此附上</span>
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+</li>
+</ul>
+<h3 id="%E4%BB%BF%E7%9C%9F">仿真</h3>
+<p>仿真思路为，重复多次随机输入，检查模块输出与测试脚本计算结果是否相同：</p>
+<pre class="hljs"><code><div><span class="hljs-meta">`<span class="hljs-meta-keyword">timescale</span> 1ns / 1ps</span>
+<span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span>
+<span class="hljs-comment">// Company: </span>
+<span class="hljs-comment">// Engineer: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Create Date: 2023/09/17 22:03:05</span>
+<span class="hljs-comment">// Design Name: </span>
+<span class="hljs-comment">// Module Name: barrelsft32_tb</span>
+<span class="hljs-comment">// Project Name: </span>
+<span class="hljs-comment">// Target Devices: </span>
+<span class="hljs-comment">// Tool Versions: </span>
+<span class="hljs-comment">// Description: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Dependencies: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Revision:</span>
+<span class="hljs-comment">// Revision 0.01 - File Created</span>
+<span class="hljs-comment">// Additional Comments:</span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span>
+
+
+<span class="hljs-keyword">module</span> barrelsft32_tb( );
+ <span class="hljs-keyword">parameter</span> N = <span class="hljs-number">32</span>;      <span class="hljs-comment">// Operand widths</span>
+ <span class="hljs-keyword">integer</span> SEED;    <span class="hljs-comment">// Change for a different random sequence</span>
+ <span class="hljs-keyword">wire</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] DOUT;
+ <span class="hljs-keyword">reg</span> <span class="hljs-keyword">signed</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] DIN;  <span class="hljs-comment">//�������óɴ��������������������Ƴ���</span>
+ <span class="hljs-keyword">reg</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] SHAMT;      <span class="hljs-comment">//�ƶ�λ��</span>
+ <span class="hljs-keyword">reg</span> LR;               <span class="hljs-comment">// LR=1 ʱ����,LR=0 ʱ����</span>
+ <span class="hljs-keyword">reg</span> AL;              <span class="hljs-comment">// AL=1 ʱ��������,AR=0 ʱ�߼�����</span>
+  <span class="hljs-keyword">integer</span> i, sh, errors;
+  <span class="hljs-keyword">reg</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] xpectS; 
+ 
+  barrelsft32 barrelsft32_inst(<span class="hljs-variable">.dout</span>(DOUT),<span class="hljs-variable">.din</span>(DIN),<span class="hljs-variable">.shamt</span>(SHAMT),<span class="hljs-variable">.LR</span>(LR),<span class="hljs-variable">.AL</span>(AL));
+
+  <span class="hljs-keyword">task</span> checksh;   <span class="hljs-comment">// Task to compare barrelsft32_inst output (DOUT) with expected (xpectS)</span>
+   <span class="hljs-keyword">input</span> LR,AL;
+   <span class="hljs-keyword">begin</span>
+      xpectS=((LR==<span class="hljs-number">1</span>) ? ((DIN &lt;&lt; SHAMT) ):((AL==<span class="hljs-number">1</span>) ?(DIN &gt;&gt;&gt; SHAMT ):(DIN &gt;&gt; SHAMT)));
+        <span class="hljs-keyword">if</span> (xpectS!==DOUT) <span class="hljs-keyword">begin</span>
+        errors = errors + <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">$display</span>(<span class="hljs-string">"Error: LR=%1B,AL=%1B,SHAMT=%5b, DIN=%32b, want= %32b, got= %32b"</span>, LR, AL, SHAMT,DIN, xpectS, DOUT);
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">endtask</span>
+  
+  <span class="hljs-keyword">initial</span> <span class="hljs-keyword">begin</span>
+    <span class="hljs-built_in">$dumpfile</span>(<span class="hljs-string">"barrelsft32_tb.vcd"</span>);
+    <span class="hljs-built_in">$dumpvars</span>(<span class="hljs-number">0</span>, barrelsft32_tb);
+    SEED = <span class="hljs-built_in">$time</span>;
+    errors = <span class="hljs-number">0</span>; DIN = <span class="hljs-built_in">$random</span>(SEED);
+    <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">2500</span>; i=i+<span class="hljs-number">1</span>) <span class="hljs-keyword">begin</span>      <span class="hljs-comment">// Test 2500 random input data vectors</span>
+      DIN = <span class="hljs-built_in">$random</span>;                    <span class="hljs-comment">// Apply random data input</span>
+      <span class="hljs-keyword">for</span> (sh=<span class="hljs-number">1</span>; sh&lt;=N-<span class="hljs-number">1</span>; sh=sh+<span class="hljs-number">1</span>) <span class="hljs-keyword">begin</span> <span class="hljs-comment">// Test all possible shift amounts</span>
+        SHAMT = sh;                         <span class="hljs-comment">// Apply shift amount</span>
+                                       
+        LR=<span class="hljs-number">1'b0</span>;AL=<span class="hljs-number">1'b0</span>; #<span class="hljs-number">10</span>  ; checksh(LR,AL);
+        LR=<span class="hljs-number">1'b0</span>;AL=<span class="hljs-number">1'b1</span>; #<span class="hljs-number">10</span>  ; checksh(LR,AL);
+        LR=<span class="hljs-number">1'b1</span>;AL=<span class="hljs-number">1'b0</span>; #<span class="hljs-number">10</span>  ; checksh(LR,AL);
+        LR=<span class="hljs-number">1'b1</span>;AL=<span class="hljs-number">1'b1</span>; #<span class="hljs-number">10</span>  ; checksh(LR,AL);
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-built_in">$display</span>(<span class="hljs-string">"BarrelShifter32 test done, %0d errors."</span>, errors); <span class="hljs-built_in">$fflush</span>; 
+    <span class="hljs-built_in">$stop</span>(<span class="hljs-number">1</span>);
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+<p>使用上述makefile脚本和如下指令调用iverilog进编译和行仿真得到波形文件：</p>
+<pre class="hljs"><code><div>make module module_name=barrelsft32
+</div></code></pre>
+<p>命令行输出如下：</p>
+<pre class="hljs"><code><div>iverilog barrelsft32_tb.v barrelsft32.v -o barrelsft32_sim.vvp
+vvp -n barrelsft32_sim.vvp -lxt2
+LXT2 info: dumpfile barrelsft32_tb.vcd opened for output.
+BarrelShifter32 test done, 0 errors.
+</div></code></pre>
+<p>仿真没有发现问题。</p>
+<p>使用GTKWave打开仿真生成的波形文件：</p>
+<pre class="hljs"><code><div>gtkwave ./barrelsft32_tb.vcd 
+</div></code></pre>
+<p><img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/截屏2024-03-24 14.56.43.png" alt="image-20240312163320726"></p>
+<p>可以看到仿真结果符合预期，模块可以按照预期工作。</p>
+<p>仿真结果符合预期。</p>
+<h2 id="3-32-%E4%BD%8D-alu">3. 32 位 ALU</h2>
+<h3 id="%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1">整体设计</h3>
+<p>通过将若干个模块，如加法器和与门阵列、或门阵列多路选选择器相连实现按照ALUctr信号输出想要的结果。</p>
+<h3 id="%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1">模块设计</h3>
+<p>该设计由1个模块组成：</p>
+<ul>
+<li>ALU32 模块：
+<ul>
+<li>功能：作为顶层模块，ALU32根据控制信号aluctr选择- 并执行不同的算术或逻辑操作。</li>
+<li>输入：两个32位数据输入dataa和datab，4位控制信号aluctr。</li>
+<li>输出：32位结果result，零标志zero。</li>
+<li>内部逻辑：
+<ul>
+<li>使用Adder32模块执行加法和减法操作。</li>
+<li>使用barrelsft32模块执行逻辑右移位操作。</li>
+<li>通过多路选择器（由output_BUS数组和OPctr控制）来选择不同的操作结果作为最终输出。</li>
+<li>生成其他控制信号，如SFTctr、ALctr、SUBctr和SIGctr，用于控制ALU的行为。</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> ALU32(
+    <span class="hljs-keyword">output</span>  [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] result,     
+    <span class="hljs-keyword">output</span>  zero,              
+    <span class="hljs-keyword">input</span>   [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] dataa,     
+    <span class="hljs-keyword">input</span>   [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] datab,      
+    <span class="hljs-keyword">input</span>   [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] aluctr       
+    ); 
+    <span class="hljs-comment">//add your code here</span>
+
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] output_BUS [<span class="hljs-number">0</span>:<span class="hljs-number">7</span>];
+    <span class="hljs-keyword">wire</span> OF_adder, SF_adder, CF_adder, COUT_adder;
+    <span class="hljs-keyword">wire</span> SFTctr, ALctr, SUBctr, SIGctr;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">2</span>:<span class="hljs-number">0</span>] OPctr;
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] mux_1;
+    <span class="hljs-keyword">assign</span> mux_1[<span class="hljs-number">0</span>] = SUBctr ^ COUT_adder;
+    <span class="hljs-keyword">assign</span> mux_1[<span class="hljs-number">1</span>] = OF_adder ^ SF_adder;
+    <span class="hljs-keyword">assign</span> SFTctr = (aluctr == <span class="hljs-number">4'b0001</span>) ? <span class="hljs-number">1'b1</span> : <span class="hljs-number">1'b0</span>;
+    <span class="hljs-keyword">assign</span> ALctr = (aluctr == <span class="hljs-number">4'b1101</span>) ? <span class="hljs-number">1'b1</span> : <span class="hljs-number">1'b0</span>;
+    <span class="hljs-keyword">assign</span> SUBctr = (aluctr == <span class="hljs-number">4'b0010</span> || aluctr == <span class="hljs-number">4'b0011</span> || aluctr == <span class="hljs-number">4'b1000</span>) ? <span class="hljs-number">1'b1</span> : <span class="hljs-number">1'b0</span>;
+    <span class="hljs-keyword">assign</span> SIGctr = (aluctr == <span class="hljs-number">4'b0010</span>) ? <span class="hljs-number">1'b1</span> : <span class="hljs-number">1'b0</span>;
+    <span class="hljs-keyword">assign</span> OPctr = (aluctr == <span class="hljs-number">4'b0000</span> || aluctr == <span class="hljs-number">4'b1000</span>) ? <span class="hljs-number">3'b000</span> : 
+                    ((aluctr == <span class="hljs-number">4'b0001</span> || aluctr == <span class="hljs-number">4'b1101</span>) ? <span class="hljs-number">3'b100</span> : 
+                    ((aluctr == <span class="hljs-number">4'b0010</span> || aluctr == <span class="hljs-number">4'b0011</span>) ? <span class="hljs-number">3'b110</span> : 
+                    ((aluctr == <span class="hljs-number">4'b0100</span>) ? <span class="hljs-number">3'b011</span> : 
+                    ((aluctr == <span class="hljs-number">4'b0101</span> || aluctr == <span class="hljs-number">4'b1101</span>) ? <span class="hljs-number">3'b100</span> : 
+                    ((aluctr == <span class="hljs-number">4'b0110</span>) ? <span class="hljs-number">3'b010</span> : 
+                    ((aluctr == <span class="hljs-number">4'b0111</span>) ? <span class="hljs-number">3'b001</span> : <span class="hljs-number">3'b101</span>))))));
+    Adder32 my_adder(
+        <span class="hljs-variable">.f</span>(output_BUS[<span class="hljs-number">0</span>]),
+        <span class="hljs-variable">.OF</span>(OF_adder),
+        <span class="hljs-variable">.SF</span>(SF_adder), 
+        <span class="hljs-variable">.ZF</span>(zero), 
+        <span class="hljs-variable">.CF</span>(CF_adder),
+        <span class="hljs-variable">.cout</span>(COUT_adder),
+        <span class="hljs-variable">.x</span>(dataa),
+        <span class="hljs-variable">.y</span>(datab),
+        <span class="hljs-variable">.sub</span>(SUBctr)
+    );    
+    barrelsft32 my_barrel(
+        <span class="hljs-variable">.dout</span>(output_BUS[<span class="hljs-number">4</span>]),
+        <span class="hljs-variable">.din</span>(dataa),
+        <span class="hljs-variable">.shamt</span>(datab[<span class="hljs-number">4</span>:<span class="hljs-number">0</span>]),   
+        <span class="hljs-variable">.LR</span>(SFTctr),           
+        <span class="hljs-variable">.AL</span>(ALctr)   
+    );
+    <span class="hljs-keyword">assign</span> output_BUS[<span class="hljs-number">1</span>] = dataa &amp; datab;
+    <span class="hljs-keyword">assign</span> output_BUS[<span class="hljs-number">2</span>] = dataa | datab;
+    <span class="hljs-keyword">assign</span> output_BUS[<span class="hljs-number">3</span>] = dataa ^ datab;
+    <span class="hljs-keyword">assign</span> output_BUS[<span class="hljs-number">5</span>] = datab;
+    <span class="hljs-keyword">assign</span> output_BUS[<span class="hljs-number">6</span>] = {<span class="hljs-number">31'b0000000000000000000000000</span>, (mux_1[SIGctr])};
+    <span class="hljs-keyword">assign</span> output_BUS[<span class="hljs-number">7</span>] = <span class="hljs-number">32'b00000000000000000000000000</span>;
+    <span class="hljs-keyword">assign</span> result = output_BUS[OPctr];
+<span class="hljs-keyword">endmodule</span>    
+</div></code></pre>
+</li>
+</ul>
+<h3 id="%E4%BB%BF%E7%9C%9F">仿真</h3>
+<p>仿真脚本思路为，随机输入并检查模块输出是否与脚本的计算结果相同：</p>
+<pre class="hljs"><code><div><span class="hljs-meta">`<span class="hljs-meta-keyword">timescale</span> 1ns / 1ps</span>
+<span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span>
+<span class="hljs-comment">// Company: </span>
+<span class="hljs-comment">// Engineer: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Create Date: 2023/09/17 22:35:58</span>
+<span class="hljs-comment">// Design Name: </span>
+<span class="hljs-comment">// Module Name: ALU32_tb</span>
+<span class="hljs-comment">// Project Name: </span>
+<span class="hljs-comment">// Target Devices: </span>
+<span class="hljs-comment">// Tool Versions: </span>
+<span class="hljs-comment">// Description: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Dependencies: </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Revision:</span>
+<span class="hljs-comment">// Revision 0.01 - File Created</span>
+<span class="hljs-comment">// Additional Comments:</span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span>
+
+
+<span class="hljs-keyword">module</span> ALU32_tb(    );
+  <span class="hljs-keyword">parameter</span> N = <span class="hljs-number">32</span>;           
+  <span class="hljs-keyword">wire</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] Result;              <span class="hljs-comment">//32λ������</span>
+  <span class="hljs-keyword">wire</span> zero;                         <span class="hljs-comment">//���Ϊ0��־λ</span>
+  <span class="hljs-keyword">reg</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>]  Data_A, Data_B;     <span class="hljs-comment">//32λ��������,�͵�ALU�˿�A</span>
+  <span class="hljs-keyword">reg</span> [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>]   ALUctr;             <span class="hljs-comment">//4λALU���������ź�</span>
+  <span class="hljs-keyword">integer</span> i, errors;
+  <span class="hljs-keyword">reg</span> [N-<span class="hljs-number">1</span>:<span class="hljs-number">0</span>] TempS;
+  <span class="hljs-keyword">reg</span> [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] shamt;
+<span class="hljs-comment">//  reg tempZero;</span>
+  <span class="hljs-keyword">reg</span> less;
+  <span class="hljs-keyword">reg</span> <span class="hljs-keyword">signed</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] tempdata_a,tempdata_b;
+  
+  <span class="hljs-keyword">parameter</span> Addctr  = <span class="hljs-number">4'b0000</span>,   <span class="hljs-comment">// ���岻ͬ����Ŀ�����</span>
+             Sllctr  = <span class="hljs-number">4'b0001</span>, 
+             Sltctr  = <span class="hljs-number">4'b0010</span>, 
+             Sltuctr = <span class="hljs-number">4'b0011</span>, 
+             Xorctr  = <span class="hljs-number">4'b0100</span>, 
+             Srlctr  = <span class="hljs-number">4'b0101</span>, 
+             Orctr   = <span class="hljs-number">4'b0110</span>, 
+             Andctr  = <span class="hljs-number">4'b0111</span>, 
+             Subctr  = <span class="hljs-number">4'b1000</span>, 
+             Sractr  = <span class="hljs-number">4'b1101</span>, 
+             Luictr  = <span class="hljs-number">4'b1111</span>; 
+
+
+ALU32 ALU32_inst(<span class="hljs-variable">.result</span>(Result),<span class="hljs-variable">.zero</span>(zero),<span class="hljs-variable">.dataa</span>(Data_A),<span class="hljs-variable">.datab</span>(Data_B),<span class="hljs-variable">.aluctr</span>(ALUctr));
+
+  <span class="hljs-keyword">task</span> checkalu;
+    <span class="hljs-keyword">begin</span>
+    <span class="hljs-keyword">case</span> (ALUctr)
+    Addctr: <span class="hljs-keyword">begin</span> 
+                 TempS=Data_A+Data_B;   <span class="hljs-comment">//�ӷ�����</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+    Sllctr: <span class="hljs-keyword">begin</span> 
+                 shamt=Data_B[<span class="hljs-number">4</span>:<span class="hljs-number">0</span>];
+                 TempS=Data_A &lt;&lt; shamt;   <span class="hljs-comment">//��������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+    Sltctr: <span class="hljs-keyword">begin</span>                 <span class="hljs-comment">//��������С�ڱȽ�����</span>
+                 tempdata_a=Data_A;
+                 tempdata_b=Data_B;
+                 less=tempdata_a &lt; tempdata_b;
+                 TempS={<span class="hljs-number">28'h0000000</span>,<span class="hljs-number">3'b000</span>,less};
+                 <span class="hljs-keyword">if</span> (TempS!=Result)
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+    Sltuctr: <span class="hljs-keyword">begin</span>                 <span class="hljs-comment">//�޷�����С�ڱȽ�����</span>
+                 less=Data_A &lt; Data_B;
+                 TempS={<span class="hljs-number">28'h0000000</span>,<span class="hljs-number">3'b000</span>,less};
+                 <span class="hljs-keyword">if</span> (TempS!=Result)
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+      Xorctr: <span class="hljs-keyword">begin</span> 
+                 TempS=Data_A ^ Data_B;   <span class="hljs-comment">//�������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+      Srlctr: <span class="hljs-keyword">begin</span> 
+                 shamt=Data_B[<span class="hljs-number">4</span>:<span class="hljs-number">0</span>];
+                 TempS=Data_A &gt;&gt; shamt;   <span class="hljs-comment">//�߼���������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+      Orctr: <span class="hljs-keyword">begin</span> 
+                 TempS=Data_A | Data_B;   <span class="hljs-comment">//������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+      Andctr: <span class="hljs-keyword">begin</span> 
+                 TempS=Data_A &amp; Data_B;   <span class="hljs-comment">//������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+      Subctr: <span class="hljs-keyword">begin</span> 
+                 TempS=Data_A-Data_B;   <span class="hljs-comment">//��������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+      Sractr: <span class="hljs-keyword">begin</span> 
+                 shamt=Data_B[<span class="hljs-number">4</span>:<span class="hljs-number">0</span>];
+                 TempS=tempdata_a &gt;&gt;&gt; shamt;   <span class="hljs-comment">//������������</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+    Luictr: <span class="hljs-keyword">begin</span> 
+                 TempS=Data_B;   <span class="hljs-comment">//ȡ������B</span>
+                 <span class="hljs-keyword">if</span> (TempS!=Result) 
+                  <span class="hljs-keyword">begin</span>     
+                       errors = errors + <span class="hljs-number">1</span>;
+                      <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ERROR: ALUctr,Data_A,Data_B = %4b,%8h,%8h, want= %8h, got=%8h,%1b."</span> ,
+                      ALUctr, Data_A, Data_B, TempS, Result,zero);                 
+                  <span class="hljs-keyword">end</span>
+             <span class="hljs-keyword">end</span>
+           
+             
+    <span class="hljs-keyword">endcase</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">endtask</span>
+  <span class="hljs-keyword">integer</span> SEED;
+  <span class="hljs-keyword">initial</span> <span class="hljs-keyword">begin</span>
+     SEED = <span class="hljs-built_in">$time</span>;
+     <span class="hljs-built_in">$dumpfile</span>(<span class="hljs-string">"ALU32_tb.vcd"</span>);
+     <span class="hljs-built_in">$dumpvars</span>(<span class="hljs-number">0</span>, ALU32_tb);
+    errors = <span class="hljs-number">0</span>;
+           Data_A = <span class="hljs-built_in">$random</span>(SEED);                        <span class="hljs-comment">// Set pattern based on seed parameter</span>
+   <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">10000</span>; i=i+<span class="hljs-number">1</span>) <span class="hljs-keyword">begin</span>                <span class="hljs-comment">//����10000��</span>
+          Data_B = ~Data_A; 
+          ALUctr = Addctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sllctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sltctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sltuctr; #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Xorctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Srlctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Orctr;   #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Subctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sractr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Luictr;  #<span class="hljs-number">10</span> ; checkalu;     
+          Data_B = Data_A; 
+          ALUctr = Addctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sllctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sltctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sltuctr; #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Xorctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Srlctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Orctr;   #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Subctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sractr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Luictr;  #<span class="hljs-number">10</span> ; checkalu;     
+          Data_A = <span class="hljs-built_in">$random</span>; Data_B= <span class="hljs-built_in">$random</span>;                          <span class="hljs-comment">// Get random number, maybe &gt; 32 bits wide</span>
+          ALUctr = Addctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sllctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sltctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sltuctr; #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Xorctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Srlctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Orctr;   #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Subctr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Sractr;  #<span class="hljs-number">10</span> ; checkalu;     
+          ALUctr = Luictr;  #<span class="hljs-number">10</span> ; checkalu;     
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-built_in">$display</span>(<span class="hljs-string">"ALU32 test done. Errors: %0d ."</span>, errors);
+    <span class="hljs-built_in">$stop</span>(<span class="hljs-number">1</span>);
+  <span class="hljs-keyword">end</span>
+
+
+
+
+<span class="hljs-comment">/*
+     initial begin
+         #10 begin Data_A=$random(SEED); Data_B=$random; aluctr=4'b0000;end
+         
+         #20 aluctr=4'b0001;
+         #20 aluctr=4'b0010;
+         #20 aluctr=4'b0011;
+         #20 aluctr=4'b0100;
+         #20 aluctr=4'b0101;
+         #20 aluctr=4'b0110;
+         #20 aluctr=4'b0111;
+         #20 aluctr=4'b1000;
+         #20 aluctr=4'b1101;
+         #20 aluctr=4'b1111;
+         #50 begin a=32'h80000000; b=32'h7fffffff; aluctr=4'b0010; end
+         #20 aluctr=4'b0011; 
+         #20 aluctr=4'b0100;
+         #20 aluctr=4'b0101;
+         #20 aluctr=4'b0110;
+         #20 aluctr=4'b0111;
+         #20 aluctr=4'b1000;
+         #50 begin a=32'h00000000; b=32'hffffffff; aluctr=4'b0010; end
+         #20 aluctr=4'b0011; 
+         #20 aluctr=4'b0100;
+         #20 aluctr=4'b0101;
+         #20 aluctr=4'b0110;
+         #20 aluctr=4'b0111;
+         #20 aluctr=4'b1000;
+         #20  $stop;
+ end
+*/</span>
+<span class="hljs-keyword">endmodule</span>
+
+</div></code></pre>
+<p>使用如下命令进行仿真：</p>
+<pre class="hljs"><code><div>iverilog ./Adder32.v ./barrelsft32.v ./ALU32.v ./ALU32_tb.v -o ALU32_tb_sim.vvp
+vvp -n ALU32_tb_sim.vvp -lxt2
+</div></code></pre>
+<p>命令行输出如下：</p>
+<pre class="hljs"><code><div>iverilog ./Adder32.v ./barrelsft32.v ./ALU32.v ./ALU32_tb.v -o ALU32_tb_sim.vvp
+vvp -n ALU32_tb_sim.vvp -lxt2
+LXT2 info: dumpfile ALU32_tb.vcd opened for output.
+ALU32 test done. Errors: 0 .
+</div></code></pre>
+<p>可见没有发异常。
+使用gtkwave打开生成的波形：</p>
+<pre class="hljs"><code><div>gtkwave ./ALU32_tb.vcd 
+</div></code></pre>
+<p><img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/截屏2024-03-24 15.19.17.png" alt="">
+波形图也没有异常，可以认为模块在模拟中可以正常工作。</p>
+<h3 id="%E9%AA%8C%E8%AF%81">验证</h3>
+<p>为了能够在实验板进行验证，分别使用 4 位输入开关表示输入端 a 和 b，使用 4 位输入开关表示 4 位
+ALU 控制码，32 位运算结果现在 8 个七段数码管上，运算结果的低 16 位输出到 16 个 led 指示灯，结果为
+0 的标志位输出到 3 色 led 的蓝色指示灯。
+上级模块和约束如下：</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">module</span> ALU32_top(
+    <span class="hljs-keyword">output</span> [<span class="hljs-number">6</span>:<span class="hljs-number">0</span>] segs,           
+    <span class="hljs-keyword">output</span> [<span class="hljs-number">7</span>:<span class="hljs-number">0</span>] AN,            
+    <span class="hljs-keyword">output</span>  [<span class="hljs-number">15</span>:<span class="hljs-number">0</span>] result_l,       
+    <span class="hljs-keyword">output</span>  zero,            
+    <span class="hljs-keyword">input</span>   [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] data_a,          
+    <span class="hljs-keyword">input</span>   [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] data_b,     
+    <span class="hljs-keyword">input</span>   [<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] aluctr,    
+    <span class="hljs-keyword">input</span>   clk
+); 
+<span class="hljs-comment">//add your code here</span>
+    <span class="hljs-keyword">wire</span> [<span class="hljs-number">31</span>:<span class="hljs-number">0</span>] ALU_result;
+    ALU32 ALU_0(
+        <span class="hljs-variable">.result</span>(ALU_result),     
+        <span class="hljs-variable">.zero</span>(zero),              
+        <span class="hljs-variable">.dataa</span>({data_a, data_a, data_a, data_a, data_a, data_a, data_a, data_a}),     
+        <span class="hljs-variable">.datab</span>({data_b, data_b, data_b, data_b, data_b, data_b, data_b, data_b}),      
+        <span class="hljs-variable">.aluctr</span>(aluctr)       
+    ); 
+    <span class="hljs-keyword">assign</span> result_l = ALU_result[<span class="hljs-number">15</span>:<span class="hljs-number">0</span>];
+    seg_display seg0(
+        <span class="hljs-variable">.I0</span>(ALU_result[<span class="hljs-number">31</span>:<span class="hljs-number">28</span>]),
+        <span class="hljs-variable">.I1</span>(ALU_result[<span class="hljs-number">27</span>:<span class="hljs-number">24</span>]),
+        <span class="hljs-variable">.I2</span>(ALU_result[<span class="hljs-number">23</span>:<span class="hljs-number">20</span>]),
+        <span class="hljs-variable">.I3</span>(ALU_result[<span class="hljs-number">19</span>:<span class="hljs-number">16</span>]),
+        <span class="hljs-variable">.I4</span>(ALU_result[<span class="hljs-number">15</span>:<span class="hljs-number">12</span>]),
+        <span class="hljs-variable">.I5</span>(ALU_result[<span class="hljs-number">11</span>:<span class="hljs-number">8</span>]),
+        <span class="hljs-variable">.I6</span>(ALU_result[<span class="hljs-number">7</span>:<span class="hljs-number">4</span>]),
+        <span class="hljs-variable">.I7</span>(ALU_result[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>]),
+        <span class="hljs-variable">.clk</span>(clk),
+        <span class="hljs-variable">.segs</span>(segs),           
+        <span class="hljs-variable">.AN</span>(AN)  
+    );
+<span class="hljs-keyword">endmodule</span>
+</div></code></pre>
+<pre class="hljs"><code><div>set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { data_a[<span class="hljs-number">0</span>] }]; #IO_L24N_T3_RS0_15 Sch=sw[<span class="hljs-number">0</span>]
+set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { data_a[<span class="hljs-number">1</span>] }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[<span class="hljs-number">1</span>]
+set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { data_a[<span class="hljs-number">2</span>] }]; #IO_L6N_T0_D08_VREF_14 Sch=sw[<span class="hljs-number">2</span>]
+set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { data_a[<span class="hljs-number">3</span>] }]; #IO_L13N_T2_MRCC_14 Sch=sw[<span class="hljs-number">3</span>]
+set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { data_b[<span class="hljs-number">0</span>] }]; #IO_L12N_T1_MRCC_14 Sch=sw[<span class="hljs-number">4</span>]
+set_property -dict { PACKAGE_PIN T18   IOSTANDARD LVCMOS33 } [get_ports { data_b[<span class="hljs-number">1</span>] }]; #IO_L7N_T1_D10_14 Sch=sw[<span class="hljs-number">5</span>]
+set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { data_b[<span class="hljs-number">2</span>] }]; #IO_L17N_T2_A13_D29_14 Sch=sw[<span class="hljs-number">6</span>]
+set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports { data_b[<span class="hljs-number">3</span>] }]; #IO_L5N_T0_D07_14 Sch=sw[<span class="hljs-number">7</span>]
+set_property -dict { PACKAGE_PIN H6    IOSTANDARD LVCMOS33 } [get_ports { aluctr[<span class="hljs-number">0</span>] }]; #IO_L24P_T3_35 Sch=sw[<span class="hljs-number">12</span>]
+set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { aluctr[<span class="hljs-number">1</span>] }]; #IO_L20P_T3_A08_D24_14 Sch=sw[<span class="hljs-number">13</span>]
+set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { aluctr[<span class="hljs-number">2</span>] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=sw[<span class="hljs-number">14</span>]
+set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { aluctr[<span class="hljs-number">3</span>] }]; #IO_L21P_T3_DQS_14 Sch=sw[<span class="hljs-number">15</span>]
+set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">0</span>] }]; #IO_L18P_T2_A24_15 Sch=led[<span class="hljs-number">0</span>]
+set_property -dict { PACKAGE_PIN K15   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">1</span>] }]; #IO_L24P_T3_RS1_15 Sch=led[<span class="hljs-number">1</span>]
+set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">2</span>] }]; #IO_L17N_T2_A25_15 Sch=led[<span class="hljs-number">2</span>]
+set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">3</span>] }]; #IO_L8P_T1_D11_14 Sch=led[<span class="hljs-number">3</span>]
+set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">4</span>] }]; #IO_L7P_T1_D09_14 Sch=led[<span class="hljs-number">4</span>]
+set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">5</span>] }]; #IO_L18N_T2_A11_D27_14 Sch=led[<span class="hljs-number">5</span>]
+set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">6</span>] }]; #IO_L17P_T2_A14_D30_14 Sch=led[<span class="hljs-number">6</span>]
+set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">7</span>] }]; #IO_L18P_T2_A12_D28_14 Sch=led[<span class="hljs-number">7</span>]
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">8</span>] }]; #IO_L16N_T2_A15_D31_14 Sch=led[<span class="hljs-number">8</span>]
+set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">9</span>] }]; #IO_L14N_T2_SRCC_14 Sch=led[<span class="hljs-number">9</span>]
+set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">10</span>] }]; #IO_L22P_T3_A05_D21_14 Sch=led[<span class="hljs-number">10</span>]
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">11</span>] }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=led[<span class="hljs-number">11</span>]
+set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">12</span>] }]; #IO_L16P_T2_CSI_B_14 Sch=led[<span class="hljs-number">12</span>]
+set_property -dict { PACKAGE_PIN V14   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">13</span>] }]; #IO_L22N_T3_A04_D20_14 Sch=led[<span class="hljs-number">13</span>]
+set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">14</span>] }]; #IO_L20N_T3_A07_D23_14 Sch=led[<span class="hljs-number">14</span>]
+set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { result_l[<span class="hljs-number">15</span>] }]; #IO_L21N_T3_DQS_A06_D22_14 Sch=led[<span class="hljs-number">15</span>]
+set_property -dict { PACKAGE_PIN R12   IOSTANDARD LVCMOS33 } [get_ports { zero }]; #IO_L5P_T0_D06_14 Sch=led16_b
+set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">0</span>] }]; #IO_L24N_T3_A00_D16_14 Sch=ca
+set_property -dict { PACKAGE_PIN R10   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">1</span>] }]; #IO_25_14 Sch=cb
+set_property -dict { PACKAGE_PIN K16   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">2</span>] }]; #IO_25_15 Sch=cc
+set_property -dict { PACKAGE_PIN K13   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">3</span>] }]; #IO_L17P_T2_A26_15 Sch=cd
+set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">4</span>] }]; #IO_L13P_T2_MRCC_14 Sch=ce
+set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">5</span>] }]; #IO_L19P_T3_A10_D26_14 Sch=cf
+set_property -dict { PACKAGE_PIN L18   IOSTANDARD LVCMOS33 } [get_ports { segs[<span class="hljs-number">6</span>] }]; #IO_L4P_T0_D04_14 Sch=cg
+set_property -dict { PACKAGE_PIN J17   IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">0</span>] }]; #IO_L23P_T3_FOE_B_15 Sch=an[<span class="hljs-number">0</span>]
+set_property -dict { PACKAGE_PIN J18   IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">1</span>] }]; #IO_L23N_T3_FWE_B_15 Sch=an[<span class="hljs-number">1</span>]
+set_property -dict { PACKAGE_PIN T9    IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">2</span>] }]; #IO_L24P_T3_A01_D17_14 Sch=an[<span class="hljs-number">2</span>]
+set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">3</span>] }]; #IO_L19P_T3_A22_15 Sch=an[<span class="hljs-number">3</span>]
+set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">4</span>] }]; #IO_L8N_T1_D12_14 Sch=an[<span class="hljs-number">4</span>]
+set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">5</span>] }]; #IO_L14P_T2_SRCC_14 Sch=an[<span class="hljs-number">5</span>]
+set_property -dict { PACKAGE_PIN K2    IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">6</span>] }]; #IO_L23P_T3_35 Sch=an[<span class="hljs-number">6</span>]
+set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { AN[<span class="hljs-number">7</span>] }]; #IO_L23N_T3_A02_D18_14 Sch=an[<span class="hljs-number">7</span>]
+</div></code></pre>
+<p>烧录进开发版后开发版行为如下：
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0904.jpg" alt="">
+0+0=0,ZF=1
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0905.jpg" alt="">
+1+3 = 4
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0906.jpg" alt="">
+1&lt;&lt;1 = 2
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0907.jpg" alt="">
+1&lt;1 == 0
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0908.jpg" alt="">
+2&gt;1 == 1
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0910.jpg" alt="">
+无符号数比较
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0912.jpg" alt="">
+有符号数比较，负数&lt;正数 == 0
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0913.jpg" alt="">
+1^1 == 0
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0914.jpg" alt="">
+3^1 == 2
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0915.jpg" alt="">
+3 or 6 == 7
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0917.jpg" alt="">
+3 and 6 == 2
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0918.jpg" alt="">
+7 - 3 == 4
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0919.jpg" alt="">
+算数右移
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/ALU32_photo/IMG_0920.jpg" alt="">
+取操作数b</p>
+<h3 id="%E9%94%99%E8%AF%AF%E7%8E%B0%E8%B1%A1%E5%8F%8A%E5%88%86%E6%9E%90">错误现象及分析</h3>
+<p>实验中没有遇到错误。</p>
+<hr>
+<h2 id="%E6%80%9D%E8%80%83%E9%A2%98">思考题</h2>
+<h3 id="1%E5%88%86%E6%9E%90-32-%E4%BD%8D-alu-%E7%9A%84%E8%B5%84%E6%BA%90%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5">1.分析 32 位 ALU 的资源占用情况。</h3>
+<p>分析如下：
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/屏幕截图 2024-03-24 113740.png" alt="">
+<img src="file:///home/cx_li/digitalLogic_Lab/digital_logic_exp/lab3/屏幕截图 2024-03-24 113824.png" alt=""></p>
+<p>该寄存器占用资源很少，只有不超过0.77%的逻辑片资源站占用。</p>
+<h3 id="2-%E5%A6%82%E6%9E%9C%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF%E6%AF%94%E8%BE%83%E5%99%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E5%88%99-32-%E4%BD%8D-alu-%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%9B%BE%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E4%BF%AE%E6%94%B9">2. 如果比较运算直接使用组合电路比较器来实现，则 32 位 ALU 电路原理图需要做哪些修改?</h3>
+<p>直接将两个输入连接到一个组合电路比较器上，比较器输出连接到输出多路选择器对应比较操作的位置。</p>
+<h3 id="3-%E6%9F%A5%E6%89%BE%E8%B5%84%E6%96%99%E8%AF%B4%E6%98%8E%E8%BF%98%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B9%B6%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E5%B9%B6%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E5%85%B6%E4%B8%AD%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95">3. 查找资料说明还有哪些并行加法器的设计方法，并详细介绍其中一种方法。</h3>
+<p>还有一些并行加法器，如：</p>
+<ul>
+<li>进位跳过加法器（Carry-Skip Adder）</li>
+<li>进位旁路加法器（Carry Bypass Adder）</li>
+<li>进位选择加法器（Carry-Select Adder）</li>
+<li>条件和加法器（Conditional-Sum Adder）</li>
+<li>前瞻进位加法器（Lookahead Carry Adder）
+其中进位跳过加法器是一种高速加法器设计，它通过在加法器的某些部分引入旁路逻辑来加速进位的传播，从而减少总体的加法延迟。这种加法器特别适合于位数较多的情况，因为它能有效地缩短进位传播的关键路径。</li>
+</ul>
+<p>其中CSA的工作原理如下：</p>
+<ul>
+<li>CSA由多个固定位宽的块组成，每个块内部的进位信号逐位传递。</li>
+<li>块与块之间的进位可以通过旁路逻辑直接传播，而不需要经过每个全加器，这样就可以跳过内部的进位链。</li>
+<li>当一个块内所有的进位生成逻辑（P）都为1时，表示该块可以产生进位，此时进位信号可以直接从该块的开始跳到结束，而不需要逐位传递。</li>
+</ul>
+<h3 id="4-%E7%AE%80%E8%BF%B0%E5%AE%9E%E7%8E%B0%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%B5%AE%E7%82%B9%E6%95%B0%E5%8A%A0%E5%87%8F%E6%B3%95%E8%BF%90%E7%AE%97%E9%83%A8%E4%BB%B6%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95">4. 简述实现单精度浮点数加减法运算部件的设计方法。</h3>
+<p>其流程大致如下：</p>
+<ul>
+<li>将两个浮点数的符号、指数和尾数分离，并恢复隐藏的1。</li>
+<li>对阶：根据两个数的指数差值，对尾数进行移动操作，使得它们的指数相同。</li>
+<li>尾数加减：执行尾数的加减运算。（如果是减法，使用补码运算进行）。</li>
+<li>规格化：对结果进行规格化处理，确保尾数在预定的范围内。</li>
+<li>舍入：根据IEEE标准，对结果进行舍入处理。</li>
+<li>最后将计算后的符号、指数和尾数重新组合成浮点数格式。</li>
+</ul>
+
+</body>
+</html>
