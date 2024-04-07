@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module KeyBoardReceiver(
-    output [31:0] keycodeout,           //接收到连续4个键盘扫描码
-    output ready,                     //数据就绪标志位
-    input clk,                        //系统时钟 
-    input kb_clk,                    //键盘 时钟信号
-    input kb_data                    //键盘 串行数据
+        output [31:0] keycodeout,           //接收到连续4个键盘扫描码
+        output ready,                     //数据就绪标志位
+        input clk,                        //系统时钟 
+        input kb_clk,                    //键盘 时钟信号
+        input kb_data                    //键盘 串行数据
     );
     wire kclkf, kdataf;
     reg [7:0]datacur;              //当前扫描码
@@ -66,8 +66,8 @@ module KeyBoardReceiver(
             readyflag<=1'b1;              //数据就绪标志位置1
         end
     end
-    assign keycodeout=keycode;
-    assign ready=readyflag;    
+    assign keycodeout = keycode;
+    assign ready = readyflag;    
 endmodule
 
 module debouncer(

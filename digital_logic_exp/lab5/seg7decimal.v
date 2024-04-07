@@ -24,9 +24,8 @@ module seg7decimal(
 	input [31:0] x,
     input clk,
     output reg [6:0] seg,
-    output reg [7:0] an,
-    output wire dp 
-	 );
+    output reg [7:0] an
+);
 	 
 	 
 wire [2:0] s;	 
@@ -34,7 +33,6 @@ reg [3:0] digit;
 wire [7:0] aen;
 reg [19:0] clkdiv;
 
-assign dp = 1;
 assign s = clkdiv[19:17];
 assign aen = 8'b11111111; // all turned off initially
 
