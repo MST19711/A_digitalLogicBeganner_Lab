@@ -22,6 +22,7 @@ module buffer(
     input [31:0]SC_in,
     input read,
     input clk,
+    input rst,
     output [7:0]SC_out,
     output OF,
     output out_valid
@@ -34,21 +35,27 @@ module buffer(
     reg OF_r = 0;
     assign OF = OF_r;
     always@(posedge clk)begin
-        if(snapshot != SC_in)begin
-            snapshot <= SC_in;
-            buffer[head] <= SC_in[7:0];
-            head <= (head + 1) % 8;
-            if((head + 1) % 8 == tail)begin
-                OF_r <= 1;
+        if(rst == 1)begin
+            head <= 32'd0;
+            tail <= 32'd0;
+            OF_r <= 0;
+        end else begin
+            if(snapshot != SC_in)begin
+                snapshot <= SC_in;
+                buffer[head] <= SC_in[7:0];
+                head <= (head + 1) % 8;
+                if((head + 1) % 8 == tail)begin
+                    OF_r <= 1;
+                end
+                else begin 
+                    OF_r <= 0;
+                end
             end
-            else begin 
-                OF_r <= 0;
+            if(read == 1)begin
+                tail <= (tail + 1) % 8;
             end
         end
-        if(read == 1)begin
-            tail <= (tail + 1) % 8;
-        end
-    end
+     end
 endmodule
 
 module KeyboardSim(
@@ -85,6 +92,7 @@ module KeyboardSim(
         .SC_in(keycode),
         .read(0),
         .clk(CLK100MHZ),
+        .rst(BTNC),
         .SC_out(buffer_read),
         .OF(LED[0]),
         .out_valid(buffer_outval)
@@ -99,7 +107,7 @@ module KeyboardSim(
     wire read_sig, buf_out_val;
     wire [7:0] buffer2dis;
     reg testout = 0;
-    assign testLED = testout;
+    assign testLED = BTNC;
     reg [7:0] now_ascii;
     wire [7:0]Nascii_w;
     assign Nascii_w = now_ascii;
