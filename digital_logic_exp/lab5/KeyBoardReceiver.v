@@ -32,7 +32,7 @@ module KeyBoardReceiver(
     reg [3:0]cnt;                //收到串行位数
     reg [31:0]keycode;            //扫描码
     reg flag;                     //接受1帧数据
-    reg readyflag;
+    reg readyflag = 0;
 //    reg error;                   //错误标志位
     initial begin                 //初始化
         keycode[7:0]<=8'b00000000;
@@ -41,8 +41,8 @@ module KeyBoardReceiver(
     debouncer debounce( .clk(clk), .I0(kb_clk), .I1(kb_data), .O0(kclkf), .O1(kdataf));  //消除按键抖动
     always@(negedge(kclkf))begin
      case(cnt)
-            0:  readyflag<=1'b0;                       //开始位
-            1:datacur[0]<=kdataf;
+            0:  ;//readyflag<=1'b0;                       //开始位
+            1:begin datacur[0]<=kdataf; end
             2:datacur[1]<=kdataf;
             3:datacur[2]<=kdataf;
             4:datacur[3]<=kdataf;
@@ -56,18 +56,25 @@ module KeyBoardReceiver(
         if(cnt<=9) cnt<=cnt+1;
         else if(cnt==10)  cnt<=0;
     end
+    reg [3:0]last_up = 0;
     always @(posedge flag)begin
-        if (dataprev!=datacur)begin           //去除重复按键数据
+        if (dataprev!=datacur | last_up != 0)begin           //去除重复按键数据
+            if(last_up != 0 && datacur != 8'hF0)    last_up <= last_up - 1;
             keycode[31:24]<=keycode[23:16];
             keycode[23:16]<=keycode[15:8];
             keycode[15:8]<=dataprev;
             keycode[7:0]<=datacur;
             dataprev<=datacur;
             readyflag<=1'b1;              //数据就绪标志位置1
+            if(datacur == 8'hF0)begin
+                last_up <= 2;
+            end 
+        end else begin
+             readyflag <= 1'b0;
         end
     end
     assign keycodeout = keycode;
-    assign ready = readyflag;    
+    assign ready = readyflag; //readyflag;    
 endmodule
 
 module debouncer(

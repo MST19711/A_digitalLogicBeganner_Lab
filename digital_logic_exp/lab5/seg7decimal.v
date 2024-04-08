@@ -24,9 +24,10 @@ module seg7decimal(
 	input [31:0] x,
     input clk,
     output reg [6:0] seg,
-    output reg [7:0] an
+    output reg [7:0] an,
+    output dp
 );
-	 
+	 assign dp = 1;
 	 
 wire [2:0] s;	 
 reg [3:0] digit;

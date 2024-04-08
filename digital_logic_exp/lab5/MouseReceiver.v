@@ -27,6 +27,7 @@ module MouseReceiver(
     output LeftButton,     //��ఴť״̬
     output MiddleButton,   //�м䰴ť״̬
     output RightButton,     //�Ҳఴť״̬
+    output PS2_clk_test,
     input CLK100MHZ,
     input PS2_CLK,
     input PS2_DATA
@@ -37,7 +38,12 @@ module MouseReceiver(
     reg checksum = 0;
     reg readyflag = 0;
     reg has_ready = 0;
+    reg [31:0] test = 0;
+    assign PS2_clk_test = test < 5000 ? 1 : 0;
     always@(negedge(PS2_CLK))begin
+        if(test == 31'd9999)   test <= 0;
+        else test <= test + 1;
+        
         case(cnt)
             0:  readyflag<=1'b0;                       //��ʼλ
             1:dataframe[0]<=PS2_DATA;

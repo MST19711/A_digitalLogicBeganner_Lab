@@ -33,12 +33,14 @@ module KeyBoardTest(
 reg CLK50MHZ=0;    
 wire [31:0]keycode;
 
-
+reg ready_reg = 0;
+assign ready = ready_reg;
+wire ready_w;
 always @(posedge(CLK100MHZ))begin
     CLK50MHZ<=~CLK50MHZ;
+    if(ready_w == 1)    ready_reg <= 1;
 end
-
-KeyBoardReceiver keyboard_uut(.keycodeout(keycode[31:0]),.ready(ready),.clk(CLK50MHZ),.kb_clk(PS2_CLK),.kb_data(PS2_DATA));
+KeyBoardReceiver keyboard_uut(.keycodeout(keycode[31:0]),.ready(ready_w),.clk(CLK50MHZ),.kb_clk(PS2_CLK),.kb_data(PS2_DATA));
 
 seg7decimal sevenSeg (.x(keycode[31:0]),.clk(CLK100MHZ),.seg(SEG[6:0]),.an(AN[7:0]),.dp(DP) );
 
