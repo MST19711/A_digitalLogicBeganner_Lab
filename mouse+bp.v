@@ -24,19 +24,16 @@ module MouseReceiver(
     output [6:0]SEG,
     output [7:0]AN,
     output DP,
-    output LeftButton,     //��ఴť״̬
-    output MiddleButton,   //�м䰴ť״̬
-    output RightButton,     //�Ҳఴť״̬
+    output LeftButton,     //左侧按钮状态
+    output MiddleButton,   //中间按钮状态
+    output RightButton,     //右侧按钮状态
     input CLK100MHZ,
     inout PS2_CLK,
     inout PS2_DATA,
     output [4:0]LED,
-    output ps2clk_out,
-    output [3:0]stateLED
+    output ps2clk_out
     );
  // add your code here
-    reg [3:0]stateLEDR;
-    assign stateLED = stateLEDR;
     reg hassend_st = 0;
     reg [15:0]state = 0;//wait : 0, get control of ps2clk : 1, send ack : 2
     reg [31:0]cnt = 0;
@@ -52,7 +49,7 @@ module MouseReceiver(
     always@(negedge(PS2_CLK))begin
         if(ps2_writting == 0)begin
             case(cnt)
-                0:begin readyflag<=1'b0; mouse_counter <= (mouse_counter == 3) ? 0 : mouse_counter + 1;  end                  //��ʼλ
+                0:  readyflag<=1'b0;                       //开始位
                 1:dataframe[0]<=PS2_DATA;
                 2:dataframe[1]<=PS2_DATA;
                 3:dataframe[2]<=PS2_DATA;
@@ -61,15 +58,14 @@ module MouseReceiver(
                 6:dataframe[5]<=PS2_DATA;
                 7:dataframe[6]<=PS2_DATA;
                 8:dataframe[7]<=PS2_DATA;
-                9:begin checksum<=PS2_DATA; readyflag<=1'b1; end          //�ѽ���8λ��Ч����
-                10:readyflag<=1'b0;       //����λ
+                9:checksum<=PS2_DATA;         //已接收8位有效数据
+                10:readyflag<=1'b1;       //结束位
             endcase
             if(cnt<=9) cnt<=cnt+1;
             else if(cnt==10)  cnt<=0;
         end else begin
             cnt <= 0;
             dataframe <= 8'b0;
-            mouse_counter <= 4'd3;
         end
     end
     reg [3:0] mouse_counter = 0;
@@ -115,7 +111,7 @@ module MouseReceiver(
             if(time_after_last_ps2clk < 100000000)begin
                 time_after_last_ps2clk <= time_after_last_ps2clk + 1;
             end else begin
-                //state <= 0;
+                state <= 0;
                 PS2_CLK_R <= 1'bz;
                 PS2_DATA_R <= 1'bz;
             end
@@ -153,7 +149,7 @@ module MouseReceiver(
                 prev_ps2clk_posedge <= 0;
             end
             case(synsig_counter)
-                0:  PS2_DATA_R <= 1'b0;                       //��ʼλ
+                0:  PS2_DATA_R <= 1'b0;                       //开始位
                 1:  PS2_DATA_R <= 1'b0;
                 2:  PS2_DATA_R <= 1'b0;  
                 3:  PS2_DATA_R <= 1'b1;  
@@ -162,9 +158,9 @@ module MouseReceiver(
                 6:  PS2_DATA_R <= 1'b1;  
                 7:  PS2_DATA_R <= 1'b1;  
                 8:  PS2_DATA_R <= 1'b1;   
-                9:  PS2_DATA_R <= 1'b1;          //��send8λ��Ч����
-                10: PS2_DATA_R <= 1'b1;        //����λ
-                11: begin 
+                9:  PS2_DATA_R <= 1'b1;          //已send8位有效数据
+                10: PS2_DATA_R <= 1'b1;        //结束位
+                11: begin
                         PS2_DATA_R <= 1'bz;
                         ps2_writting <= 1'b0;
                         state <= 3;
@@ -178,8 +174,7 @@ module MouseReceiver(
                 if(dataframe == 8'hFA)begin
                     PS2_CLK_R <= 1'bz;
                     PS2_DATA_R <= 1'bz;
-                    //mouse_counter <= 4'd0;
-                    ps2_writting <= 1'b0;
+                    mouse_counter <= 0;
                     state <= 4;
                 end
             end
@@ -188,22 +183,18 @@ module MouseReceiver(
             LEDR = 5'b00001;
             has_ready <= readyflag;
             if(has_ready == 0 && readyflag == 1)begin
-                //mouse_counter <= (mouse_counter == 3) ? 0 : mouse_counter + 1;
-                if(mouse_counter == 4'd1)begin
+                mouse_counter <= (mouse_counter == 3) ? 0 : mouse_counter + 1;
+                if(mouse_counter == 4'd0)begin
                     {YOVF, XOVF, YSIGN, XSIGN, empty, MBTN, RBTN, LBTN} <= dataframe;
-                    stateLEDR <= 4'b1000;
+                end
+                if(mouse_counter == 4'd1)begin
+                    dx <= dataframe;
                 end
                 if(mouse_counter == 4'd2)begin
-                    dx <= dataframe;
-                    stateLEDR <= 4'b0100;
+                    dy <= dataframe;
                 end
                 if(mouse_counter == 4'd3)begin
-                    dy <= dataframe;
-                    stateLEDR <= 4'b0010;
-                end
-                if(mouse_counter == 4'd0)begin
                     dz <= dataframe;
-                    stateLEDR <= 4'b0001;
                 end
             end 
         end
