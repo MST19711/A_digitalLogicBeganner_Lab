@@ -27,38 +27,46 @@ module MouseReceiver(
     output LeftButton,     //左侧按钮状态
     output MiddleButton,   //中间按钮状态
     output RightButton,     //右侧按钮状态
-    output PS2_clk_test,
     input CLK100MHZ,
-    input PS2_CLK,
-    input PS2_DATA
+    inout PS2_CLK,
+    inout PS2_DATA,
+    output [4:0]LED,
+    output ps2clk_out
     );
  // add your code here
+    reg hassend_st = 0;
+    reg [15:0]state = 0;//wait : 0, get control of ps2clk : 1, send ack : 2
     reg [31:0]cnt = 0;
     reg [7:0]dataframe;
     reg checksum = 0;
     reg readyflag = 0;
     reg has_ready = 0;
     reg [31:0] test = 0;
-    assign PS2_clk_test = test < 5000 ? 1 : 0;
+    reg last_PS2CLK = 0;
+    reg [31:0] time_after_last_ps2clk = 0;
+    reg [31:0] ps2clk_counter = 0;
+    reg ps2_writting = 0;
     always@(negedge(PS2_CLK))begin
-        if(test == 31'd9999)   test <= 0;
-        else test <= test + 1;
-        
-        case(cnt)
-            0:  readyflag<=1'b0;                       //开始位
-            1:dataframe[0]<=PS2_DATA;
-            2:dataframe[1]<=PS2_DATA;
-            3:dataframe[2]<=PS2_DATA;
-            4:dataframe[3]<=PS2_DATA;
-            5:dataframe[4]<=PS2_DATA;
-            6:dataframe[5]<=PS2_DATA;
-            7:dataframe[6]<=PS2_DATA;
-            8:dataframe[7]<=PS2_DATA;
-            9:checksum<=PS2_DATA;         //已接收8位有效数据
-            10:readyflag<=1'b1;       //结束位
-        endcase
-        if(cnt<=9) cnt<=cnt+1;
-        else if(cnt==10)  cnt<=0;
+        if(ps2_writting == 0)begin
+            case(cnt)
+                0:  readyflag<=1'b0;                       //开始位
+                1:dataframe[0]<=PS2_DATA;
+                2:dataframe[1]<=PS2_DATA;
+                3:dataframe[2]<=PS2_DATA;
+                4:dataframe[3]<=PS2_DATA;
+                5:dataframe[4]<=PS2_DATA;
+                6:dataframe[5]<=PS2_DATA;
+                7:dataframe[6]<=PS2_DATA;
+                8:dataframe[7]<=PS2_DATA;
+                9:checksum<=PS2_DATA;         //已接收8位有效数据
+                10:readyflag<=1'b1;       //结束位
+            endcase
+            if(cnt<=9) cnt<=cnt+1;
+            else if(cnt==10)  cnt<=0;
+        end else begin
+            cnt <= 0;
+            dataframe <= 8'b0;
+        end
     end
     reg [3:0] mouse_counter = 0;
     reg YOVF, XOVF, YSIGN, XSIGN, MBTN, RBTN, LBTN, empty;
@@ -77,24 +85,233 @@ module MouseReceiver(
         .seg(SEG),
         .an(AN)
     );
+    reg [31:0] ps2clk_ounter = 0;
+    always@(negedge(PS2_CLK))begin
+        if(ps2clk_ounter < 100000000) ps2clk_ounter <= ps2clk_ounter + 1;
+        else ps2clk_ounter <= 0;
+    end
+    assign ps2clk_out = hassend_st;//(ps2clk_ounter > 50000000) ? 1'b1 : 1'b0; 
+    reg PS2_CLK_R = 1'bz, PS2_DATA_R = 1'bz;
+    reg [31:0] sent_counter = 0;
+    reg wait_to_next_ps2clk = 0;
+    assign PS2_CLK = PS2_CLK_R;
+    assign PS2_DATA = PS2_DATA_R;
+    reg [4:0] LEDR;
+    assign LED = LEDR;
+    reg [31:0] sender_counter = 0;
+    reg prev_ps2clk;
+    reg [31:0] sentsig_couunter = 0;
+    reg [31:0] synsig_counter = 0;
+    reg prev_ps2clk_posedge = 0;
     always @(posedge CLK100MHZ) begin
-        if(has_ready == 0 && readyflag == 1)begin
-            mouse_counter <= (mouse_counter == 3) ? 0 : mouse_counter + 1;
-            has_ready <= 1;
-            if(mouse_counter == 4'd0)begin
-                {YOVF, XOVF, YSIGN, XSIGN, empty, MBTN, RBTN, LBTN} <= dataframe;
-            end
-            if(mouse_counter == 4'd1)begin
-                dx <= dataframe;
-            end
-            if(mouse_counter == 4'd2)begin
-                dy <= dataframe;
-            end
-            if(mouse_counter == 4'd3)begin
-                dz <= dataframe;
-            end
+        prev_ps2clk <= PS2_CLK;
+        if(prev_ps2clk != PS2_CLK)begin
+            time_after_last_ps2clk <= 0;
         end else begin
-            has_ready <= 0;
+            if(time_after_last_ps2clk < 100000000)begin
+                time_after_last_ps2clk <= time_after_last_ps2clk + 1;
+            end else begin
+                state <= 0;
+                PS2_CLK_R <= 1'bz;
+                PS2_DATA_R <= 1'bz;
+            end
+        end
+        case(state):
+            0:begin
+                LEDR = 5'b10000;
+                if(time_after_last_ps2clk == 0)begin
+                    state <= 1;
+                    PS2_CLK_R <= 1'bz;
+                    PS2_DATA_R <= 1'bz;
+                    sentsig_couunter <= 0;
+                    ps2_writting <= 1'b1;
+                end
+            end
+            1:begin
+                LEDR = 5'b01000;
+                if(sentsig_couunter < 10000)begin
+                    sentsig_couunter <= sentsig_couunter + 1;
+                    PS2_CLK_R <= 1'b0;
+                end else begin
+                    PS2_CLK_R <= 1'bz;
+                    sentsig_couunter <= 0;
+                    synsig_counter <= 0;
+                    prev_ps2clk_posedge <= 0;
+                    state <= 2;
+                end
+            end
+            2:begin
+                if(prev_ps2clk == 0 && PS2_CLK == 1 && prev_ps2clk_posedge == 0)begin
+                    prev_ps2clk_posedge <= 1;
+                end
+                if(prev_ps2clk == 1 && PS2_CLK == 0 && prev_ps2clk_posedge == 1)begin
+                    synsig_counter <= synsig_counter + 1;
+                    prev_ps2clk_posedge <= 0;
+                end
+                case(synsig_counter):
+                    0:  PS2_DATA_R <= 1'b0;                       //开始位
+                    1:  PS2_DATA_R <= 1'b0;
+                    2:  PS2_DATA_R <= 1'b0;  
+                    3:  PS2_DATA_R <= 1'b1;  
+                    4:  PS2_DATA_R <= 1'b0;  
+                    5:  PS2_DATA_R <= 1'b1;  
+                    6:  PS2_DATA_R <= 1'b1;  
+                    7:  PS2_DATA_R <= 1'b1;  
+                    8:  PS2_DATA_R <= 1'b1;   
+                    9:  PS2_DATA_R <= 1'b1;          //已send8位有效数据
+                    10: PS2_DATA_R <= 1'b1;        //结束位
+                    11: begin
+                            PS2_DATA_R <= 1'bz;
+                            ps2_writting <= 1'b0;
+                            state <= 3;
+                        end
+                endcase 
+            end
+            3:begin
+                has_ready <= readyflag;
+                if(readyflag == 1 && has_ready == 0)begin
+                    if(dataframe == 8'hFA)begin
+                        PS2_CLK_R <= 1'bz;
+                        PS2_DATA_R <= 1'bz;
+                        mouse_counter <= 0;
+                        state <= 4;
+                    end
+                end
+            end
+            4:begin
+                has_ready <= readyflag;
+                if(has_ready == 0 && readyflag == 1)begin
+                    mouse_counter <= (mouse_counter == 3) ? 0 : mouse_counter + 1;
+                    if(mouse_counter == 4'd0)begin
+                        {YOVF, XOVF, YSIGN, XSIGN, empty, MBTN, RBTN, LBTN} <= dataframe;
+                    end
+                    if(mouse_counter == 4'd1)begin
+                        dx <= dataframe;
+                    end
+                    if(mouse_counter == 4'd2)begin
+                        dy <= dataframe;
+                    end
+                    if(mouse_counter == 4'd3)begin
+                        dz <= dataframe;
+                    end
+                end 
+            end
+        endcase
+    end
+
+    always @(posedge CLK100MHZ) begin
+        if(last_PS2CLK != PS2_CLK)begin
+            last_PS2CLK <= PS2_CLK;
+            time_after_last_ps2clk <= 0;
+        end 
+        else begin
+            if(time_after_last_ps2clk < 100000000)begin
+                time_after_last_ps2clk <= time_after_last_ps2clk + 1;
+            end
+            else begin
+                time_after_last_ps2clk <= 0;
+                state <= 15'd0;
+                PS2_CLK_R <= 1'bz;
+                PS2_DATA_R <= 1'bz;
+            end
+        end
+        if(state == 0)begin
+            wait_to_next_ps2clk <= 1'b0;
+            //hassend_st <= 1;
+            LEDR = 5'b10000;
+            if(PS2_CLK != last_PS2CLK)begin
+                state <= 15'd1;
+                sent_counter <= 0;
+            end
+        end
+        if(state == 1)begin
+            LEDR = 5'b01000;
+            if(sent_counter < 5000)begin
+                PS2_CLK_R <= 1'b0;
+                sent_counter <= sent_counter + 1;
+            end else begin
+                PS2_CLK_R <= 1'bz;
+                sent_counter <= 0;
+                sender_counter <= 0;
+                state <= 2;
+            end
+        end
+        if(state == 2)begin
+            //hassend_st <= 0;
+            ps2_writting <= 1'b1;
+            //PS2_CLK_R <= 1'bz;
+            LEDR = 5'b00100;//sender_counter
+            if(last_PS2CLK != PS2_CLK && PS2_CLK == 0)begin
+                sender_counter <= sender_counter + 1;
+            end
+            case(sender_counter)
+                0:  PS2_DATA_R <= 1'b0;                       //开始位
+                1:  PS2_DATA_R <= 1'b0;
+                2:  PS2_DATA_R <= 1'b0;  
+                3:  PS2_DATA_R <= 1'b1;  
+                4:  PS2_DATA_R <= 1'b0;  
+                5:  PS2_DATA_R <= 1'b1;  
+                6:  PS2_DATA_R <= 1'b1;  
+                7:  PS2_DATA_R <= 1'b1;  
+                8:  PS2_DATA_R <= 1'b1;   
+                9:  PS2_DATA_R <= 1'b1;          //已send8位有效数据
+                10: PS2_DATA_R <= 1'b1;        //结束位
+                11: begin 
+                        state <= 3;
+                        sender_counter <= 0;
+                        ps2_writting <= 1'b0;
+                        PS2_DATA_R <= 1'bz; 
+                        PS2_CLK_R <= 1'bz;
+                        has_ready <= 1'b0;
+                        wait_to_next_ps2clk <= 1'b0;
+                    end
+            endcase
+        end
+        if(state == 3)begin
+            //hassend_st <= 0;
+            ps2_writting <= 1'b0;
+            LEDR = 5'b00010;
+            //PS2_CLK_R <= 1'bz;
+            //PS2_DATA_R <= 1'bz; 
+            if(has_ready == 0 && readyflag == 1)begin
+                has_ready <= 1;
+                if(dataframe == 8'hFA)begin
+                    wait_to_next_ps2clk <= 1'b1;
+                    hassend_st <= 1'b1;
+                end
+            end else begin
+                has_ready <= 0;
+                if(wait_to_next_ps2clk == 1'b1)begin
+                    state <= 15'd4;
+                    mouse_counter <= 0;
+                    PS2_CLK_R <= 1'bz;
+                    PS2_DATA_R <= 1'bz; 
+                    has_ready <= 1'b1;
+                end
+            end
+        end
+        if(state == 4)begin
+            //hassend_st <= 0;
+            //PS2_CLK_R <= 1'bz;
+            //PS2_DATA_R <= 1'bz; 
+            LEDR = 5'b00001;
+            if(has_ready == 0 && readyflag == 1)begin
+                mouse_counter <= (mouse_counter == 3) ? 0 : mouse_counter + 1;
+                if(mouse_counter == 4'd0)begin
+                    {YOVF, XOVF, YSIGN, XSIGN, empty, MBTN, RBTN, LBTN} <= dataframe;
+                end
+                if(mouse_counter == 4'd1)begin
+                    dx <= dataframe;
+                end
+                if(mouse_counter == 4'd2)begin
+                    dy <= dataframe;
+                end
+                if(mouse_counter == 4'd3)begin
+                    dz <= dataframe;
+                end
+            end 
+            has_ready <= readyflag;
         end
     end
+    
 endmodule
