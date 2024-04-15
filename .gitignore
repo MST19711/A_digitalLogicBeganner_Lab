@@ -1,3 +1,4 @@
 *.vvp
 *.vcd
 *.zip
+.DS_Store
