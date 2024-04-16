@@ -2,3 +2,4 @@
 *.vcd
 *.zip
 .DS_Store
+compiler_commands.json
