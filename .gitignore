@@ -2,4 +2,6 @@
 *.vcd
 *.zip
 .DS_Store
-compiler_commands.json
+compile_commands.json
+build/
+.cache/

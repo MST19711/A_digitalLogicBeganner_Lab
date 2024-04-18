@@ -1,4 +1,4 @@
-#include "Vdecoder32.h"
+#include "obj_dir/Vdecoder32.h"
 #include "verilated.h"
 
 int main(int argc, char **argv) {

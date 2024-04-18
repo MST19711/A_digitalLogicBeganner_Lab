@@ -21,13 +21,13 @@
 
 
 module VGASim(
-    input CLK100MHZ,        //系统时钟信号
-    input  BTNC,           // 复位信号
-    output [3:0] VGA_R,    //红色信号值
-    output [3:0] VGA_G,    //绿色信号值
-    output [3:0] VGA_B,     //蓝色信号值
-    output  VGA_HS,         //行同步信号
-    output  VGA_VS          //帧同步信号
+    input CLK100MHZ,        //????????
+    input  BTNC,           // ??λ???
+    output [3:0] VGA_R,    //???????
+    output [3:0] VGA_G,    //???????
+    output [3:0] VGA_B,     //???????
+    output  VGA_HS,         //????????
+    output  VGA_VS,         //???????
  );
 wire [11:0] vga_data;
 wire valid;
