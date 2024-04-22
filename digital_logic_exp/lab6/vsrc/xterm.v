@@ -103,7 +103,7 @@ module xterm(
         .clk(CLK100MHZ),
         .in_valid(kbinput_available),
         .douta(vram_output[4]),
-        .available(state == 3'd3)
+        .available(state == 3'd4)
     );
 endmodule
 

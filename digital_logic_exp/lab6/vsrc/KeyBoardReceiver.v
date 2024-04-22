@@ -42,7 +42,7 @@ module KeyBoardReceiver(
     end
 
 `ifdef NVBoard
-    // is for NVBoard, in FPGA please use debouncer
+    // It is for NVBoard, in FPGA please use debouncer
     assign kclkf = kb_clk;
     assign kdataf = kb_data;
 `else

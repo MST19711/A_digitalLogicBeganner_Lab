@@ -679,7 +679,7 @@ module term_man(
                 end else begin
                     text[ptr] <= ascii_in;
                     if(kbsig[8] == 0 & kbsig[7] == 0 & kbsig[6] == 0 & kbsig[5] == 0 & kbsig[9] == 0)begin
-                        ptr <= (ptr < 2399) ? ptr + 1 : ptr;
+                        ptr <= (ptr < 479) ? ptr + 1 : ptr;
                     end
                 end
             end
