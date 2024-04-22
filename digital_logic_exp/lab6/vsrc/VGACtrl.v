@@ -70,19 +70,21 @@ always@(posedge pix_clk) begin
 //assign v_valid = (y_cnt > v_active) & (y_cnt <= v_backporch);
 //assign valid = h_valid & v_valid;
 
- /*// for real VGA
+ // for real VGA
  assign  pix_valid = (((cnt_h >= H_Sync_Width + H_Back_Porche)
                     && (cnt_h <= H_Totals - H_Front_Porch))
                     &&((cnt_v >= V_Sync_Width + V_Back_Porche)
                     && (cnt_v <= V_Totals - V_Front_Porch)))
                     ? 1'b1 : 1'b0;
- */
+ 
  // for NVBoard
+ /*
  assign  pix_valid = (((cnt_h > H_Sync_Width + H_Back_Porche)
                     && (cnt_h <= H_Totals - H_Front_Porch))
                     &&((cnt_v > V_Sync_Width + V_Back_Porche)
                     && (cnt_v <= V_Totals - V_Front_Porch)))
                     ? 1'b1 : 1'b0;
+*/
 //Hsync,Vsync active，计算像素在可显示区域的位置
    assign pix_x = (pix_valid==1) ? (cnt_h - (H_Sync_Width + H_Back_Porche)):12'h0;
    assign pix_y = (pix_valid==1) ? (cnt_v - (V_Sync_Width + V_Back_Porche)):12'h0;

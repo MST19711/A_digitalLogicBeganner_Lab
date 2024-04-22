@@ -576,6 +576,30 @@ module term_man(
                         text[495] = 8'd0;
                         text[496] = 8'd0;
                         text[497] = 8'd0;
+                    end else if(text[401] == 8'd73) begin
+                        text[401] <= 0;
+                        state_R <= 2;
+                        ptr <= 32'd401;
+                        $display("401 : %d", text[401]);
+                        $display("state: %d", state_R);
+                        text[480] = 8'd0;
+                        text[481] = 8'd0;
+                        text[482] = 8'd0;
+                        text[483] = 8'd0;
+                        text[484] = 8'd0;
+                        text[485] = 8'd0;
+                        text[486] = 8'd0;
+                        text[487] = 8'd0;
+                        text[488] = 8'd0;
+                        text[489] = 8'd0;
+                        text[490] = 8'd0;
+                        text[491] = 8'd0;
+                        text[492] = 8'd0;
+                        text[493] = 8'd0;
+                        text[494] = 8'd0;
+                        text[495] = 8'd0;
+                        text[496] = 8'd0;
+                        text[497] = 8'd0;
                     end else begin// display "Syntax error !!!!!" and clear word typed
                         ptr <= 401;
                         text[480] = 8'd83;

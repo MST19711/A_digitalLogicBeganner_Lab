@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`define NVBoard
+//`define NVBoard
 
 module KeyBoardReceiver(
         output [31:0] keycodeout,           //���յ�����4������ɨ����

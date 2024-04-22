@@ -25,23 +25,23 @@ module xterm(
     input PS2_CLK,    //���Լ��̵�ʱ���ź�
     input PS2_DATA,  //���Լ��̵Ĵ�������λ
     input BTNC,      //Reset
-    output [6:0]SEG,
-    output [7:0]AN,     //��ʾɨ�����ASCII��
     output [15:0] LED,   //��ʾ����״̬
     output [3:0] VGA_R,
     output [3:0] VGA_G,
     output [3:0] VGA_B,
     output  VGA_HS,
-    output  VGA_VS,
-    // for nvboard
-    output VALID
+    output  VGA_VS//,
+    // VGA output valid for nvboard
+    //output VALID
 );
 // Add your code here
 
     wire [2:0] state;
     wire [31:0] vram_addr;
     wire [11:0] vram_output [4:0];
-    wire pix_clk = CLK100MHZ;
+    wire pix_clk;
+    
+    clk_wiz_0 myvgaclk(.clk_in1(CLK100MHZ),.reset(BTNC),.locked(LOCK),.clk_out1(pix_clk));
     VGASim display(
         .ram_addr(vram_addr),
         .CLK(pix_clk),
@@ -63,7 +63,7 @@ module xterm(
     wire kbinput_available;
     KeyboardSim keyboard_0(
         .CLK100MHZ(CLK100MHZ),   //系统时钟信号
-        .PS2_CLK(PS2_CLK),    //来自键盘的时钟信号
+        .PS2_CLK(PS2_CLK),    //来自键盘的时钟信�?
         .PS2_DATA(PS2_DATA),  //来自键盘的串行数据位
         .BTNC(BTNC),      //Reset
         .ascii_out(ascii_input),
@@ -86,6 +86,13 @@ module xterm(
                     .addra({vram_addr}),
                     .dina(12'd0),
                     .douta(vram_output[1])
+    );
+    img I(.clka(pix_clk),
+                    .ena(1'b1),
+                    .wea(1'b0),
+                    .addra({vram_addr}),
+                    .dina(12'd0),
+                    .douta(vram_output[2])
     );
     txt my_txt(
         .addra({vram_addr}),
