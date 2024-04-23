@@ -7,6 +7,7 @@ module Calculator(
     output [11:0] douta,
     input available
 );
+    reg is_calculating = 0;
     wire out;
     reg [7:0] text [2399:0];
     reg [31:0] ptr = 80;
@@ -62,5 +63,11 @@ module Calculator(
         .in_ptr((80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80)) == ptr),
         .is_light(out)
     );
+    reg [31:0] i;
+    always @(posedge clk) begin
+        if(is_calculating == 1)begin
+            
+        end
+    end
     assign douta = (out == 1) ? 12'b111111111111 : 12'd0; 
 endmodule
