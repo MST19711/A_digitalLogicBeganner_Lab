@@ -150,7 +150,32 @@ module Calculator(
                             end
                         end
                     endcase
-                end
+                end else if(text[i] == 8'd40)begin
+                    num_stack[sp + 1] <= 0;
+                    sim_stack[sp + 1] <= 0;
+                    sp <= sp + 1;
+                end else if(text[i] == 8'd41)begin
+                    if(sp == 0)begin
+                        state <= 3'd7;
+                    end else begin
+                        case (sim_stack[sp])
+                            4'd1:begin
+                                temp <= num_stack[sp] + temp;
+                            end 
+                            4'd2:begin
+                                temp <= num_stack[sp] - temp;
+                            end 
+                            4'd3:begin
+                                temp <= num_stack[sp] * temp;
+                            end 
+                            4'd4:begin
+                                temp <= num_stack[sp] / temp;
+                            end 
+                            default : ;
+                        endcase
+                        sp <= sp - 1;
+                    end
+                end 
             end else if(state == 3'd1)begin
                 if(ptr == 32'd2400)begin
                     ptr <= 0;
