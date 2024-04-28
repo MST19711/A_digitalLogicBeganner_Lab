@@ -30,8 +30,11 @@ module Calculator(
             if(state == 3'd6)begin
                 if(i == 0)begin
                     state <= 0;
+                    sp <= 0;
                     j <= 0;
                     ptr <= 0;
+                    num_stack[0] <= 0;
+                    sim_stack[0] <= 0;
                 end else begin
                     i <= i - 1;
                 end
@@ -59,8 +62,12 @@ module Calculator(
                 text[97] <= 8'd33;
             end else if(state == 3'd4)begin
                 if(j == 0)begin
+                    i <= 0;
                     state <= 0;
+                    sp <= 0;
                     ptr <= 0;
+                    num_stack[0] <= 0;
+                    sim_stack[0] <= 0;
                 end else if(i == 0)begin
                     j <= j - 1;
                     text[j] <= text[i];
@@ -174,12 +181,18 @@ module Calculator(
                             default : ;
                         endcase
                         sp <= sp - 1;
+                        num_stack[sp] <= 0;
+                        sim_stack[sp] <= 0;
                     end
                 end 
             end else if(state == 3'd1)begin
                 if(ptr == 32'd2400)begin
+                    sp <= 0;
+                    i <= 0;
                     ptr <= 0;
                     state <= 0;
+                    num_stack[0] <= 0;
+                    sim_stack[0] <= 0;
                 end else begin
                     text[ptr] <= 0;
                     ptr <= ptr + 1;
