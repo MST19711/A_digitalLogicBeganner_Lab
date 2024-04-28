@@ -45,41 +45,50 @@ module txt(
     wire [31:0] xw = addra % 8, yw = ((addra / 640) % 16);
     
     integer i;
+    reg [2:0]state;
     always @(posedge clk) begin
         if(available == 1)begin
-            if(in_valid == 1)begin
-                $display("ascii : %d", ascii_in);
-                if(ascii_in == 8'h0D)begin
-                    ptr <= (ptr < 2400 - 80) ? ((ptr + 80) - (ptr % 80)) : ptr;
+            if(state == 3'd1)begin
+                if(ptr == 32'd2400)begin
+                    ptr <= 0;
+                    state <= 0;
                 end else begin
-                    if(kbsig[3] == 1 && ascii_in == 100)begin
-                        ptr <= 0;
-                        for(i = 0; i < 2400; i = i + 1)begin
-                            text[i] = 0;
-                        end
+                    text[ptr] <= 0;
+                    ptr <= ptr + 1;
+                end
+            end else begin
+                if(in_valid == 1)begin
+                    $display("ascii : %d", ascii_in);
+                    if(ascii_in == 8'h0D)begin
+                        ptr <= (ptr < 2400 - 80) ? ((ptr + 80) - (ptr % 80)) : ptr;
                     end else begin
-                        text[ptr] <= ascii_in;
-                        if(kbsig[8] == 0 & kbsig[7] == 0 & kbsig[6] == 0 & kbsig[5] == 0 & kbsig[9] == 0)begin
-                            ptr <= (ptr < 2399) ? ptr + 1 : ptr;
+                        if(kbsig[3] == 1 && ascii_in == 100)begin
+                            ptr <= 0;
+                            state <= 3'd1;
+                        end else begin
+                            text[ptr] <= ascii_in;
+                            if(kbsig[8] == 0 & kbsig[7] == 0 & kbsig[6] == 0 & kbsig[5] == 0 & kbsig[9] == 0)begin
+                                ptr <= (ptr < 2399) ? ptr + 1 : ptr;
+                            end
                         end
                     end
                 end
-            end
-            else if(kbsig[8] == 1)begin
-                ptr <= (ptr >= 80) ? (ptr - 80) : ptr;
-            end
-            else if(kbsig[7] == 1)begin
-                ptr <= (ptr < 2400 - 80) ? (ptr + 80) : ptr;
-            end
-            else if(kbsig[6] == 1)begin
-                ptr <= (ptr < 2339) ? (ptr + 1) : ptr;
-            end
-            else if(kbsig[5] == 1)begin
-                ptr <= (ptr > 0) ? (ptr - 1) : ptr;
-            end
-            else if(kbsig[9] == 1) begin
-                ptr <= (ptr > 0) ? ptr - 1 : ptr;
-                text[(ptr > 0) ? ptr - 1 : ptr] <= 0;
+                else if(kbsig[8] == 1)begin
+                    ptr <= (ptr >= 80) ? (ptr - 80) : ptr;
+                end
+                else if(kbsig[7] == 1)begin
+                    ptr <= (ptr < 2400 - 80) ? (ptr + 80) : ptr;
+                end
+                else if(kbsig[6] == 1)begin
+                    ptr <= (ptr < 2339) ? (ptr + 1) : ptr;
+                end
+                else if(kbsig[5] == 1)begin
+                    ptr <= (ptr > 0) ? (ptr - 1) : ptr;
+                end
+                else if(kbsig[9] == 1) begin
+                    ptr <= (ptr > 0) ? ptr - 1 : ptr;
+                    text[(ptr > 0) ? ptr - 1 : ptr] <= 0;
+                end
             end
         end
     end

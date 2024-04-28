@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module KeyboardSim(
-    input CLK100MHZ,   //ÏµÍ³Ê±ÖÓÐÅºÅ
-    input PS2_CLK,    //À´×Ô¼üÅÌµÄÊ±ÖÓÐÅºÅ
-    input PS2_DATA,  //À´×Ô¼üÅÌµÄ´®ÐÐÊý¾ÝÎ»
+    input CLK100MHZ,   //ÏµÍ³Ê±ï¿½ï¿½ï¿½Åºï¿½
+    input PS2_CLK,    //ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ìµï¿½Ê±ï¿½ï¿½ï¿½Åºï¿½
+    input PS2_DATA,  //ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ÌµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»
     input BTNC,      //Reset
     output [7:0] ascii_out,
     output [10:0] kb_sig,// 10:esc, 9:backspace, 8:u, 7:d, 6:l, 5:r
@@ -38,11 +38,11 @@ module KeyboardSim(
         CLK50MHZ<=~CLK50MHZ;
     end
     KeyBoardReceiver keyboard_0(
-        .keycodeout(keycode),           //½ÓÊÕµ½Á¬Ðø4¸ö¼üÅÌÉ¨ÃèÂë
-        .ready(ready),                     //Êý¾Ý¾ÍÐ÷±êÖ¾Î»
-        .clk(CLK50MHZ),                        //ÏµÍ³Ê±ÖÓ 
-        .kb_clk(PS2_CLK),                    //¼üÅÌ Ê±ÖÓÐÅºÅ
-        .kb_data(PS2_DATA)                    //¼üÅÌ ´®ÐÐÊý¾Ý
+        .keycodeout(keycode),           //ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½ï¿½ï¿½
+        .ready(ready),                     //ï¿½ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾Î»
+        .clk(CLK50MHZ),                        //ÏµÍ³Ê±ï¿½ï¿½ 
+        .kb_clk(PS2_CLK),                    //ï¿½ï¿½ï¿½ï¿½ Ê±ï¿½ï¿½ï¿½Åºï¿½
+        .kb_data(PS2_DATA)                    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     );
     
     reg testout = 0;
@@ -180,6 +180,11 @@ module KeyboardSim(
                        else if(ascii_temp == 8'd120)  now_ascii <= 8'd88;
                        else if(ascii_temp == 8'd121)  now_ascii <= 8'd89;
                        else if(ascii_temp == 8'd122)  now_ascii <= 8'd90;
+                       else if(ascii_temp == 8'd61)  now_ascii <= 8'd43;
+                       else if(ascii_temp == 8'd45)  now_ascii <= 8'd95;
+                       else if(ascii_temp == 8'd48)  now_ascii <= 8'd41;
+                       else if(ascii_temp == 8'd57)  now_ascii <= 8'd40;
+                       else if(ascii_temp == 8'd56)  now_ascii <= 8'd42;
                        else now_ascii <= ascii_temp;
             end else begin
                 now_ascii <= ascii_temp;

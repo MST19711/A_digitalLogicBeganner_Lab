@@ -10,7 +10,7 @@ module term_man(
 );
     wire out;
     reg [7:0] text [2399:0];
-    reg [31:0] ptr = 401;
+    reg [31:0] ptr = 402;
     reg [2:0] state_R = 0;
     assign state = state_R;
     initial begin
@@ -415,7 +415,7 @@ module term_man(
         text[398] = 8'd32;
         text[399] = 8'd32;
         text[400] = 8'd45;
-        text[401] = 8'd32;
+        text[401] = 8'd62;
         text[402] = 8'd32;
         text[403] = 8'd32;
         text[404] = 8'd32;
@@ -504,11 +504,11 @@ module term_man(
         end else if(state_R == 0) begin
             if(in_valid == 1) begin
                 if(ascii_in == 8'h0D) begin
-                    if(text[401] == 8'd84) begin
-                        text[401] <= 0;
+                    if(text[402] == 8'd84) begin
+                        text[402] <= 0;
                         state_R <= 3;
-                        ptr <= 32'd401;
-                        $display("401 : %d", text[401]);
+                        ptr <= 32'd402;
+                        $display("401 : %d", text[402]);
                         $display("state: %d", state_R);
                         text[480] = 8'd0;
                         text[481] = 8'd0;
@@ -528,11 +528,11 @@ module term_man(
                         text[495] = 8'd0;
                         text[496] = 8'd0;
                         text[497] = 8'd0;
-                    end else if(text[401] == 8'd71) begin
-                        text[401] <= 0;
+                    end else if(text[402] == 8'd71) begin
+                        text[402] <= 0;
                         state_R <= 1;
-                        ptr <= 32'd401;
-                        $display("401 : %d", text[401]);
+                        ptr <= 32'd402;
+                        $display("401 : %d", text[402]);
                         $display("state: %d", state_R);
                         text[480] = 8'd0;
                         text[481] = 8'd0;
@@ -552,11 +552,11 @@ module term_man(
                         text[495] = 8'd0;
                         text[496] = 8'd0;
                         text[497] = 8'd0;
-                    end else if(text[401] == 8'd67) begin
-                        text[401] <= 0;
+                    end else if(text[402] == 8'd67) begin
+                        text[402] <= 0;
                         state_R <= 4;
-                        ptr <= 32'd401;
-                        $display("401 : %d", text[401]);
+                        ptr <= 32'd402;
+                        $display("401 : %d", text[402]);
                         $display("state: %d", state_R);
                         text[480] = 8'd0;
                         text[481] = 8'd0;
@@ -577,7 +577,7 @@ module term_man(
                         text[496] = 8'd0;
                         text[497] = 8'd0;
                     end else begin// display "Syntax error !!!!!" and clear word typed
-                        ptr <= 401;
+                        ptr <= 402;
                         text[480] = 8'd83;
                         text[481] = 8'd121;
                         text[482] = 8'd110;
@@ -596,7 +596,7 @@ module term_man(
                         text[495] = 8'd33;
                         text[496] = 8'd33;
                         text[497] = 8'd33;
-                        text[401] = 8'd0;
+                        text[401] = 8'd62;
                         text[402] = 8'd0;
                         text[403] = 8'd0;
                         text[404] = 8'd0;
@@ -687,7 +687,7 @@ module term_man(
                 ptr <= ((ptr % 80) < 79) ? (ptr + 1) : ptr;
             end
             else if(kbsig[5] == 1)begin
-                ptr <= ((ptr % 80) > 0) ? (ptr - 1) : ptr;
+                ptr <= ((ptr % 80) > 2) ? (ptr - 1) : ptr;
             end
             else if(kbsig[9] == 1) begin
                 ptr <= (ptr > 401) ? ptr - 1 : ptr;

@@ -16,7 +16,7 @@ BIN = $(BUILD_DIR)/$(TOPNAME)
 default: $(BIN)
 
 $(shell mkdir -p $(BUILD_DIR))
-
+# NVBOARD_HOME=/Users/cx_li/Documents/Github/nvboard
 # constraint file
 SRC_AUTO_BIND = $(abspath $(BUILD_DIR)/auto_bind.cpp)
 $(SRC_AUTO_BIND): $(NXDC_FILES)
