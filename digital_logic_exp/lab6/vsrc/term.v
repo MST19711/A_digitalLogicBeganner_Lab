@@ -9,7 +9,8 @@ module term_man(
     output [2:0] state
 );
     wire out;
-    reg [7:0] text [2399:0];
+    reg [7:0] text [1199:0];
+    wire [31:0] chr_location = 80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80);
     reg [31:0] ptr = 402;
     reg [2:0] state_R = 0;
     assign state = state_R;
@@ -699,7 +700,7 @@ module term_man(
     end
 
     get_charpix pix(
-        .c(text[80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80)]),
+        .c((chr_location <= 1199) ? text[chr_location] : 8'd0),
         .x(xw[5:0]),
         .y(yw[5:0]),
         .in_ptr((80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80)) == ptr),

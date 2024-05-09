@@ -8,11 +8,12 @@ module Calculator(
     input available
 );
     wire out;
-    reg [7:0] text [2399:0];
+    reg [7:0] text [239:0];
     reg [31:0] ptr = 0;
     wire [31:0] xw = addra % 8, yw = ((addra / 640) % 16);
+    wire [31:0] chr_location = 80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80);
     get_charpix pix(
-        .c(text[80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80)]),
+        .c((chr_location <= 32'd239) ? text[chr_location] : 8'd0),
         .x(xw[5:0]),
         .y(yw[5:0]),
         .in_ptr((80 * (addra / (640 * 16)) + (((addra % (640 * 16)) / 8) % 80)) == ptr),
@@ -219,19 +220,7 @@ module Calculator(
                             end
                         end
                     end
-                end/*
-                else if(kbsig[8] == 1)begin
-                    ptr <= (ptr >= 80) ? (ptr - 80) : ptr;
                 end
-                else if(kbsig[7] == 1)begin
-                    ptr <= (ptr < 2400 - 80) ? (ptr + 80) : ptr;
-                end
-                else if(kbsig[6] == 1)begin
-                    ptr <= (ptr < 2339) ? (ptr + 1) : ptr;
-                end
-                else if(kbsig[5] == 1)begin
-                    ptr <= (ptr > 0) ? (ptr - 1) : ptr;
-                end*/
                 else if(kbsig[9] == 1) begin
                     ptr <= (ptr > 0) ? ptr - 1 : ptr;
                     text[(ptr > 0) ? ptr - 1 : ptr] <= 0;
