@@ -1,60 +1,58 @@
 `timescale 1ns / 1ps
 
-`define NVB
+//`define NVB
 
 module mem32b_top(
-`ifdef NVB
-    output [7:0] o_seg0,
-    output [7:0] o_seg1,
-    output [7:0] o_seg2,
-    output [7:0] o_seg3,
-    output [7:0] o_seg4,
-    output [7:0] o_seg5,
-    output [7:0] o_seg6,
-    output [7:0] o_seg7,
-`else
     output [6:0]SEG,     
-    output [7:0]AN,              //ÏÔÊ¾32Î»Êä³öÊýÖµ
-`endif
-    output [15:0] dataout_L16b,   //Êä³öÊý¾ÝµÍ16Î»
-    input CLK100MHZ,            //ÏµÍ³Ê±ÖÓÐÅºÅ
-    input BTNC,                 //¸´Î»ÇåÁãÐÅºÅ
-    input [2:0] MemOp,          //¶ÁÐ´×Ö½ÚÊý¿ØÖÆÐÅºÅ
-    input we,                   //´æ´¢Æ÷Ð´Ê¹ÄÜÐÅºÅ£¬¸ßµçÆ½Ê±ÔÊÐíÐ´ÈëÊý¾Ý
-    input [3:0] addr_L4b,           //µØÖ·Î»µÍ4Î»£¬¸ßÎ»¿ÉÒÔÖ¸¶¨Îª0»òÆäËûÈÎÒâÖµ
-    input [7:0] datain_L8b          //ÊäÈëÊý¾ÝµÍ8Î»£¬¿ÉÖØ¸´4´Î£¬»ò¸ßÎ»Ö¸¶¨ÎªÈÎÒâÖµ
+    output [7:0]AN,              //ï¿½ï¿½Ê¾32Î»ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    output [15:0] dataout_L16b,   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½16Î»
+    input CLK100MHZ,            //ÏµÍ³Ê±ï¿½ï¿½ï¿½Åºï¿½
+    input BTNC,                 //ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    input [2:0] MemOp,          //ï¿½ï¿½Ð´ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    input we,                   //ï¿½æ´¢ï¿½ï¿½Ð´Ê¹ï¿½ï¿½ï¿½ÅºÅ£ï¿½ï¿½ßµï¿½Æ½Ê±ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    input [3:0] addr_L4b,           //ï¿½ï¿½Ö·Î»ï¿½ï¿½4Î»ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    input [7:0] datain_L8b          //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½8Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½4ï¿½Î£ï¿½ï¿½ï¿½ï¿½Î»Ö¸ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Öµ
  );
  // Add your code here 
     wire [31:0] dataout;
     wire out_valid;
-    
+    reg [31:0]counter;
+    reg [31:0] datain;
+    reg [15:0] addrin;
+    reg we_R;
+    reg [2:0] MemOp_R;
+    always@(posedge CLK100MHZ) begin
+        if(BTNC && counter == 0)begin
+            MemOp_R <= 3'b010;
+            we_R <= 1;
+            datain <= 0;
+            addrin <= 0;
+            counter <= counter + 1;
+        end else if(counter != 0 && counter < 2**16)begin
+            addrin <= counter;
+            counter <= counter + 1;
+        end else if(counter == 2**16)begin
+            counter <= 0;
+            we_R <= 0;
+            MemOp_R <= MemOp;
+        end else begin
+            datain <= {datain_L8b, datain_L8b, datain_L8b, datain_L8b};
+            addrin <= {12'b0, addr_L4b};
+            we_R <= we;
+            MemOp_R <= MemOp;
+        end
+    end
     mem32b RAM(
-        .dataout(dataout),   //Êä³öÊý¾Ý
-        .clk(CLK100MHZ),                   //Ê±ÖÓÐÅºÅ
-        .rst(BTNC),
-        .MemOp(MemOp),          //¶ÁÐ´×Ö½ÚÊý¿ØÖÆÐÅºÅ
-        .datain({datain_L8b, datain_L8b, datain_L8b, datain_L8b}),        //ÊäÈëÊý¾Ý
-        .addr({12'd0, addr_L4b}),          //16Î»´æ´¢Æ÷µØÖ·
-        .we(we),
-        .out_valid(out_valid)
+        .dataout(dataout),   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .clk(CLK100MHZ),                   //Ê±ï¿½ï¿½ï¿½Åºï¿½
+        .MemOp(MemOp_R),          //ï¿½ï¿½Ð´ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+        .datain(datain),        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        .addr(addrin),          //16Î»ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½Ö·
+        .we(we_R)
     );
     
-    assign dataout_L16b = dataout[15:0];
-`ifdef NVB
-    seg nvb_seg(
-        .clk(CLK100MHZ),
-        .rst(BTNC),
-        .num(dataout),
-        .o_seg0(o_seg0),
-        .o_seg1(o_seg1),
-        .o_seg2(o_seg2),
-        .o_seg3(o_seg3),
-        .o_seg4(o_seg4),
-        .o_seg5(o_seg5),
-        .o_seg6(o_seg6),
-        .o_seg7(o_seg7)
-    );
-`else
+    //assign dataout_L16b = dataout[15:0];
+
     seg7decimal my_seg7(
         .x(dataout),
         .clk(CLK100MHZ),
@@ -62,5 +60,5 @@ module mem32b_top(
         .an(AN),
         .dp(0)
     );
-`endif
+
 endmodule
