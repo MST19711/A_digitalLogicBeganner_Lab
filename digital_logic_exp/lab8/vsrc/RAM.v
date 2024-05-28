@@ -16,7 +16,7 @@ module ram_64k(
     (* ram_style="block" *) reg [7:0] ram [2**16-1:0];
     initial begin
     // 使用$readmemh系统任务从.hex文件中读取数据到寄存器文件
-        $readmemh("/Users/cx_li/Documents/Github/digitalLogic_Lab/digital_logic_exp/lab8/testcase/Fibonacci_hex_littleEnd_1byte.hex", ram);
+        $readmemh("/Users/cx_li/Documents/Github/digitalLogic_Lab/digital_logic_exp/lab8/testcase/Fibonacci_littleEnd_1byte.hex", ram);
     end
     wire [31:0] outwire;
     assign outwire[7:0] = (addr > 2**16-1) ? 0 : ram[addr];

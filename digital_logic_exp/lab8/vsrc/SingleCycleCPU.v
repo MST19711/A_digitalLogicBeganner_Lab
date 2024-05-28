@@ -151,7 +151,7 @@ module SingleCycleCPU(
 		.CF(emptyCF),
 		.cout(emptycout),
 		.x((NxtASrc_W == 0) ? pc : busa_W), 
-		.y((NxtBSrc_W == 0) ? 32'd4 : IMM_W),
+		.y((NxtBSrc_W == 0) ? 32'd4 : IMM_W & 32'hfffffffe),
 		.sub(1'b0)
 	);
 

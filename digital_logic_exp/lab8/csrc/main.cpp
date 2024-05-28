@@ -14,13 +14,13 @@ static void single_cycle() {
     dut.CLK = 0;
     dut.eval();
     // std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    while (lastTime / 50000 == std::clock() / 50000)
+    while (lastTime / 50 == std::clock() / 50)
         ;
     lastTime = std::clock();
     dut.CLK = 1;
     // std::this_thread::sleep_for(std::chrono::milliseconds(500));
     dut.eval();
-    while (lastTime / 50000 == std::clock() / 50000)
+    while (lastTime / 50 == std::clock() / 50)
         ;
     lastTime = std::clock();
 }
