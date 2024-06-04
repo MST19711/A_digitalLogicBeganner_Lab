@@ -21,7 +21,17 @@ module SingleCycleCPU_top(
 );
     wire RST = BTNC;
     wire cpuclk;
-    assign cpuclk = CLK;
+    reg cpuclk_r;
+    reg [31:0] clkcnt = 0;
+    assign cpuclk = cpuclk_r;
+    always @(posedge CLK)begin
+        if(clkcnt == (1000) - 1)begin
+            cpuclk_r <= ~cpuclk_r;
+            clkcnt <= 0;
+        end else begin
+            clkcnt <= clkcnt + 1;
+        end
+    end
     wire [31:0] InstrMemaddr_W;
     wire [31:0] InstrMemdataout_W;
     wire InstrMemclk_W;
@@ -39,17 +49,17 @@ module SingleCycleCPU_top(
     SingleCycleCPU CPU0(
         .clock(cpuclk),
         .reset(rst_sig),
-        .InstrMemaddr(InstrMemaddr_W),        // 指令存储器地址
+        .InstrMemaddr(InstrMemaddr_W),        // 指令存储器地�?
         .InstrMemdataout(InstrMemdataout_W),     // 指令内容
         .InstrMemclk(InstrMemclk_W),         // 指令存储器读取时钟，为了实现异步读取，设置读取时钟和写入时钟反相
-        .DataMemaddr(DataMemaddr_W),         // 数据存储器地址
-        .DataMemdataout(DataMemdataout_W),      // 数据存储器输出数据
-        .DataMemdatain(DataMemdatain_W),       // 数据存储器写入数据
+        .DataMemaddr(DataMemaddr_W),         // 数据存储器地�?
+        .DataMemdataout(DataMemdataout_W),      // 数据存储器输出数�?
+        .DataMemdatain(DataMemdatain_W),       // 数据存储器写入数�?
         .DataMemrdclk(DataMemrdclk_W),        // 数据存储器读取时钟，为了实现异步读取，设置读取时钟和写入时钟反相
-        .DataMemwrclk(DataMemwrclk_W),        // 数据存储器写入时钟
-        .DataMemop(DataMemop_W),           // 数据读写字节数控制信号
-        .DataMemwe(DataMemwe_W),           // 数据存储器写入使能信号
-        .dbgdata(dbgdata_W)              // debug调试信号，输出16位指令存储器地址有效地址
+        .DataMemwrclk(DataMemwrclk_W),        // 数据存储器写入时�?
+        .DataMemop(DataMemop_W),           // 数据读写字节数控制信�?
+        .DataMemwe(DataMemwe_W),           // 数据存储器写入使能信�?
+        .dbgdata(dbgdata_W)              // debug调试信号，输�?16位指令存储器地址有效地址
     );
     assign dataout_L16b = dbgdata_W;
     ram_64k InstrMem(
@@ -70,7 +80,7 @@ module SingleCycleCPU_top(
         .addr(DataMemaddr_W[15:0]),      
         .we(DataMemwe_W)
     );
-    // 将地址0x1004F000映射到数码管上
+    // 将地�?0x1004F000映射到数码管�?
     reg [31:0] seg_R;
     always @(posedge DataMemwrclk_W) begin
         //if (DataMemwe_W)    $display("PC = %h, write %h to datamem %h", CPU0.pc, DataMemdatain_W, DataMemaddr_W);

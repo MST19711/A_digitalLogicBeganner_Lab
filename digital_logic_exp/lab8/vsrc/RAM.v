@@ -13,10 +13,10 @@ module ram_64k(
     wire [3:0] we_W_T;
     reg [31:0] outreg;
     wire [31:0] out_valid_w;
-    (* ram_style="block" *) reg [7:0] ram [2**16-1:0];
+    (* ram_style="block" *) reg [7:0] ram [2**11-1:0];
     initial begin
-    // 使用$readmemh系统任务从.hex文件中读取数据到寄存器文件
-        $readmemh("/Users/cx_li/Documents/Github/digitalLogic_Lab/digital_logic_exp/lab8/testcase/Fibonacci_hex_littleEnd_1byte.hex", ram);
+    // 使用$readmemh系统任务�?.hex文件中读取数据到寄存器文�?
+        $readmemh("F:\\digitalLogic_Lab\\digital_logic_exp\\lab8\\testcase\\Fibonacci_with_call_littleEnd_1byte.hex", ram);
     end
     wire [31:0] outwire;
     assign outwire[7:0] = (addr > 2**16-1) ? 0 : ram[addr];
@@ -75,7 +75,7 @@ module DataRam_64k(
     wire [3:0] we_W_T;
     reg [31:0] outreg;
     wire [31:0] out_valid_w;
-    (* ram_style="block" *) reg [7:0] ram [2**16-1:0];
+    (* ram_style="block" *) reg [7:0] ram [2**10-1:0];
     wire [31:0] outwire;
     assign outwire[7:0] = (addr > 2**16-1) ? 0 : ram[addr];
     assign outwire[15:8] = (addr + 1 > 2**16-1) ? 0 : ram[addr + 1];
