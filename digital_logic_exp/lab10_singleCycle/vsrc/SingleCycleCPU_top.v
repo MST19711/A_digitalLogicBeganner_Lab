@@ -114,11 +114,23 @@ module SingleCycleCPU_top(
     // 0xa0000000 到 0xa0000FFF 为终端窗口，显示模块只能read, cpu可以写入或读取。
     // 对该区域的所有load/store指令都只有最低的一字节是有效的，编写程序时请注意语义正确
     // 终端窗口的指针地址为0xa0000FFF，该指针由于未知原因最好将其视作只写变量，在其上做自增可能会出现未知原因的错误
-    // 0xa0001000 到 0xa0001FFF 为键盘IO区域
+    // 0xa0001000 到 0xa0001AFF 为键盘IO区域
     // 从0xa0001000 到 0xa00010FF为键盘扫描吗映射区域，
     // 该区域相应位置读结果为1(0xFFFFFFFF)则表明已经该按键为按下状态，反之认为该按键为抬起状态
     // cpu只能从该区域读取而不能写入，键盘控制器负责向键盘IO区域写入当前键盘状态。
     // 0x1004F000 为数码管
+    // 0xa0001B00 为从系统开始运行到当前的毫秒数，对于cpu只读
+    // 此时认为系统运行在100MHz
+    reg [31:0] time_reg = 0;
+    reg [31:0] cycle_counter;
+    always @(posedge CLK)begin
+        if(cycle_counter != 100000 - 1) begin
+            cycle_counter <= cycle_counter + 1;
+        end else begin
+            time_reg <= time_reg + 1;
+            cycle_counter <= 0;
+        end
+    end
     wire [31:0] KB_memmap_addr;
     assign KB_memmap_addr = (DataMemaddr_W >= 32'ha0001000 && DataMemaddr_W <= 32'ha00010FF) ? DataMemaddr_W : 0;
     wire [31:0] KB_memmap_output;
@@ -176,6 +188,7 @@ module SingleCycleCPU_top(
                                 (DataMemaddr_W >= 32'ha0000000 && DataMemaddr_W <= 32'ha0000FFF) ? consoles_0_bufferout : 
                                 (DataMemaddr_W == 32'ha0000FFF) ? con0_ptr :
                                 (DataMemaddr_W >= 32'ha0001000 && DataMemaddr_W <= 32'ha00010FF) ? KB_memmap_output :
+                                (DataMemaddr_W == 32'ha0001B00) ? time_reg :
                                 32'd0;
     /*
     always @(DataMemaddr_W) begin

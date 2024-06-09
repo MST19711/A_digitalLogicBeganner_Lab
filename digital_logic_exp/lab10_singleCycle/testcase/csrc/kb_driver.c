@@ -1,3 +1,13 @@
+// LED
+void write2LED(int x) {
+    volatile unsigned *SEG_LED = (volatile unsigned *)0x1004F000;
+    *SEG_LED = x;
+}
+
+// time memmap
+#define TIME_MEMMAP_ADDR 0xa0001B00
+#define TIME_MS *((unsigned int *)TIME_MEMMAP_ADDR)
+
 // umul, udiv and umod
 unsigned int umul(unsigned int a, unsigned int b) {
     unsigned int result = 0;
@@ -44,20 +54,21 @@ unsigned int umod(unsigned int a, unsigned int b) {
     return (unsigned int)A;
 }
 // keyboard driver
-#define kb_snapshot_addr 0xb0000000 // 到0xb00000FF
-#define kb_memmap_addr 0xa0001000   // 到0xa00010FF
+#define kb_snapshot_addr 0xb0000000                    // 到0xb00000FF
+#define kb_snapshot(x) *((char *)kb_snapshot_addr + x) // 到0xa00010FF
+#define kb_memmap_addr 0xa0001000                      // 到0xa00010FF
+#define kb_memmap(x) *((char *)kb_memmap_addr + x)     // 到0xa00010FF
 
 char kb_getc() {
     char c = 0;
     int kbc = 0xFFFFFFFF;
     for (int i = 0; i < 0xFF; i++) {
-        if (*((char *)kb_snapshot_addr + i) != *((char *)kb_memmap_addr + i) &&
-            *((char *)kb_snapshot_addr + i) == 0) {
-            *((char *)kb_snapshot_addr + i) = *((char *)kb_memmap_addr + i);
+        if (kb_snapshot(i) != kb_memmap(i) && kb_snapshot(i) == 0) {
+            kb_snapshot(i) = kb_memmap(i);
             kbc = i;
             break;
         }
-        *((char *)kb_snapshot_addr + i) = *((char *)kb_memmap_addr + i);
+        kb_snapshot(i) = kb_memmap(i);
     }
     if (kbc != 0xFFFFFFFF) {
         *((volatile unsigned *)0x1004F000) = kbc;
@@ -292,6 +303,30 @@ void console_putc(console *con, char c) {
         *(con->conptr) = con->ptr;
     }
 }
+#define conBuffer_char(con, ptr) (ptr < con->size ? con->data[ptr] : 0)
+void console_putc_at(console *con, char c, int addr) {
+    if (addr < con->size) {
+        con->data[addr] = c;
+    }
+}
+void console_insert_char(console *con, char c) {
+    if (c == '\n') {
+        console_putc(con, c);
+        return;
+    }
+    int i;
+    if (con->ptr < con->size) {
+        for (i = con->ptr; conBuffer_char(con, i) != 0; i++)
+            ;
+        if (i == con->size)
+            i--;
+        while (i > con->ptr) {
+            console_putc_at(con, conBuffer_char(con, i - 1), i);
+            i--;
+        }
+        console_putc(con, c);
+    }
+}
 void console_backspace(console *con) {
     if (con->ptr > 0) {
         con->ptr--;
@@ -331,6 +366,17 @@ void console_moveptr(console *con, int c) {
     }
     *(con->conptr) = con->ptr;
 }
+
+void console_backspace_inline(console *con) {
+    if (con->ptr < con->size && con->ptr > 0) {
+        int i;
+        for (i = con->ptr; umod((i + 1), con->line_size) != 0; i++) {
+            console_putc_at(con, con->data[i + 1], i);
+        }
+        con->ptr--;
+        *(con->conptr) = con->ptr;
+    }
+}
 int print_int(console *con, unsigned x) {
     int ret;
     if (x != 0)
@@ -341,6 +387,24 @@ int print_int(console *con, unsigned x) {
     return ret + 1;
 }
 
+#define getc_fromStr(str, addr) (char)*((char *)str + addr)
+void console_nputline(console *con, char *str, int max_len) {
+    for (int i = 0; getc_fromStr(str, i) != 0 && i < max_len; i++) {
+        console_putc(con, getc_fromStr(str, i));
+    }
+}
+void console_rollUp(console *con) {
+    int i = 0;
+    for (int i = 0; i < con->size; i++) {
+        console_putc_at(con,
+                        (i + con->line_size < con->size
+                             ? con->data[i + con->line_size]
+                             : 0),
+                        i);
+    }
+    con->ptr -= con->line_size;
+    *(con->conptr) = con->ptr;
+}
 char getc() { return kb_getc(); }
 int main() {
     char c;
@@ -354,11 +418,11 @@ int main() {
         c = getc();
         if (c != 0) {
             if (c == 0x08)
-                console_backspace(&con0);
+                console_backspace_inline(&con0);
             else if (c == 0x11 || c == 0x12 || c == 0x13 || c == 0x14)
                 console_moveptr(&con0, c);
             else
-                console_putc(&con0, c);
+                console_insert_char(&con0, c);
         }
     }
     return 0;

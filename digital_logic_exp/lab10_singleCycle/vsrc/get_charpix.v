@@ -9,6 +9,6 @@ module get_charpix(
     initial begin
         $readmemh("/Users/cx_li/Documents/Github/digitalLogic_Lab/digital_logic_exp/lab6/vsrc/ASC16.hex", font);
     end
-    assign is_light = (font[c][127 - ((y * 8) + x)]) | (in_ptr & (y == 15));
+    assign is_light = (font[c][127 - ((y * 8) + x)]) | (in_ptr & ((x == 0) || (x == 0)));
     
 endmodule

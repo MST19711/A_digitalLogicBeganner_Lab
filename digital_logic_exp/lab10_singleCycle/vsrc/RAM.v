@@ -17,7 +17,7 @@ module ram_64k(
     (* ram_style="block" *) reg [31:0] ram [2**16-1:0];
     initial begin
     // 使用$readmemh系统任务从.hex文件中读取数据到寄存器文件
-        $readmemh("/Users/cx_li/Documents/Github/digitalLogic_Lab/digital_logic_exp/lab10_singleCycle/testcase/kbdriver_test.hex", ram);
+        $readmemh("/Users/cx_li/Documents/Github/digitalLogic_Lab/digital_logic_exp/lab10_singleCycle/testcase/lab10_xterm.hex", ram);
     end  
     always @(negedge Rclk) begin
         outreg <= ram[addr >> 2];
