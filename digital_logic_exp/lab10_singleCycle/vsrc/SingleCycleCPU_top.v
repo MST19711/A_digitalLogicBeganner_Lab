@@ -190,19 +190,13 @@ module SingleCycleCPU_top(
                                 (DataMemaddr_W >= 32'ha0001000 && DataMemaddr_W <= 32'ha00010FF) ? KB_memmap_output :
                                 (DataMemaddr_W == 32'ha0001B00) ? time_reg :
                                 32'd0;
-    /*
+    
     always @(DataMemaddr_W) begin
-        if(DataMemaddr_W >= 32'hb0000000 && DataMemaddr_W <= 32'hb0000000 + 32*1024*1024) begin
-            if(DataMemdataout_RAM_heap != 0) begin
-                $display("read heap : %h at %h", DataMemdataout_RAM_heap, DataMemaddr_W);
-            end
-            if(darm_heap_we == 1) begin
-                $display("write heap : %h to %h", DataMemdatain_W, DataMemaddr_W);
-            end
+        if(DataMemaddr_W == 32'ha0001B00) begin
+            $display("get time : %h", time_reg);
         end
     end
-    */
-    
+
     DataRam_64k stack(
         .dataout(DataMemdataout_RAM_stack), 
         .Rclk(DataMemrdclk_W),            

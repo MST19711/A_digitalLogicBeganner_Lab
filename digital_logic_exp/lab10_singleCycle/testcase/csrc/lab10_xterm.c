@@ -56,8 +56,11 @@ unsigned int umod(unsigned int a, unsigned int b) {
 // heap
 #define prompt_addr 0xb0000200
 #define hello_addr 0xb0000220
-#define getline_buffer_addr 0xb0000300 // to 0xb0000400
+#define Unknown_Command_addr 0xb0000250
+#define getline_buffer_addr 0xb0000300 // to 0xb0000CFF
 #define getline_buffer ((char *)getline_buffer_addr)
+#define sort_buffer_addr 0xb0000D00 // to 0xb0000FFF (max to 150 nums)
+#define sort_buffer ((int *)sort_buffer_addr)
 
 // keyboard driver
 #define kb_snapshot_addr 0xb0000000                    // 到0xb00000FF
@@ -77,7 +80,7 @@ char kb_getc() {
         kb_snapshot(i) = kb_memmap(i);
     }
     if (kbc != 0xFFFFFFFF) {
-        *((volatile unsigned *)0x1004F000) = kbc;
+        //*((volatile unsigned *)0x1004F000) = kbc;
         if (kbc == 0x66)
             c = 0x08; // backspace
         if (kbc == 0x5a)
@@ -391,16 +394,26 @@ void console_backspace_inline(console *con) {
         *(con->conptr) = con->ptr;
     }
 }
-int print_int(console *con, unsigned x) {
+int print_int(console *con, unsigned x, unsigned first_call) {
     int ret;
     if (x != 0)
-        ret = print_int(con, udiv(x, 10));
-    else
+        ret = print_int(con, udiv(x, 10), 0);
+    else {
+        if (first_call != 0)
+            console_putc(con, '0');
         return 0;
+    }
     console_putc(con, umod(x, 10) + '0');
     return ret + 1;
 }
-
+int print_signedInt(console *con, unsigned x, unsigned first_call) {
+    if (x & 1 << 31) {
+        console_putc(con, '-');
+        print_int(con, (int)x * -1, 1);
+    } else {
+        print_int(con, x, 1);
+    }
+}
 #define getc_fromStr(str, addr) (char)*((char *)str + addr)
 void console_nputline(console *con, char *str, int max_len) {
     for (int i = 0; getc_fromStr(str, i) != 0 && i < max_len; i++) {
@@ -432,7 +445,7 @@ void get_line(console *con) { // 不包括\n
     while (1) {
         c = getc();
         if (c != 0x0) {
-            if (c == 0x08) {
+            if (c == 0x08 && con->ptr > start) {
                 console_backspace_inline(con);
                 i--;
             } else if (c == 0x13 || c == 0x14) {
@@ -456,8 +469,224 @@ void get_line(console *con) { // 不包括\n
 }
 
 // apps
-void hi() {}
+void hi(console *con, char *hello) {
+    console_nputline(con, hello, 100);
+    console_nputline(con, getline_buffer + 3, 100);
+    console_putc(con, ' ');
+    for (int i = 0; i < 5; i++)
+        console_putc(con, '!');
+    console_putc(con, '\n');
+    console_autorollUp(con);
+}
+void print_time(console *con) {
 
+    unsigned time_ms = TIME_MS;
+    unsigned int h = udiv(time_ms, (1000 * 60 * 60));
+    unsigned int m = udiv(time_ms, (1000 * 60));
+    unsigned int s = udiv(time_ms, (1000));
+    print_int(con, h, 1);
+    console_putc(con, ':');
+    print_int(con, m, 1);
+    console_putc(con, ':');
+    print_int(con, s, 1);
+    console_putc(con, '\n');
+    console_autorollUp(con);
+}
+
+void fib(console *con) {
+    int i = 3;
+    while (getline_buffer[i] < '0' || getline_buffer[i] > '9') {
+        i++;
+        write2LED(0);
+    }
+    int n = 0;
+    while (getline_buffer[i]) {
+        n = umul(n, 10);
+        n += getline_buffer[i] - '0';
+        i++;
+    }
+    int a = 1, b = 1, c;
+    write2LED(n);
+    if (n < 2)
+        console_putc(con, '0');
+    else {
+        console_putc(con, '1');
+        console_putc(con, '\n');
+        console_autorollUp(con);
+        console_putc(con, '1');
+        console_putc(con, '\n');
+        console_autorollUp(con);
+        for (int j = 0; j < n - 2; j++) {
+            // write2LED(j);
+            c = a + b;
+            b = a;
+            a = c;
+            print_int(con, c, 1);
+            console_putc(con, '\n');
+            console_autorollUp(con);
+        }
+    }
+    console_putc(con, '\n');
+    console_autorollUp(con);
+}
+#define not_a_num(x) (x < '0' || x > '9')
+#define swap(a, b) a ^= b, b ^= a, a ^= b;
+void sort(console *con) {
+    console_clear(con);
+    while (1) {
+        get_line(con);
+        int num = 0;
+        int i;
+        if (getline_buffer[0] == 'e' && getline_buffer[1] == 'x' &&
+            getline_buffer[2] == 'i' && getline_buffer[3] == 't') {
+            break;
+        }
+        char last_simble = 0;
+        int meet_num = 0;
+        sort_buffer[num] = 0;
+        for (i = 0; getline_buffer[i] != 0 && i < con->size; i++) {
+            if (not_a_num(getline_buffer[i])) {
+                if (meet_num != 0 && !not_a_num(getline_buffer[i - 1])) {
+                    if (last_simble == '-') {
+                        sort_buffer[num] *= -1;
+                    }
+                    num++;
+                    sort_buffer[num] = 0;
+                }
+            } else {
+                meet_num = 1;
+                if (not_a_num(getline_buffer[i - 1])) {
+                    last_simble = getline_buffer[i - 1];
+                }
+                sort_buffer[num] *= 10;
+                sort_buffer[num] += getline_buffer[i] - '0';
+            }
+        }
+        if (not_a_num(getline_buffer[i - 1])) {
+            num--;
+        } else if (last_simble == '-') {
+            sort_buffer[num] *= -1;
+        }
+        write2LED(num);
+        for (int j = num; j > 0; j--) {
+            for (int k = 0; k < j; k++) {
+                if (sort_buffer[k] > sort_buffer[k + 1]) {
+                    swap(sort_buffer[k], sort_buffer[k + 1]);
+                }
+            }
+        }
+        for (int j = 0; j <= num; j++) {
+            print_signedInt(con, sort_buffer[j], 1);
+            console_putc(con, ' ');
+        }
+        console_putc(con, '\n');
+        console_autorollUp(con);
+    }
+    console_clear(con);
+}
+
+#define MAX_SIZE 100
+
+typedef struct {
+    int top;
+    unsigned data[MAX_SIZE];
+} NumStack;
+
+typedef struct {
+    int top;
+    char data[MAX_SIZE];
+} OpStack;
+
+void pushNum(NumStack *s, unsigned num) { s->data[++s->top] = num; }
+
+unsigned popNum(NumStack *s) { return s->data[s->top--]; }
+
+void pushOp(OpStack *s, char op) { s->data[++s->top] = op; }
+
+char popOp(OpStack *s) { return s->data[s->top--]; }
+
+int isOperator(char c) { return c == '+' || c == '-' || c == '*' || c == '/'; }
+
+int precedence(char op) {
+    if (op == '+' || op == '-')
+        return 1;
+    else if (op == '*' || op == '/')
+        return 2;
+    else
+        return 0;
+}
+
+void applyOp(NumStack *nums, char op) {
+    unsigned b = popNum(nums);
+    unsigned a = popNum(nums);
+    if (op == '+')
+        pushNum(nums, a + b);
+    else if (op == '-')
+        pushNum(nums, a - b);
+    else if (op == '*')
+        pushNum(nums, umul(a, b));
+    else if (op == '/')
+        pushNum(nums, udiv(a, b));
+}
+
+unsigned strlen(const char *s) {
+    unsigned len = 0;
+    for (; *(s + len) != 0; len++)
+        ;
+    return len;
+}
+
+unsigned evaluate(const char *expression) {
+    NumStack nums;
+    nums.top = -1;
+    OpStack ops;
+    ops.top = -1;
+    for (int i = 0; expression[i] != '\0'; ++i) {
+        if (expression[i] == ' ') {
+            continue;
+        } else if (expression[i] == '(') {
+            pushOp(&ops, expression[i]);
+        } else if (!not_a_num(expression[i])) {
+            unsigned num = 0;
+            while (i < strlen(expression) && !not_a_num(expression[i])) {
+                num = num * 10 + (expression[i] - '0');
+                i++;
+            }
+            i--;
+            pushNum(&nums, num);
+        } else if (expression[i] == ')') {
+            while (ops.top != -1 && ops.data[ops.top] != '(') {
+                applyOp(&nums, popOp(&ops));
+            }
+            popOp(&ops);
+        } else if (isOperator(expression[i])) {
+            while (ops.top != -1 &&
+                   precedence(ops.data[ops.top]) >= precedence(expression[i])) {
+                applyOp(&nums, popOp(&ops));
+            }
+            pushOp(&ops, expression[i]);
+        }
+    }
+    while (ops.top != -1) {
+        applyOp(&nums, popOp(&ops));
+    }
+    return popNum(&nums);
+}
+
+void calculator(console *con) {
+    console_clear(con);
+    while (1) {
+        get_line(con);
+        if (getline_buffer[0] == 'e' && getline_buffer[1] == 'x' &&
+            getline_buffer[2] == 'i' && getline_buffer[3] == 't') {
+            break;
+        }
+        print_int(con, evaluate(getline_buffer), 1);
+        console_putc(con, '\n');
+        console_autorollUp(con);
+    }
+    console_clear(con);
+}
 int main() {
     char c;
     console con0;
@@ -492,6 +721,24 @@ int main() {
     promp[14] = ' ';
     promp[15] = 0;
     //"CX_Li@LCore ~ "
+    char *UC = (char *)Unknown_Command_addr;
+    UC[0] = 'U';
+    UC[1] = 'n';
+    UC[2] = 'k';
+    UC[3] = 'n';
+    UC[4] = 'o';
+    UC[5] = 'w';
+    UC[6] = 'n';
+    UC[7] = ' ';
+    UC[8] = 'C';
+    UC[9] = 'o';
+    UC[10] = 'm';
+    UC[11] = 'm';
+    UC[12] = 'a';
+    UC[13] = 'n';
+    UC[14] = 'd';
+    UC[15] = ' ';
+    UC[16] = 0;
     console_nputline(&con0, promp, 100);
     while (1) {
         get_line(&con0);
@@ -499,20 +746,30 @@ int main() {
         // console_putc(&con0, '\n');
         if (getline_buffer[0] == 'h' && getline_buffer[1] == 'i' &&
             getline_buffer[2] == ' ') {
-            console_nputline(&con0, hello, 100);
-            console_nputline(&con0, getline_buffer + 3, 100);
-            console_putc(&con0, ' ');
-            console_putc(&con0, '!');
-            console_putc(&con0, '!');
-            console_putc(&con0, '!');
-            console_putc(&con0, '!');
-            console_putc(&con0, '!');
-            console_putc(&con0, '\n');
-            console_autorollUp(&con0);
+            hi(&con0, hello);
         } else if (getline_buffer[0] == 'c' && getline_buffer[1] == 'l' &&
                    getline_buffer[2] == 'e' && getline_buffer[3] == 'a' &&
                    getline_buffer[4] == 'r' && getline_buffer[5] == 0) {
             console_clear(&con0);
+        } else if (getline_buffer[0] == 't' && getline_buffer[1] == 'i' &&
+                   getline_buffer[2] == 'm' && getline_buffer[3] == 'e' &&
+                   getline_buffer[4] == 0) {
+            print_time(&con0);
+        } else if (getline_buffer[0] == 'f' && getline_buffer[1] == 'i' &&
+                   getline_buffer[2] == 'b' && getline_buffer[3] == ' ') {
+            fib(&con0);
+        } else if (getline_buffer[0] == 's' && getline_buffer[1] == 'o' &&
+                   getline_buffer[2] == 'r' && getline_buffer[3] == 't' &&
+                   getline_buffer[4] == 0) {
+            sort(&con0);
+        } else if (getline_buffer[0] == 'c' && getline_buffer[1] == 'a' &&
+                   getline_buffer[2] == 'l' && getline_buffer[3] == 0) {
+            calculator(&con0);
+        } else {
+            console_nputline(&con0, UC, 100);
+            for (int i = 0; i < 5; i++)
+                console_putc(&con0, '!');
+            console_putc(&con0, '\n');
         }
         console_nputline(&con0, promp, 100);
         /*
