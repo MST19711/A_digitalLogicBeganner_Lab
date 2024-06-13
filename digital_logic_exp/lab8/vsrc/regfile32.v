@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module regfile32(
-	output wire [31:0] busa,   //�Ĵ���ra�������?
-	output wire [31:0] busb,   //�Ĵ���rb�������?
+	output wire [31:0] busa,   //�Ĵ���ra�������?
+	output wire [31:0] busb,   //�Ĵ���rb�������?
 	input clk,
 	input [4:0] ra,           //���Ĵ������ra
 	input [4:0] rb,          //���Ĵ������rb
@@ -18,7 +18,7 @@ module regfile32(
 	assign busa=regfiles[ra]; ////���˿�ra
 	assign busb=regfiles[rb];
 	
-	always@(posedge clk)
+	always@(negedge clk)
 	begin
 		if(we==1'b1) begin 
 			regfiles[rw] <= (rw==5'b00000)? 32'b0:busw; 
