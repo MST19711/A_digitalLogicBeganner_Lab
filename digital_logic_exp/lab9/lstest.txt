@@ -1,0 +1,285 @@
+PC : 0xfffffffc, instr : 0x00000000
+PC : 0x00000000, instr : 0xfe010113
+write ffffffe0 to reg  2
+PC : 0x00000004, instr : 0x00112e23
+store 0x00000000 to 0xfffffffc from reg  1
+store 0x00000000 to 0xfffffffc from reg  1
+PC : 0x00000008, instr : 0x00812c23
+store 0x00000000 to 0xfffffff8 from reg  8
+store 0x00000000 to 0xfffffff8 from reg  8
+PC : 0x0000000c, instr : 0x02010413
+write 00000000 to reg  8
+PC : 0x00000010, instr : 0x00100793
+write 00000001 to reg 15
+PC : 0x00000014, instr : 0xfef42623
+store 0x00000001 to 0xffffffec from reg 15
+store 0x00000001 to 0xffffffec from reg 15
+PC : 0x00000018, instr : 0x00200793
+write 00000002 to reg 15
+PC : 0x0000001c, instr : 0xfef42423
+store 0x00000002 to 0xffffffe8 from reg 15
+store 0x00000002 to 0xffffffe8 from reg 15
+PC : 0x00000020, instr : 0x00300793
+write 00000003 to reg 15
+PC : 0x00000024, instr : 0xfef42223
+store 0x00000003 to 0xffffffe4 from reg 15
+store 0x00000003 to 0xffffffe4 from reg 15
+PC : 0x00000028, instr : 0xfec42783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffec to reg 15
+load 0x00000001 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000001 to 0xffffffe0 from reg 15
+store 0x00000001 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe8 to reg 15
+load 0x00000002 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000002 to 0xffffffec from reg 15
+store 0x00000002 to 0xffffffec from reg 15
+PC : 0x00000038, instr : 0xfe442783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffe4 to reg 15
+load 0x00000003 from 0xffffffe4 to reg 15
+PC : 0x0000003c, instr : 0xfef42423
+store 0x00000003 to 0xffffffe8 from reg 15
+store 0x00000003 to 0xffffffe8 from reg 15
+PC : 0x00000040, instr : 0xfe042783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffe0 to reg 15
+load 0x00000001 from 0xffffffe0 to reg 15
+PC : 0x00000044, instr : 0xfef42223
+store 0x00000001 to 0xffffffe4 from reg 15
+store 0x00000001 to 0xffffffe4 from reg 15
+PC : 0x00000048, instr : 0x1004f7b7
+write 1004f000 to reg 15
+PC : 0x0000004c, instr : 0x00078793
+write 1004f000 to reg 15
+PC : 0x00000050, instr : 0xfe442703
+write 00000001 to reg 14
+load 0x00000001 from 0xffffffe4 to reg 14
+load 0x00000001 from 0xffffffe4 to reg 14
+PC : 0x00000054, instr : 0x00e7a023
+store 0x00000001 to 0x1004f000 from reg 14
+store 0x00000001 to 0x1004f000 from reg 14
+PC : 0x00000058, instr : 0xfd1ff06f
+write 0000005c to reg  0
+PC : 0x00000028, instr : 0xfec42783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffec to reg 15
+load 0x00000002 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000002 to 0xffffffe0 from reg 15
+store 0x00000002 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffe8 to reg 15
+load 0x00000003 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000003 to 0xffffffec from reg 15
+store 0x00000003 to 0xffffffec from reg 15
+PC : 0x00000038, instr : 0xfe442783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffe4 to reg 15
+load 0x00000001 from 0xffffffe4 to reg 15
+PC : 0x0000003c, instr : 0xfef42423
+store 0x00000001 to 0xffffffe8 from reg 15
+store 0x00000001 to 0xffffffe8 from reg 15
+PC : 0x00000040, instr : 0xfe042783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe0 to reg 15
+load 0x00000002 from 0xffffffe0 to reg 15
+PC : 0x00000044, instr : 0xfef42223
+store 0x00000002 to 0xffffffe4 from reg 15
+store 0x00000002 to 0xffffffe4 from reg 15
+PC : 0x00000048, instr : 0x1004f7b7
+write 1004f000 to reg 15
+PC : 0x0000004c, instr : 0x00078793
+write 1004f000 to reg 15
+PC : 0x00000050, instr : 0xfe442703
+write 00000002 to reg 14
+load 0x00000002 from 0xffffffe4 to reg 14
+load 0x00000002 from 0xffffffe4 to reg 14
+PC : 0x00000054, instr : 0x00e7a023
+store 0x00000002 to 0x1004f000 from reg 14
+store 0x00000002 to 0x1004f000 from reg 14
+PC : 0x00000058, instr : 0xfd1ff06f
+write 0000005c to reg  0
+PC : 0x00000028, instr : 0xfec42783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffec to reg 15
+load 0x00000003 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000003 to 0xffffffe0 from reg 15
+store 0x00000003 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffe8 to reg 15
+load 0x00000001 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000001 to 0xffffffec from reg 15
+store 0x00000001 to 0xffffffec from reg 15
+PC : 0x00000038, instr : 0xfe442783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe4 to reg 15
+load 0x00000002 from 0xffffffe4 to reg 15
+PC : 0x0000003c, instr : 0xfef42423
+store 0x00000002 to 0xffffffe8 from reg 15
+store 0x00000002 to 0xffffffe8 from reg 15
+PC : 0x00000040, instr : 0xfe042783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffe0 to reg 15
+load 0x00000003 from 0xffffffe0 to reg 15
+PC : 0x00000044, instr : 0xfef42223
+store 0x00000003 to 0xffffffe4 from reg 15
+store 0x00000003 to 0xffffffe4 from reg 15
+PC : 0x00000048, instr : 0x1004f7b7
+write 1004f000 to reg 15
+PC : 0x0000004c, instr : 0x00078793
+write 1004f000 to reg 15
+PC : 0x00000050, instr : 0xfe442703
+write 00000003 to reg 14
+load 0x00000003 from 0xffffffe4 to reg 14
+load 0x00000003 from 0xffffffe4 to reg 14
+PC : 0x00000054, instr : 0x00e7a023
+store 0x00000003 to 0x1004f000 from reg 14
+store 0x00000003 to 0x1004f000 from reg 14
+PC : 0x00000058, instr : 0xfd1ff06f
+write 0000005c to reg  0
+PC : 0x00000028, instr : 0xfec42783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffec to reg 15
+load 0x00000001 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000001 to 0xffffffe0 from reg 15
+store 0x00000001 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe8 to reg 15
+load 0x00000002 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000002 to 0xffffffec from reg 15
+store 0x00000002 to 0xffffffec from reg 15
+PC : 0x00000038, instr : 0xfe442783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffe4 to reg 15
+load 0x00000003 from 0xffffffe4 to reg 15
+PC : 0x0000003c, instr : 0xfef42423
+store 0x00000003 to 0xffffffe8 from reg 15
+store 0x00000003 to 0xffffffe8 from reg 15
+PC : 0x00000040, instr : 0xfe042783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffe0 to reg 15
+load 0x00000001 from 0xffffffe0 to reg 15
+PC : 0x00000044, instr : 0xfef42223
+store 0x00000001 to 0xffffffe4 from reg 15
+store 0x00000001 to 0xffffffe4 from reg 15
+PC : 0x00000048, instr : 0x1004f7b7
+write 1004f000 to reg 15
+PC : 0x0000004c, instr : 0x00078793
+write 1004f000 to reg 15
+PC : 0x00000050, instr : 0xfe442703
+write 00000001 to reg 14
+load 0x00000001 from 0xffffffe4 to reg 14
+load 0x00000001 from 0xffffffe4 to reg 14
+PC : 0x00000054, instr : 0x00e7a023
+store 0x00000001 to 0x1004f000 from reg 14
+store 0x00000001 to 0x1004f000 from reg 14
+PC : 0x00000058, instr : 0xfd1ff06f
+write 0000005c to reg  0
+PC : 0x00000028, instr : 0xfec42783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffec to reg 15
+load 0x00000002 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000002 to 0xffffffe0 from reg 15
+store 0x00000002 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffe8 to reg 15
+load 0x00000003 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000003 to 0xffffffec from reg 15
+store 0x00000003 to 0xffffffec from reg 15
+PC : 0x00000038, instr : 0xfe442783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffe4 to reg 15
+load 0x00000001 from 0xffffffe4 to reg 15
+PC : 0x0000003c, instr : 0xfef42423
+store 0x00000001 to 0xffffffe8 from reg 15
+store 0x00000001 to 0xffffffe8 from reg 15
+PC : 0x00000040, instr : 0xfe042783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe0 to reg 15
+load 0x00000002 from 0xffffffe0 to reg 15
+PC : 0x00000044, instr : 0xfef42223
+store 0x00000002 to 0xffffffe4 from reg 15
+store 0x00000002 to 0xffffffe4 from reg 15
+PC : 0x00000048, instr : 0x1004f7b7
+write 1004f000 to reg 15
+PC : 0x0000004c, instr : 0x00078793
+write 1004f000 to reg 15
+PC : 0x00000050, instr : 0xfe442703
+write 00000002 to reg 14
+load 0x00000002 from 0xffffffe4 to reg 14
+load 0x00000002 from 0xffffffe4 to reg 14
+PC : 0x00000054, instr : 0x00e7a023
+store 0x00000002 to 0x1004f000 from reg 14
+store 0x00000002 to 0x1004f000 from reg 14
+PC : 0x00000058, instr : 0xfd1ff06f
+write 0000005c to reg  0
+PC : 0x00000028, instr : 0xfec42783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffec to reg 15
+load 0x00000003 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000003 to 0xffffffe0 from reg 15
+store 0x00000003 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffe8 to reg 15
+load 0x00000001 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000001 to 0xffffffec from reg 15
+store 0x00000001 to 0xffffffec from reg 15
+PC : 0x00000038, instr : 0xfe442783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe4 to reg 15
+load 0x00000002 from 0xffffffe4 to reg 15
+PC : 0x0000003c, instr : 0xfef42423
+store 0x00000002 to 0xffffffe8 from reg 15
+store 0x00000002 to 0xffffffe8 from reg 15
+PC : 0x00000040, instr : 0xfe042783
+write 00000003 to reg 15
+load 0x00000003 from 0xffffffe0 to reg 15
+load 0x00000003 from 0xffffffe0 to reg 15
+PC : 0x00000044, instr : 0xfef42223
+store 0x00000003 to 0xffffffe4 from reg 15
+store 0x00000003 to 0xffffffe4 from reg 15
+PC : 0x00000048, instr : 0x1004f7b7
+write 1004f000 to reg 15
+PC : 0x0000004c, instr : 0x00078793
+write 1004f000 to reg 15
+PC : 0x00000050, instr : 0xfe442703
+write 00000003 to reg 14
+load 0x00000003 from 0xffffffe4 to reg 14
+load 0x00000003 from 0xffffffe4 to reg 14
+PC : 0x00000054, instr : 0x00e7a023
+store 0x00000003 to 0x1004f000 from reg 14
+store 0x00000003 to 0x1004f000 from reg 14
+PC : 0x00000058, instr : 0xfd1ff06f
+write 0000005c to reg  0
+PC : 0x00000028, instr : 0xfec42783
+write 00000001 to reg 15
+load 0x00000001 from 0xffffffec to reg 15
+load 0x00000001 from 0xffffffec to reg 15
+PC : 0x0000002c, instr : 0xfef42023
+store 0x00000001 to 0xffffffe0 from reg 15
+store 0x00000001 to 0xffffffe0 from reg 15
+PC : 0x00000030, instr : 0xfe842783
+write 00000002 to reg 15
+load 0x00000002 from 0xffffffe8 to reg 15
+load 0x00000002 from 0xffffffe8 to reg 15
+PC : 0x00000034, instr : 0xfef42623
+store 0x00000002 to 0xffffffec from reg 15

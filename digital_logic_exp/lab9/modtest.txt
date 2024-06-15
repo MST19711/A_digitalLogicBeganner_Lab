@@ -1,0 +1,5555 @@
+PC : 0xfffffffc, instr : 0x00000000
+PC : 0x00000000, instr : 0xfe010113
+write ffffffe0 to reg  2
+PC : 0x00000004, instr : 0x00112e23
+store 0x00000000 to 0xfffffffc from reg  1
+store 0x00000000 to 0xfffffffc from reg  1
+PC : 0x00000008, instr : 0x00812c23
+store 0x00000000 to 0xfffffff8 from reg  8
+store 0x00000000 to 0xfffffff8 from reg  8
+PC : 0x0000000c, instr : 0x02010413
+write 00000000 to reg  8
+PC : 0x00000010, instr : 0x000037b7
+write 00003000 to reg 15
+PC : 0x00000014, instr : 0x00078793
+write 00003000 to reg 15
+PC : 0x00000018, instr : 0x03978793
+write 00003039 to reg 15
+PC : 0x0000001c, instr : 0xfef42623
+store 0x00003039 to 0xffffffec from reg 15
+store 0x00003039 to 0xffffffec from reg 15
+PC : 0x00000020, instr : 0xfe042423
+store 0x00000000 to 0xffffffe8 from reg  0
+store 0x00000000 to 0xffffffe8 from reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
+PC : 0x00000080, instr : 0x02e68733
+write fc000064 to reg 14
+PC : 0x00000084, instr : 0x40e787b3
+write 04002fd5 to reg 15
+PC : 0x00000088, instr : 0xfef42423
+store 0x04002fd5 to 0xffffffe8 from reg 15
+store 0x04002fd5 to 0xffffffe8 from reg 15
+PC : 0x0000008c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000090, instr : 0x10625737
+write 10625000 to reg 14
+PC : 0x00000094, instr : 0x00070713
+write 10625000 to reg 14
+PC : 0x00000098, instr : 0xdd370713
+write 10624dd3 to reg 14
+PC : 0x0000009c, instr : 0x02e79733
+write 81c80000 to reg 14
+PC : 0x000000a0, instr : 0x40675693
+write fe072000 to reg 13
+PC : 0x000000a4, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x000000a8, instr : 0x40e686b3
+write fe072000 to reg 13
+PC : 0x000000ac, instr : 0x3e800713
+write 000003e8 to reg 14
+PC : 0x000000b0, instr : 0x02e68733
+write fe0723e8 to reg 14
+PC : 0x000000b4, instr : 0x40e787b3
+write 01f90c51 to reg 15
+PC : 0x000000b8, instr : 0xfef42423
+store 0x01f90c51 to 0xffffffe8 from reg 15
+store 0x01f90c51 to 0xffffffe8 from reg 15
+PC : 0x000000bc, instr : 0xf69ff06f
+write 000000c0 to reg  0
+PC : 0x00000024, instr : 0xfec42703
+write 00003039 to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+load 0x00003039 from 0xffffffec to reg 14
+PC : 0x00000028, instr : 0x666667b7
+write 66666000 to reg 15
+PC : 0x0000002c, instr : 0x00078793
+write 66666000 to reg 15
+PC : 0x00000030, instr : 0x66778793
+write 66666667 to reg 15
+PC : 0x00000034, instr : 0x02f717b3
+write 00181c80 to reg 15
+PC : 0x00000038, instr : 0x4027d693
+write 00060720 to reg 13
+PC : 0x0000003c, instr : 0x41f75793
+write 00000000 to reg 15
+PC : 0x00000040, instr : 0x40f686b3
+write 00060720 to reg 13
+PC : 0x00000044, instr : 0x00d007b3
+write 00060720 to reg 15
+PC : 0x00000048, instr : 0x00279793
+write 00181c80 to reg 15
+PC : 0x0000004c, instr : 0x00d787b3
+write 001e23a0 to reg 15
+PC : 0x00000050, instr : 0x00179793
+write 003c4740 to reg 15
+PC : 0x00000054, instr : 0x40f707b3
+write ffc3e8f9 to reg 15
+PC : 0x00000058, instr : 0xfef42423
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+store 0xffc3e8f9 to 0xffffffe8 from reg 15
+PC : 0x0000005c, instr : 0xfec42783
+write 00003039 to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+load 0x00003039 from 0xffffffec to reg 15
+PC : 0x00000060, instr : 0x51eb8737
+write 51eb8000 to reg 14
+PC : 0x00000064, instr : 0x00070713
+write 51eb8000 to reg 14
+PC : 0x00000068, instr : 0x51f70713
+write 51eb851f to reg 14
+PC : 0x0000006c, instr : 0x02e79733
+write 80000000 to reg 14
+PC : 0x00000070, instr : 0x40575693
+write fc000000 to reg 13
+PC : 0x00000074, instr : 0x41f7d713
+write 00000000 to reg 14
+PC : 0x00000078, instr : 0x40e686b3
+write fc000000 to reg 13
+PC : 0x0000007c, instr : 0x06400713
+write 00000064 to reg 14
