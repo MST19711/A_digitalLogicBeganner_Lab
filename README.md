@@ -1,4 +1,4 @@
-# A_digitalLogicBeganner_Lab
+# A Lab for digital logic designing beganner
 
 > 来自NJUCS课程《数字逻辑与计算机组成试验》
 
