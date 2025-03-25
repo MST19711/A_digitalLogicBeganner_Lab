@@ -17,7 +17,9 @@ module regfile32(
 	end
 	assign busa=regfiles[ra]; ////���˿�ra
 	assign busb=regfiles[rb];
-	
+	always @(regfiles[2]) begin
+		$display("sp : %h", regfiles[2]);
+	end
 	always@(negedge clk)
 	begin
 		//$display("a5 : %h", regfiles[15]);

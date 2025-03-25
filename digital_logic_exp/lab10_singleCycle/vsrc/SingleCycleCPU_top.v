@@ -109,8 +109,8 @@ module SingleCycleCPU_top(
     // 栈空间从0xFFFFFFFF开始向下
     // 32M栈地址空间
     // 256kb栈空间，如果没有设置c语言运行时的话程序中请不要写全局变量
-    // 堆区地址空间为0xb0000000开始的32M
-    // 堆空间也只有256kb，请节约使用
+    // 堆区地址空间为0x00100000开始向上增加
+    // 堆空间也只有128kb，请节约使用
     // 0xa0000000 到 0xa0000FFF 为终端窗口，显示模块只能read, cpu可以写入或读取。
     // 对该区域的所有load/store指令都只有最低的一字节是有效的，编写程序时请注意语义正确
     // 终端窗口的指针地址为0xa0000FFF，该指针由于未知原因最好将其视作只写变量，在其上做自增可能会出现未知原因的错误
@@ -178,13 +178,13 @@ module SingleCycleCPU_top(
     wire [31:0] DataMemdataout_RAM_stack;
 
     wire [17:0] dataram_heap_addr;
-    assign dataram_heap_addr = (DataMemaddr_W >= 32'hb0000000 && DataMemaddr_W <= 32'hb0000000 + 32*1024*1024) ? DataMemaddr_W[17:0] : 0;
+    assign dataram_heap_addr = (DataMemaddr_W >= 32'h00100000 && DataMemaddr_W <= 32'h00100000 + 32*1024*1024) ? DataMemaddr_W[17:0] : 0;
     wire darm_heap_we;
-    assign darm_heap_we =  (DataMemaddr_W >= 32'hb0000000 && DataMemaddr_W <= 32'hb0000000 + 32*1024*1024) ? DataMemwe_W : 0;
+    assign darm_heap_we =  (DataMemaddr_W >= 32'h00100000 && DataMemaddr_W <= 32'h00100000 + 32*1024*1024) ? DataMemwe_W : 0;
     wire [31:0] DataMemdataout_RAM_heap;
 
     assign DataMemdataout_W = (DataMemaddr_W >= 2**32 - 32*1024*1024) ? DataMemdataout_RAM_stack :
-                                (DataMemaddr_W >= 32'hb0000000 && DataMemaddr_W <= 32'hb0000000 + 32*1024*1024) ? DataMemdataout_RAM_heap :
+                                (DataMemaddr_W >= 32'h00100000 && DataMemaddr_W <= 32'h00100000 + 32*1024*1024) ? DataMemdataout_RAM_heap :
                                 (DataMemaddr_W >= 32'ha0000000 && DataMemaddr_W <= 32'ha0000FFF) ? consoles_0_bufferout : 
                                 (DataMemaddr_W == 32'ha0000FFF) ? con0_ptr :
                                 (DataMemaddr_W >= 32'ha0001000 && DataMemaddr_W <= 32'ha00010FF) ? KB_memmap_output :

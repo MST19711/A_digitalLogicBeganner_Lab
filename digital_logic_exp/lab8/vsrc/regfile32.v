@@ -25,5 +25,4 @@ module regfile32(
 			$display("write %h to reg %d", busw, rw);
 		end
 	end
-	
 endmodule

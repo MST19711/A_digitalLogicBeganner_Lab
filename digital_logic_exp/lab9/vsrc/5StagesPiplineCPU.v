@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module main (
+module PiplineCPU (
 	output [31:0] InstrMemaddr,        // ָ���?����ַ
 	input  [31:0] InstrMemdataout,     // ָ������
 	output        InstrMemclk,         // ָ���?����ȡʱ�ӣ�Ϊ��ʵ���첽��ȡ�����ö�ȡʱ�Ӻ�д��ʱ�ӷ���
@@ -65,13 +65,6 @@ module main (
     assign instruction = InstrMemdataout;
     assign InstrMemclk = ~clk;
 
-/*
-    Instruction_Memory i_im (
-        .PCF        (PCF        ),
-        .instruction(instruction)
-    );
-*/
-
     first_register i_1 (
         .clk        (clk        ),
         .rst        (rst        ),
@@ -91,12 +84,6 @@ module main (
         PCPlus4F_R = PCF + 4;
     end
 
-/*
-    PCPlus4 i_pcp4 (
-        .PCF     (PCF     ),
-        .PCPlus4F(PCPlus4F)
-    );
-*/
     reg [4:0] A1_r;
     reg [4:0] A2_r;
     reg [4:0] RdD_r;

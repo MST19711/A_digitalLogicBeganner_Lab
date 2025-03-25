@@ -1,5 +1,9 @@
+int main();
+void entry() { main(); }
+
 #include "am/include/am.h"
 #include "klib/include/klib.h"
+
 char test[100];
 console con0 = {.conptr = (int *)0xa0000FFF,
                 .data = (char *)0xa0000000,
@@ -21,5 +25,7 @@ int main() {
     test[11] = '\n';
     test[12] = '\0';
     putstr(&con0, test);
+    while (1) {
+    };
     return 0;
 }

@@ -1,3 +1,10 @@
+int test;
+int main();
+void entry() {
+    test = 21150;
+    main();
+}
+
 // LED
 void write2LED(int x) {
     volatile unsigned *SEG_LED = (volatile unsigned *)0x1004F000;
@@ -54,16 +61,16 @@ unsigned int umod(unsigned int a, unsigned int b) {
     return (unsigned int)A;
 }
 // heap
-#define prompt_addr 0xb0000200
-#define hello_addr 0xb0000220
-#define Unknown_Command_addr 0xb0000250
-#define getline_buffer_addr 0xb0000300 // to 0xb0000CFF
+#define prompt_addr 0x00100200
+#define hello_addr 0x00100220
+#define Unknown_Command_addr 0x00100250
+#define getline_buffer_addr 0x00100300 // to 0x00100CFF
 #define getline_buffer ((char *)getline_buffer_addr)
-#define sort_buffer_addr 0xb0000D00 // to 0xb0000FFF (max to 150 nums)
+#define sort_buffer_addr 0x00100D00 // to 0x00100FFF (max to 150 nums)
 #define sort_buffer ((int *)sort_buffer_addr)
 
 // keyboard driver
-#define kb_snapshot_addr 0xb0000000                    // 到0xb00000FF
+#define kb_snapshot_addr 0x00100000                    // 到0x001000FF
 #define kb_snapshot(x) *((char *)kb_snapshot_addr + x) // 到0xa00010FF
 #define kb_memmap_addr 0xa0001000                      // 到0xa00010FF
 #define kb_memmap(x) *((char *)kb_memmap_addr + x)     // 到0xa00010FF
@@ -413,6 +420,7 @@ int print_signedInt(console *con, unsigned x, unsigned first_call) {
     } else {
         print_int(con, x, 1);
     }
+    return 0;
 }
 #define getc_fromStr(str, addr) (char)*((char *)str + addr)
 void console_nputline(console *con, char *str, int max_len) {
@@ -453,18 +461,19 @@ void get_line(console *con) { // 不包括\n
                     console_moveptr(con, c);
                 }
             } else {
-                console_insert_char(con, c);
                 if (c == '\n') {
+                    for (int j = 0; j < i; j++) {
+                        getline_buffer[j] = con->data[start + j];
+                    }
+                    console_insert_char(con, c);
                     break;
-                }
+                } else
+                    console_insert_char(con, c);
                 i++;
             }
         }
     }
     console_autorollUp(con);
-    for (int j = 0; j < i; j++) {
-        getline_buffer[j] = con->data[start + j];
-    }
     getline_buffer[i] = 0;
 }
 
@@ -482,8 +491,8 @@ void print_time(console *con) {
 
     unsigned time_ms = TIME_MS;
     unsigned int h = udiv(time_ms, (1000 * 60 * 60));
-    unsigned int m = udiv(time_ms, (1000 * 60));
-    unsigned int s = udiv(time_ms, (1000));
+    unsigned int m = umod(udiv(time_ms, (1000 * 60)), 60);
+    unsigned int s = umod(udiv(time_ms, (1000)), 60);
     print_int(con, h, 1);
     console_putc(con, ':');
     print_int(con, m, 1);
@@ -688,6 +697,7 @@ void calculator(console *con) {
     console_clear(con);
 }
 int main() {
+    write2LED(test);
     char c;
     console con0;
     con0.data = (char *)0xa0000000;
@@ -766,9 +776,12 @@ int main() {
                    getline_buffer[2] == 'l' && getline_buffer[3] == 0) {
             calculator(&con0);
         } else {
+            console_nputline(&con0, getline_buffer, 100);
+            console_putc(&con0, '\n');
             console_nputline(&con0, UC, 100);
             for (int i = 0; i < 5; i++)
                 console_putc(&con0, '!');
+            console_autorollUp(&con0);
             console_putc(&con0, '\n');
         }
         console_nputline(&con0, promp, 100);
