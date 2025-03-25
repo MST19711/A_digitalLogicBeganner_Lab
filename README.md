@@ -1,6 +1,6 @@
 # A Lab for digital logic designing beganner
 
-> 来自NJUCS课程《数字逻辑与计算机组成试验》
+> 来自NJU CS课程《数字逻辑与计算机组成试验》
 
 (branch `main` has been abandoned)
 
