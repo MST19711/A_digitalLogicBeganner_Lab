@@ -17,6 +17,6 @@ Some toy digital circuit, by a begainner of digital logic designning:
 - lan10: A Combination of lab5, lab6, lab7 and lab8, and a simple c program can be complied and worked on the circuit.
 
 For lab from lab6 to lab10, you can easily use [NVBoard](https://github.com/NJU-ProjectN/nvboard) to test the design by adding path of [NVBoard](https://github.com/NJU-ProjectN/nvboard) on your computer to $PATH and running `make run` at corresponding lab path (for example, for lab6, at `A_digitalLogicBeganner_Lab/digital_logic_exp/lab6`).
-The design in from lab6 to lab10 is design for [NVBoard](https://github.com/NJU-ProjectN/nvboard). If you need run it on real FPGA and meet some error, you may get help from branch `main`.
+The design in from lab6 to lab10 is design for [NVBoard](https://github.com/NJU-ProjectN/nvboard). If you run it on real FPGA and meet some error, you may get help from branch `main`.
 
 Please do not copy code in this repository for homework or exam. Hope this repository will help you.
