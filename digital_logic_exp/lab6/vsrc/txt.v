@@ -44,6 +44,7 @@ module txt(
     end
     wire [31:0] xw = addra % 8, yw = ((addra / 640) % 16);
     
+    integer i;
     always @(posedge clk) begin
         if(available == 1)begin
             if(in_valid == 1)begin
@@ -51,9 +52,16 @@ module txt(
                 if(ascii_in == 8'h0D)begin
                     ptr <= (ptr < 2400 - 80) ? ((ptr + 80) - (ptr % 80)) : ptr;
                 end else begin
-                    text[ptr] <= ascii_in;
-                    if(kbsig[8] == 0 & kbsig[7] == 0 & kbsig[6] == 0 & kbsig[5] == 0 & kbsig[9] == 0)begin
-                        ptr <= (ptr < 2399) ? ptr + 1 : ptr;
+                    if(kbsig[3] == 1 && ascii_in == 100)begin
+                        ptr <= 0;
+                        for(i = 0; i < 2400; i = i + 1)begin
+                            text[i] = 0;
+                        end
+                    end else begin
+                        text[ptr] <= ascii_in;
+                        if(kbsig[8] == 0 & kbsig[7] == 0 & kbsig[6] == 0 & kbsig[5] == 0 & kbsig[9] == 0)begin
+                            ptr <= (ptr < 2399) ? ptr + 1 : ptr;
+                        end
                     end
                 end
             end
