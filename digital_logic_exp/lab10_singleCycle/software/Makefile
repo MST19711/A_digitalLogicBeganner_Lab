@@ -28,7 +28,7 @@ all: $(TARGET)
 # 链接目标
 $(TARGET): $(OBJECTS)
 	$(CC) -r -o $@ $^ 
-# -T $(LD_SCRIPT) -Wl,--no-relax -static-pie
+#-T $(LD_SCRIPT) -Wl,--no-relax -static-pie
 
 # 编译.o文件
 $(BUILD_DIR)/%.o: %.c

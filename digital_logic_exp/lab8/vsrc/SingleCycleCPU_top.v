@@ -58,7 +58,7 @@ module SingleCycleCPU_top(
         .Wclk(1'b0),             
         .MemOp(3'b010),      
         .datain(32'd0),    
-        .addr(InstrMemaddr_W[15:0]),      
+        .addr(InstrMemaddr_W[17:0]),      
         .we(1'b0)
     );
     DataRam_64k DataMem(
@@ -67,7 +67,7 @@ module SingleCycleCPU_top(
         .Wclk(DataMemwrclk_W),    
         .MemOp(DataMemop_W),      
         .datain(DataMemdatain_W),    
-        .addr(DataMemaddr_W[15:0]),      
+        .addr(DataMemaddr_W[17:0]),      
         .we(DataMemwe_W)
     );
     // 将地址0x1004F000映射到数码管上
