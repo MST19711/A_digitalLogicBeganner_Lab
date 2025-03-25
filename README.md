@@ -10,7 +10,7 @@ Some toy digital circuit, by a begainner of digital logic designning:
 - lab3: A simple ALU
 - lab4: Multiplier and divider
 - lab5: PS2(on USB) keyboard
-- lab6: VGA driver (and a calculator get input from PS2 keyboard and display on VGA). Attention, some code (may in VGACtrl.v) about VGA is design for NVBoard emulator, please check if it can run on your physical VGA device!!!!!
+- lab6: VGA driver (and a calculator get input from PS2 keyboard and display on VGA). Attention, some code (may in VGACtrl.v) about VGA is design for [NVBoard](https://github.com/NJU-ProjectN/nvboard) emulator, please check if it can run on your physical VGA device!!!!!
 - lab7: simple RAM
 - lab8: A simple single cycle CPU, support a subset of RISC-V.
 - lab9: A simple pipeline CPU. Implementation has some bugs, and it dont work. Sorry.
